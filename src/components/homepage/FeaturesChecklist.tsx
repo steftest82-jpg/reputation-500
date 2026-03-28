@@ -115,7 +115,7 @@ export default function FeaturesChecklist() {
               {checklistItems.map((item) => (
                 <div
                   key={item}
-                  className="flex items-center gap-3 bg-white rounded-xl px-5 py-4 border border-gray-100 shadow-sm hover:shadow-md hover:border-[#004AAD]/20 transition-all duration-300"
+                  className="flex items-center gap-3 bg-white rounded-xl px-5 py-4 border border-[#004AAD]/15 shadow-sm hover:shadow-md hover:border-[#004AAD]/30 transition-all duration-300"
                 >
                   {/* Check icon */}
                   <div className="w-7 h-7 rounded-full bg-[#004AAD] flex items-center justify-center flex-shrink-0">
@@ -156,7 +156,7 @@ export default function FeaturesChecklist() {
             {statsData.map((stat) => (
               <div
                 key={stat.label}
-                className="bg-white rounded-2xl p-10 border border-gray-100 text-center card-lift"
+                className="bg-white rounded-2xl p-10 border border-[#004AAD]/15 text-center card-lift"
               >
                 <AnimatedCounter
                   target={stat.target}

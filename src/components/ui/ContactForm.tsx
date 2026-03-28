@@ -14,8 +14,8 @@ export default function ContactForm({ variant = 'default', prefilledPackage }: C
   const isFooter = variant === 'footer'
 
   const inputClass = isFooter
-    ? 'w-full px-4 py-3.5 bg-white/[0.07] border border-white/10 rounded-xl text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/20 focus:bg-white/10 transition-all duration-300 backdrop-blur-sm'
-    : 'w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-sm text-heading placeholder:text-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 focus:bg-white transition-all duration-300'
+    ? 'w-full px-4 py-2.5 bg-white/[0.07] border border-white/10 rounded-lg text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-[#004AAD]/60 focus:ring-2 focus:ring-[#004AAD]/20 transition-all duration-300'
+    : 'w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#004AAD] focus:ring-2 focus:ring-[#004AAD]/10 focus:bg-white transition-all duration-300'
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -50,8 +50,7 @@ export default function ContactForm({ variant = 'default', prefilledPackage }: C
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      {/* Name */}
+    <form onSubmit={handleSubmit} className="space-y-3">
       <input
         type="text"
         name="name"
@@ -60,62 +59,53 @@ export default function ContactForm({ variant = 'default', prefilledPackage }: C
         className={inputClass}
         style={{ fontFamily: 'var(--font-body)' }}
       />
-
-      {/* Email */}
       <input
         type="email"
         name="email"
         required
-        placeholder="Your email"
+        placeholder="Your email address"
         className={inputClass}
         style={{ fontFamily: 'var(--font-body)' }}
       />
-
-      {/* Phone */}
       <input
         type="tel"
         name="phone"
-        placeholder="Your phone (optional)"
+        placeholder="+088-234-6849"
         className={inputClass}
         style={{ fontFamily: 'var(--font-body)' }}
       />
-
-      {/* Message */}
       <textarea
         name="message"
         required
-        rows={4}
-        placeholder="Tell us about your project..."
+        rows={3}
+        placeholder="Write your message here..."
         className={`${inputClass} resize-none`}
         style={{ fontFamily: 'var(--font-body)' }}
       />
 
-      {/* Privacy Checkbox */}
-      <div className="flex items-start gap-2.5">
+      <div className="flex items-start gap-2">
         <input
           type="checkbox"
           required
-          className="mt-0.5 w-4 h-4 rounded accent-primary cursor-pointer"
+          className="mt-0.5 w-4 h-4 rounded accent-[#004AAD] cursor-pointer"
         />
         <label
-          className="text-[13px] text-gray-500"
+          className={`text-[12px] ${isFooter ? 'text-gray-500' : 'text-gray-500'}`}
           style={{ fontFamily: 'var(--font-body)' }}
         >
-          I agree to the{' '}
-          <Link href="/privacy" className="text-primary hover:underline">
+          I have read and agree to the{' '}
+          <Link href="/privacy-policy" className="text-[#004AAD] hover:underline">
             Privacy Policy
           </Link>
         </label>
       </div>
 
-      {/* Honeypot */}
       <input type="text" name="_gotcha" className="hidden" />
 
-      {/* Submit Button */}
       <button
         type="submit"
         disabled={status === 'sending'}
-        className={`w-full py-3.5 rounded-xl font-semibold text-[14px] transition-all duration-300 bg-primary text-white hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/20 ${
+        className={`w-full py-3 rounded-lg font-semibold text-[14px] transition-all duration-300 bg-[#004AAD] text-white hover:bg-[#003580] hover:shadow-lg hover:shadow-[#004AAD]/20 ${
           status === 'sending' ? 'opacity-60 cursor-not-allowed' : ''
         }`}
         style={{ fontFamily: 'var(--font-heading)' }}
@@ -130,18 +120,15 @@ export default function ContactForm({ variant = 'default', prefilledPackage }: C
         )}
       </button>
 
-      {/* Success Message */}
       {status === 'sent' && (
-        <p className="mt-3 text-emerald-400 text-sm font-medium flex items-center gap-2">
+        <p className="text-emerald-500 text-sm font-medium flex items-center gap-2">
           <i className="fa-solid fa-circle-check" />
-          Message sent successfully! We&apos;ll be in touch soon.
+          Message sent! We&apos;ll be in touch soon.
         </p>
       )}
-
-      {/* Error Message */}
       {status === 'error' && (
-        <p className="mt-3 text-red-400 text-sm font-medium">
-          Something went wrong. Please try again or email us directly.
+        <p className="text-red-500 text-sm font-medium">
+          Something went wrong. Please try again.
         </p>
       )}
     </form>

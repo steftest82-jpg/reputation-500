@@ -28,7 +28,7 @@ export default function Accordion({ items, defaultOpen = 0 }: AccordionProps) {
           <div
             key={index}
             className={`border rounded-xl overflow-hidden transition-all duration-300 ${
-              isOpen ? 'border-[#004AAD]/30 shadow-sm' : 'border-gray-200'
+              isOpen ? 'border-[#004AAD]/30 shadow-sm' : 'border-[#004AAD]/15'
             }`}
           >
             <button

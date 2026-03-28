@@ -24,13 +24,13 @@ export default function PricingSection() {
           className="text-3xl lg:text-[2.75rem] font-extrabold text-center tracking-tight mb-2"
           style={{ fontFamily: 'var(--font-heading)' }}
         >
-          Transparent pricing, real results
+          Online Reputation Management 360 Packages
         </h2>
         <p
           className="text-gray-400 text-[15px] text-center mb-14"
           style={{ fontFamily: 'var(--font-body)' }}
         >
-          Choose the plan that fits your reputation goals. All plans include dedicated account management.
+          Full Reputation, handled.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 stagger-children">
@@ -40,7 +40,7 @@ export default function PricingSection() {
             return (
               <div
                 key={plan.name}
-                className="relative bg-white rounded-2xl p-7 border border-gray-100 h-full flex flex-col card-lift"
+                className="relative bg-white rounded-2xl p-7 border border-[#004AAD]/15 h-full flex flex-col card-lift"
               >
                 {/* Badge */}
                 {isPopular && (

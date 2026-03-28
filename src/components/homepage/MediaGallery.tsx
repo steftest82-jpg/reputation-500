@@ -62,7 +62,7 @@ export default function MediaGallery() {
           {MEDIA_LOGOS.map((logo) => (
             <div
               key={logo.alt}
-              className="bg-white rounded-xl p-5 flex items-center justify-center h-20 border border-gray-100 hover:shadow-lg hover:border-primary/20 transition-all duration-300 group"
+              className="bg-white rounded-xl p-5 flex items-center justify-center h-20 border border-[#004AAD]/15 hover:shadow-lg hover:border-[#004AAD]/30 transition-all duration-300 group"
             >
               <Image
                 src={logo.src}

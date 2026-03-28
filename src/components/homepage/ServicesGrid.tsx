@@ -55,7 +55,7 @@ export default function ServicesGrid() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-white rounded-2xl p-8 lg:p-10 border border-gray-100 card-lift group cursor-default"
+              className="bg-white rounded-2xl p-8 lg:p-10 border border-[#004AAD]/15 card-lift group cursor-default"
             >
               {/* Decorative accent */}
               <div className="w-10 h-1 rounded-full bg-[#004AAD] mb-6 group-hover:w-16 transition-all duration-500" />
