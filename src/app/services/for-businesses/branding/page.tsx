@@ -91,7 +91,7 @@ export default function BrandingPage() {
             >
               Branding for Businesses
             </h1>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-500 leading-relaxed">
               A strong brand is the foundation of every successful business. We help companies define their market position, craft compelling messaging, and build a digital brand presence that earns trust, drives recognition, and outperforms the competition.
             </p>
           </div>

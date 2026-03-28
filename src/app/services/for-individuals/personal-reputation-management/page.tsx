@@ -91,7 +91,7 @@ export default function PersonalReputationManagementPage() {
             >
               Personal Reputation Management
             </h1>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-500 leading-relaxed">
               Your name is your most valuable asset. When someone searches for you on Google, the results they find shape their perception before you ever get a chance to speak. We help individuals take control of their digital narrative and build a search presence that reflects who they truly are.
             </p>
           </div>

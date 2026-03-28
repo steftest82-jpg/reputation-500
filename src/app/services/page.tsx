@@ -229,7 +229,7 @@ export default function ServicesPage() {
             </div>
             <div className="">
               <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center">
-                <span className="text-gray-400 text-lg">Image</span>
+                <span className="text-gray-600 text-lg">Image</span>
               </div>
             </div>
           </div>

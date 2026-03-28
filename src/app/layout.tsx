@@ -84,11 +84,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="antialiased">
+        <a href="#main-content" className="skip-to-content">Skip to main content</a>
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
         <ScrollRevealProvider />
         <Navbar />
-        <main>{children}</main>
+        <main id="main-content" role="main">{children}</main>
         <Footer />
       </body>
     </html>

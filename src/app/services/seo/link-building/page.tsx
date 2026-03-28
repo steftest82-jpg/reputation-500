@@ -119,7 +119,7 @@ export default function LinkBuildingPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-6 mb-6">
             Link Building Services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl">
+          <p className="text-xl text-gray-500 max-w-3xl">
             Earn high-authority backlinks that strengthen your domain, improve rankings, and drive
             qualified referral traffic. Every link we build is relevant, editorial, and built to
             last.

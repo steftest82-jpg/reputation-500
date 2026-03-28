@@ -7,7 +7,7 @@ import { SITE_NAME, SITE_URL } from '@/lib/constants';
 export const metadata: Metadata = {
   title: `About Us | ${SITE_NAME}`,
   description:
-    'Learn about Reputation 500 — an online reputation management agency with 10+ years of experience protecting businesses and individuals across 21 countries.',
+    'Learn about Reputation 500: an online reputation management agency with 10+ years of experience protecting businesses and individuals across 21 countries.',
   alternates: { canonical: `${SITE_URL}/about` },
 };
 
@@ -20,7 +20,7 @@ const values = [
   {
     title: 'Results-Driven',
     description:
-      'Every strategy we craft is measured by tangible outcomes — improved search results, positive sentiment, and lasting brand protection.',
+      'Every strategy we craft is measured by tangible outcomes: improved search results, positive sentiment, and lasting brand protection.',
   },
   {
     title: 'Innovation',
@@ -51,7 +51,7 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-5xl font-bold mt-4 text-white">
             About Reputation 500
           </h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-500">
             Protecting and elevating brands across the globe since day one.
           </p>
         </div>
@@ -115,7 +115,7 @@ export default function AboutPage() {
             {stats.map((s) => (
               <div key={s.label}>
                 <p className="text-4xl font-bold">{s.value}</p>
-                <p className="mt-2 text-gray-300 text-sm uppercase tracking-wide">
+                <p className="mt-2 text-gray-500 text-sm uppercase tracking-wide">
                   {s.label}
                 </p>
               </div>

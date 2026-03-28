@@ -43,12 +43,12 @@ export default function TrustBar() {
                   {stat.value}
                 </span>
                 {stat.stars && (
-                  <span className="text-[#C9A84C] text-xs tracking-widest block">
+                  <span className="text-[#9a7b2d] text-sm tracking-widest block">
                     ★★★★★
                   </span>
                 )}
                 <span
-                  className="text-[10px] text-gray-400 uppercase tracking-wider mt-0.5 block"
+                  className="text-sm text-gray-600 uppercase tracking-wider mt-0.5 block"
                   style={{ fontFamily: 'var(--font-body)' }}
                 >
                   {stat.label}
@@ -65,7 +65,7 @@ export default function TrustBar() {
             {badges.map((badge) => (
               <span
                 key={badge.platform}
-                className="bg-gray-50 border border-gray-200/80 rounded-md px-3 py-1.5 text-[11px] font-semibold text-gray-600 hover:border-[#004AAD]/30 hover:bg-[#e8f0fe]/50 transition-all cursor-default"
+                className="bg-gray-50 border border-gray-200/80 rounded-md px-3 py-1.5 text-sm font-semibold text-gray-600 hover:border-[#004AAD]/30 hover:bg-[#e8f0fe]/50 transition-all cursor-default"
                 style={{ fontFamily: 'var(--font-body)' }}
               >
                 {badge.platform} ★ {badge.rating}

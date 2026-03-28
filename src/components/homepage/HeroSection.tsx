@@ -47,7 +47,7 @@ export default function HeroSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
 
-            {/* LEFT — 7 cols */}
+            {/* LEFT: 7 cols */}
             <div className="lg:col-span-7">
               {/* H1 */}
               <h1
@@ -59,7 +59,7 @@ export default function HeroSection() {
 
               {/* Description */}
               <p
-                className="text-gray-600 text-[15px] lg:text-base leading-relaxed mb-6 max-w-xl"
+                className="text-gray-600 text-base lg:text-base leading-relaxed mb-6 max-w-xl"
                 style={{ fontFamily: 'var(--font-body)' }}
               >
                 Reputation 500 is an online reputation management agency helping
@@ -89,8 +89,8 @@ export default function HeroSection() {
                 </span>
               </div>
 
-              {/* Client Logos — Full Color, Prominent */}
-              <div className="grid grid-cols-5 gap-x-8 gap-y-6 items-center max-w-2xl">
+              {/* Client Logos: Full Color, Prominent */}
+              <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-5 items-center max-w-2xl">
                 {clientLogos.map((logo) => (
                   <div key={logo.alt} className="flex items-center justify-center">
                     <Image
@@ -111,14 +111,14 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* RIGHT — 5 cols — Form Card */}
+            {/* RIGHT: 5 cols: Form Card */}
             <div className="lg:col-span-5" style={{ transitionDelay: '200ms' }}>
               <div className="bg-white rounded-2xl p-6 lg:p-7 shadow-xl shadow-black/[0.06] border border-[#004AAD]/12">
                 {/* Stars + Stats */}
                 <div className="text-center mb-3">
-                  <div className="text-[#C9A84C] text-lg tracking-[0.15em]">★★★★★</div>
+                  <div className="text-[#9a7b2d] text-lg tracking-[0.15em]">★★★★★</div>
                   <p
-                    className="text-[10px] font-bold text-[#C9A84C] tracking-[0.12em] uppercase mt-1"
+                    className="text-sm font-bold text-[#9a7b2d] tracking-[0.12em] uppercase mt-1"
                     style={{ fontFamily: 'var(--font-heading)' }}
                   >
                     4.8 Stars · 32,920+ Articles Published
@@ -126,7 +126,7 @@ export default function HeroSection() {
                 </div>
 
                 <p
-                  className="text-[15px] font-semibold text-gray-800 text-center leading-snug mb-5"
+                  className="text-base font-semibold text-gray-800 text-center leading-snug mb-5"
                   style={{ fontFamily: 'var(--font-heading)' }}
                 >
                   Guaranteed Coverage in Forbes, Entrepreneur, IB Times &amp; More

@@ -119,7 +119,7 @@ export default function MetaAdsPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-6 mb-6">
             Meta Ads Management
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl">
+          <p className="text-xl text-gray-500 max-w-3xl">
             Reach your ideal customers where they scroll most. We create full-funnel Facebook and
             Instagram ad campaigns that combine audience science with scroll-stopping creative to
             deliver measurable leads and sales.

@@ -11,13 +11,13 @@ export default function TestimonialCard({ name, role, text, rating }: Testimonia
       {/* Stars */}
       <div className="flex gap-0.5 mb-5">
         {Array.from({ length: rating }).map((_, i) => (
-          <i key={i} className="fa-solid fa-star text-[#C9A84C] text-xs" />
+          <i key={i} className="fa-solid fa-star text-[#9a7b2d] text-sm" />
         ))}
       </div>
 
       {/* Quote */}
       <p
-        className="text-gray-500 text-[15px] leading-relaxed flex-1 mb-6"
+        className="text-gray-500 text-base leading-relaxed flex-1 mb-6"
         style={{ fontFamily: 'var(--font-body)' }}
       >
         &ldquo;{text}&rdquo;
@@ -32,7 +32,7 @@ export default function TestimonialCard({ name, role, text, rating }: Testimonia
           {name}
         </p>
         <p
-          className="text-xs text-gray-400 mt-0.5 leading-relaxed"
+          className="text-sm text-gray-600 mt-0.5 leading-relaxed"
           style={{ fontFamily: 'var(--font-body)' }}
         >
           {role}

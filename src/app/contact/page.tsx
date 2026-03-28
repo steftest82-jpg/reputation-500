@@ -44,7 +44,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 text-center">
           <Breadcrumbs items={[{ label: 'Contact', href: '/contact' }]} />
           <h1 className="text-4xl md:text-5xl font-bold mt-4 text-white">Contact Us</h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-500">
             Ready to take control of your online reputation? Get in touch with
             our team today.
           </p>
@@ -55,7 +55,7 @@ export default function ContactPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Left — Contact Info */}
+            {/* Left: Contact Info */}
             <div>
               <SectionHeading title="Get in Touch" />
               <div className="mt-8 space-y-6 text-gray-700">
@@ -100,7 +100,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right — Contact Form */}
+            {/* Right: Contact Form */}
             <div>
               <SectionHeading title="Send Us a Message" />
               <div className="mt-8">

@@ -91,7 +91,7 @@ export default function BrandMentionsIndividualsPage() {
             >
               Brand Mentions for Individuals
             </h1>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-500 leading-relaxed">
               Every time your name appears online, it shapes how others perceive you. Our brand mention services help you track every reference to your name across the web, turning passive mentions into active reputation-building opportunities.
             </p>
           </div>

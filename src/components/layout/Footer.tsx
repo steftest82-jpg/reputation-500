@@ -28,7 +28,7 @@ export default function Footer() {
 
               <a href="mailto:info@reputation500.com" className="inline-block group">
                 <span
-                  className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-1"
+                  className="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-1"
                   style={{ fontFamily: 'var(--font-body)' }}
                 >
                   Send us an email:
@@ -64,7 +64,7 @@ export default function Footer() {
               />
             </Link>
             <p
-              className="text-gray-500 text-xs"
+              className="text-gray-500 text-sm"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               &copy; Copyright 2026, All Rights Reserved by Reputation500, part of ADCX Tech Solutions LTD

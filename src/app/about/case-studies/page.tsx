@@ -45,8 +45,8 @@ export default function CaseStudiesPage() {
             ]}
           />
           <h1 className="text-4xl md:text-5xl font-bold mt-4 text-white">Case Studies</h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
-            Real results from real campaigns — see how we have delivered for
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-500">
+            Real results from real campaigns: see how we have delivered for
             clients worldwide.
           </p>
         </div>
@@ -65,7 +65,7 @@ export default function CaseStudiesPage() {
                 key={cs.title}
                 className="border border-gray-200 rounded-lg p-6 flex flex-col"
               >
-                <span className="inline-block self-start text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 rounded px-3 py-1">
+                <span className="inline-block self-start text-sm font-semibold uppercase tracking-wide text-primary bg-primary/10 rounded px-3 py-1">
                   {cs.industry}
                 </span>
                 <h3 className="mt-4 text-xl font-semibold text-gray-900">
@@ -74,7 +74,7 @@ export default function CaseStudiesPage() {
                 <p className="mt-3 text-gray-600 leading-relaxed flex-1">
                   {cs.description}
                 </p>
-                <span className="mt-6 inline-block self-start text-sm font-medium text-gray-400 bg-gray-100 rounded px-3 py-1">
+                <span className="mt-6 inline-block self-start text-sm font-medium text-gray-600 bg-gray-100 rounded px-3 py-1">
                   Coming Soon
                 </span>
               </div>

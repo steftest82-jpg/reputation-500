@@ -30,7 +30,7 @@ export default function ServicesGrid() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Label */}
         <p
-          className="text-[13px] font-semibold uppercase tracking-[0.15em] text-center mb-4"
+          className="text-sm font-semibold uppercase tracking-[0.15em] text-center mb-4"
           style={{
             fontFamily: 'var(--font-body)',
             color: 'var(--primary, #004AAD)',
@@ -71,7 +71,7 @@ export default function ServicesGrid() {
               </h4>
 
               <p
-                className="text-gray-500 text-[15px] leading-relaxed"
+                className="text-gray-500 text-base leading-relaxed"
                 style={{ fontFamily: 'var(--font-body)' }}
               >
                 {service.description}

@@ -91,7 +91,7 @@ export default function DigitalPRPage() {
             >
               Digital PR for Businesses
             </h1>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-500 leading-relaxed">
               Earned media coverage in respected publications builds the authority and trust that paid advertising cannot replicate. Our digital PR campaigns secure strategic placements that elevate your brand, strengthen your search presence, and position your company as an industry leader.
             </p>
           </div>

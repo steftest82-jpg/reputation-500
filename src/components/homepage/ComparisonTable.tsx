@@ -4,7 +4,7 @@ const Check = () => (
   </svg>
 );
 
-const Dash = () => <span className="text-gray-300">&mdash;</span>;
+const Dash = () => <span className="text-gray-500">&mdash;</span>;
 
 type CellValue = string | number | "check" | "dash";
 
@@ -79,7 +79,7 @@ const rows: Row[] = [
   },
   {
     feature: "Wikipedia Page or Wikidata",
-    sub: "Extra charge–Optional",
+    sub: "Extra charge:Optional",
     essential: "€550 One time fee",
     enhanced: "€450 One time fee",
     elite: "check",
@@ -95,7 +95,7 @@ const rows: Row[] = [
   },
   {
     feature: "Wikipedia Link",
-    sub: "Extra charge–Optional",
+    sub: "Extra charge:Optional",
     essential: "€600 One time fee",
     enhanced: "€480 One time fee",
     elite: "check",
@@ -119,7 +119,7 @@ const rows: Row[] = [
   },
   {
     feature: "Entrepreneur UK or ME or CEO Middle East full feature",
-    sub: "Extra charge–Optional",
+    sub: "Extra charge:Optional",
     essential: "€4700 One time fee",
     enhanced: "€3900 One time fee",
     elite: "€3,500 One time fee",
@@ -216,7 +216,7 @@ export default function ComparisonTable() {
                   >
                     {row.feature}
                     {row.sub && (
-                      <span className="block text-xs text-gray-400 mt-0.5">{row.sub}</span>
+                      <span className="block text-sm text-gray-600 mt-0.5">{row.sub}</span>
                     )}
                   </td>
                   <td className="py-4 px-3 text-center text-sm text-gray-600 border-b border-[#004AAD]/10 border-l border-[#004AAD]/10">

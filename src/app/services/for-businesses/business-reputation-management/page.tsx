@@ -91,7 +91,7 @@ export default function BusinessReputationManagementPage() {
             >
               Business Reputation Management
             </h1>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-500 leading-relaxed">
               Your company&apos;s reputation directly impacts revenue, partnerships, and talent acquisition. We deliver comprehensive reputation management that protects your brand across search engines, review platforms, and media channels, turning your online presence into a competitive advantage.
             </p>
           </div>

@@ -119,7 +119,7 @@ export default function SeoAuditPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-6 mb-6">
             SEO Audit Services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl">
+          <p className="text-xl text-gray-500 max-w-3xl">
             Discover exactly what is holding your site back from higher rankings. Our comprehensive
             audits cover technical health, on-page optimization, and off-page authority with a clear,
             prioritized fix-it plan.

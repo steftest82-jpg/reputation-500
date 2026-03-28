@@ -98,7 +98,7 @@ export default function FeaturesChecklist() {
               Protect, Control &amp; Dominate Your Online Presence
             </h2>
             <p
-              className="text-gray-500 text-[15px] leading-relaxed max-w-lg"
+              className="text-gray-500 text-base leading-relaxed max-w-lg"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               We help businesses and individuals take full control of their
@@ -163,7 +163,7 @@ export default function FeaturesChecklist() {
                   suffix={stat.suffix}
                 />
                 <p
-                  className="text-sm text-gray-400 mt-2 font-medium"
+                  className="text-sm text-gray-600 mt-2 font-medium"
                   style={{ fontFamily: 'var(--font-body)' }}
                 >
                   {stat.label}

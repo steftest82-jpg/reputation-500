@@ -91,7 +91,7 @@ export default function ReputationMonitoringIndividualsPage() {
             >
               Reputation Monitoring for Individuals
             </h1>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-500 leading-relaxed">
               Your online reputation can change overnight. A new article, review, or social media post can shift search results without warning. Our continuous monitoring service ensures you are always informed and prepared to act before minor issues become major problems.
             </p>
           </div>

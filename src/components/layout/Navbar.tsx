@@ -90,7 +90,7 @@ export default function Navbar() {
                   {link.children ? (
                     <>
                       <button
-                        className={`inline-flex items-center gap-1.5 px-4 py-2.5 text-[13px] font-medium tracking-wide uppercase transition-all duration-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 ${
+                        className={`inline-flex items-center gap-1.5 px-4 py-2.5 text-base font-medium transition-all duration-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 ${
                           activeDropdown === link.label
                             ? 'text-[#004AAD]'
                             : scrolled
@@ -144,7 +144,7 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href={link.href}
-                      className="inline-flex items-center px-4 py-2.5 text-[13px] font-medium tracking-wide uppercase text-gray-600 hover:text-[#004AAD] transition-all duration-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
+                      className="inline-flex items-center px-4 py-2.5 text-base font-medium text-gray-600 hover:text-[#004AAD] transition-all duration-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
                       style={{ fontFamily: 'var(--font-heading)' }}
                     >
                       {link.label}
@@ -158,7 +158,7 @@ export default function Navbar() {
             <div className="hidden lg:block">
               <Link
                 href="/contact"
-                className="btn-primary inline-flex items-center px-5 py-2.5 text-[13px] font-semibold rounded-lg transition-all duration-200"
+                className="btn-primary inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-lg transition-all duration-200"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
                 Get Your Reputation Analysis
@@ -228,7 +228,7 @@ export default function Navbar() {
             </Link>
             <button
               onClick={() => setMobileOpen(false)}
-              className="p-2 -mr-2 text-gray-400 hover:text-gray-600 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+              className="p-2 -mr-2 text-gray-600 hover:text-gray-600 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
               aria-label="Close navigation menu"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
@@ -257,7 +257,7 @@ export default function Navbar() {
                     >
                       {link.label}
                       <svg
-                        className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${
+                        className={`w-4 h-4 text-gray-600 transition-transform duration-300 ${
                           mobileDropdown === link.label ? 'rotate-180' : ''
                         }`}
                         fill="none"
@@ -279,7 +279,7 @@ export default function Navbar() {
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block px-4 py-2.5 text-[15px] text-gray-500 hover:text-[#004AAD] font-medium transition-colors rounded-lg"
+                            className="block px-4 py-2.5 text-base text-gray-500 hover:text-[#004AAD] font-medium transition-colors rounded-lg"
                             style={{ fontFamily: 'var(--font-body)' }}
                             onClick={() => setMobileOpen(false)}
                           >
@@ -306,7 +306,7 @@ export default function Navbar() {
             <div className="pt-6 px-2">
               <Link
                 href="/contact"
-                className="btn-primary flex items-center justify-center w-full px-6 py-3.5 text-[15px] font-semibold rounded-xl transition-all duration-200"
+                className="btn-primary flex items-center justify-center w-full px-6 py-3.5 text-base font-semibold rounded-xl transition-all duration-200"
                 style={{ fontFamily: 'var(--font-heading)' }}
                 onClick={() => setMobileOpen(false)}
               >

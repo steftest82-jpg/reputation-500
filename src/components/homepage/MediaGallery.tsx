@@ -46,10 +46,10 @@ export default function MediaGallery() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider cursor-pointer rounded-full transition-all duration-300 ${
+              className={`px-3 py-1.5 text-sm font-semibold uppercase tracking-wider cursor-pointer rounded-full transition-all duration-300 ${
                 activeTab === tab
                   ? 'bg-primary text-white shadow-sm'
-                  : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'
+                  : 'text-gray-600 hover:text-gray-600 hover:bg-gray-100'
               }`}
             >
               {tab}
@@ -77,7 +77,7 @@ export default function MediaGallery() {
 
         {/* Load More */}
         <div className="mt-8 text-center">
-          <button className="bg-white border border-gray-200 rounded-full px-8 py-2.5 text-[13px] font-semibold text-gray-500 hover:text-primary hover:border-primary/30 hover:shadow-sm transition-all">
+          <button className="bg-white border border-gray-200 rounded-full px-8 py-2.5 text-sm font-semibold text-gray-500 hover:text-primary hover:border-primary/30 hover:shadow-sm transition-all">
             Load More
           </button>
         </div>

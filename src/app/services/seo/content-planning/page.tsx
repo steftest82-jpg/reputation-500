@@ -119,7 +119,7 @@ export default function ContentPlanningPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-6 mb-6">
             Content Planning & Strategy
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl">
+          <p className="text-xl text-gray-500 max-w-3xl">
             Stop guessing what to publish next. Our data-driven content plans map every article to a
             keyword opportunity and every keyword to a business goal, so nothing you publish goes to
             waste.

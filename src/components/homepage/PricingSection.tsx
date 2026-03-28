@@ -27,7 +27,7 @@ export default function PricingSection() {
           Online Reputation Management 360 Packages
         </h2>
         <p
-          className="text-gray-400 text-[15px] text-center mb-14"
+          className="text-gray-600 text-base text-center mb-14"
           style={{ fontFamily: 'var(--font-body)' }}
         >
           Full Reputation, handled.
@@ -44,7 +44,7 @@ export default function PricingSection() {
               >
                 {/* Badge */}
                 {isPopular && (
-                  <span className="absolute -top-3.5 right-6 bg-primary text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-lg shadow-primary/20">
+                  <span className="absolute -top-3.5 right-6 bg-primary text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg shadow-primary/20">
                     {plan.badge}
                   </span>
                 )}
@@ -58,9 +58,9 @@ export default function PricingSection() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">Great for:</p>
+                <p className="text-sm font-bold text-gray-600 uppercase tracking-wider">Great for:</p>
                 <p
-                  className="text-[13px] text-gray-500 leading-relaxed mb-5"
+                  className="text-sm text-gray-500 leading-relaxed mb-5"
                   style={{ fontFamily: 'var(--font-body)' }}
                 >
                   {plan.description}
@@ -68,14 +68,14 @@ export default function PricingSection() {
 
                 {/* Price */}
                 <div className="flex items-baseline gap-1 mb-5">
-                  <span className="text-lg font-semibold text-gray-300">{plan.currency}</span>
+                  <span className="text-lg font-semibold text-gray-500">{plan.currency}</span>
                   <span
                     className="text-4xl font-extrabold text-heading tracking-tighter"
                     style={{ fontFamily: 'var(--font-heading)' }}
                   >
                     {plan.price}
                   </span>
-                  <span className="text-[13px] text-gray-400 ml-1">{plan.period}</span>
+                  <span className="text-sm text-gray-600 ml-1">{plan.period}</span>
                 </div>
 
                 {/* Divider */}
@@ -87,7 +87,7 @@ export default function PricingSection() {
                     <li key={i} className="flex items-start gap-2.5">
                       <CheckIcon />
                       <span
-                        className="text-[13px] text-gray-600 leading-relaxed"
+                        className="text-sm text-gray-600 leading-relaxed"
                         style={{ fontFamily: 'var(--font-body)' }}
                       >
                         {feature}
@@ -100,9 +100,9 @@ export default function PricingSection() {
                 <div className="border-t border-gray-100 my-5" />
 
                 {/* Includes */}
-                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Includes</p>
+                <p className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-1">Includes</p>
                 <p
-                  className="text-[12px] text-gray-500 leading-relaxed"
+                  className="text-sm text-gray-500 leading-relaxed"
                   style={{ fontFamily: 'var(--font-body)' }}
                 >
                   {plan.includes}
@@ -112,7 +112,7 @@ export default function PricingSection() {
                 <div className="mt-auto pt-5">
                   <Link
                     href={`/contact?package=${plan.name}`}
-                    className={`block w-full text-center py-3.5 rounded-xl font-semibold text-[13px] transition-all duration-300 ${
+                    className={`block w-full text-center py-3.5 rounded-xl font-semibold text-sm transition-all duration-300 ${
                       isPopular
                         ? 'bg-primary text-white hover:bg-primary-dark shadow-lg shadow-primary/15'
                         : 'bg-gray-50 text-heading border border-gray-200 hover:bg-primary hover:text-white hover:border-primary'
@@ -128,12 +128,12 @@ export default function PricingSection() {
 
         {/* Footer Note */}
         <div className="mt-10 text-center">
-          <p className="text-[13px] text-gray-400">
+          <p className="text-sm text-gray-600">
             Note: All deliverables and outcomes are based on a 12-month annual project timeline
           </p>
           <Link
             href="#compare-plans"
-            className="text-[13px] text-primary font-semibold mt-2 block hover:underline"
+            className="text-sm text-primary font-semibold mt-2 block hover:underline"
           >
             Compare packages, details below
           </Link>

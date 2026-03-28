@@ -7,7 +7,7 @@ import JsonLd from '@/components/seo/JsonLd'
 import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'AI Optimization — Get Your Brand in AI Answers | Reputation 500',
+  title: 'AI Optimization: Get Your Brand in AI Answers | Reputation 500',
   description:
     'Ensure your brand is accurately cited by ChatGPT, Claude, Perplexity, and Google AI Overviews. AI search optimization, entity building, and knowledge graph presence for forward-thinking brands.',
   alternates: { canonical: `${SITE_URL}/services/ai-optimization` },
