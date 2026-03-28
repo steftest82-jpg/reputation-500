@@ -23,22 +23,22 @@ export default function ProcessAccordion() {
   return (
     <section className="bg-white py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left column */}
-          <div className="mb-10 lg:mb-0">
+          <div>
             <h2
-              className="text-3xl lg:text-4xl font-bold text-heading mb-6"
+              className="text-3xl lg:text-4xl font-bold text-heading leading-tight mb-6"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
               Our Proven Reputation Management Process
             </h2>
-            <p className="text-text-light leading-relaxed mb-4">
+            <p className="text-gray-500 text-base leading-relaxed mb-4">
               Every engagement starts with a clear reputation audit and
               measurable goals. We map what people see across search results,
               reviews, social, news, and then prioritize the fastest wins and the
               highest-impact fixes.
             </p>
-            <p className="text-text-light leading-relaxed">
+            <p className="text-gray-500 text-base leading-relaxed">
               Some cases require additional steps (crisis response,
               multi-location review workflows, ongoing PR). The method stays
               consistent: diagnose, execute, measure, and protect your reputation
@@ -56,7 +56,7 @@ export default function ProcessAccordion() {
         <div className="mt-12 text-center">
           <Link
             href="/contact"
-            className="inline-block border-2 border-primary text-primary font-semibold px-8 py-3 rounded-md hover:bg-primary hover:text-white transition-colors"
+            className="inline-block border-2 border-primary text-primary font-semibold px-8 py-3 rounded-md hover:bg-primary hover:text-white transition"
           >
             Book a free consultation
           </Link>

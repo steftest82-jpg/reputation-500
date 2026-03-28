@@ -1,37 +1,32 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
-function CheckIcon() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="shrink-0"
-    >
-      <path
-        d="M13.3 4.3L6 11.6L2.7 8.3"
-        stroke="#004AAD"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+const checklistItems = [
+  "Online Reputation Management",
+  "Guaranteed Media Publicity",
+  "Google 1st Page Ranking",
+  "Be in AI Answers / Citations",
+  "Push Negative Search Results Away",
+];
+
+const stats = [
+  { target: 10, suffix: "+", label: "Years of experience" },
+  { target: 500, suffix: "+", label: "Reputation Campaigns Delivered" },
+  { target: 78, suffix: "+", label: "International Clients" },
+];
 
 function AnimatedCounter({
   target,
-  suffix = '',
+  suffix,
+  label,
 }: {
   target: number;
-  suffix?: string;
+  suffix: string;
+  label: string;
 }) {
   const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const hasAnimated = useRef(false);
 
   useEffect(() => {
@@ -67,41 +62,56 @@ function AnimatedCounter({
   }, [target]);
 
   return (
-    <span ref={ref}>
-      {count}
-      {suffix}
-    </span>
+    <div
+      ref={ref}
+      className="bg-white border border-gray-200 rounded-xl p-8 text-center"
+    >
+      <p
+        className="text-5xl font-bold text-heading mb-2"
+        style={{ fontFamily: "var(--font-heading)" }}
+      >
+        {count}
+        {suffix}
+      </p>
+      <p className="text-sm text-gray-500 mt-1">{label}</p>
+    </div>
+  );
+}
+
+function CheckIcon() {
+  return (
+    <svg
+      className="w-6 h-6 flex-shrink-0"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="12" cy="12" r="12" fill="#004AAD" />
+      <path
+        d="M7.5 12.5L10.5 15.5L16.5 9.5"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }
 
 export default function FeaturesChecklist() {
-  const checklistItems = [
-    'Online Reputation Management',
-    'Guaranteed Media Publicity',
-    'Google 1st Page Ranking',
-    'Be in AI Answers / Citations',
-    'Push Negative Search Results Away',
-  ];
-
-  const stats = [
-    { value: 10, suffix: '+', label: 'Years of experience' },
-    { value: 500, suffix: '+', label: 'Reputation Campaigns Delivered' },
-    { value: 78, suffix: '+', label: 'International Clients' },
-  ];
-
   return (
     <section className="bg-white py-16 lg:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-          {/* Left part - text content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Column */}
           <div>
             <h2
-              className="text-3xl font-bold text-heading lg:text-4xl"
-              style={{ fontFamily: 'var(--font-heading)' }}
+              className="text-3xl lg:text-4xl font-bold text-heading leading-tight mb-6"
+              style={{ fontFamily: "var(--font-heading)" }}
             >
               Protect, Control &amp; Dominate Your Online Presence
             </h2>
-            <p className="mt-6 text-text-light">
+            <p className="text-gray-500 text-base leading-relaxed">
               We work closely with you to understand your risk points, brand
               goals, and target audience. Then we build a practical reputation
               plan across reviews, search results, PR, and monitoring, with
@@ -109,8 +119,8 @@ export default function FeaturesChecklist() {
             </p>
           </div>
 
-          {/* Right part - checklist grid */}
-          <div className="grid grid-cols-2 gap-4 content-start">
+          {/* Right Column */}
+          <div className="grid grid-cols-2 gap-4 lg:gap-5">
             {checklistItems.map((item) => (
               <div key={item} className="flex items-center gap-3">
                 <CheckIcon />
@@ -122,21 +132,15 @@ export default function FeaturesChecklist() {
           </div>
         </div>
 
-        {/* Stats counter bar */}
-        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
+        {/* Stats Row */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           {stats.map((stat) => (
-            <div
+            <AnimatedCounter
               key={stat.label}
-              className="rounded-lg border border-border p-6 text-center"
-            >
-              <div
-                className="text-4xl font-bold text-heading"
-                style={{ fontFamily: 'var(--font-heading)' }}
-              >
-                <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-              </div>
-              <p className="mt-2 text-sm text-text-light">{stat.label}</p>
-            </div>
+              target={stat.target}
+              suffix={stat.suffix}
+              label={stat.label}
+            />
           ))}
         </div>
       </div>
