@@ -51,7 +51,7 @@ export default function ServicesGrid() {
         </h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 stagger-children">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {services.map((service) => (
             <div
               key={service.title}

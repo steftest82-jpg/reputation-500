@@ -25,7 +25,7 @@ export default function ProcessAccordion() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left Column */}
-          <div className="reveal-left">
+          <div className="">
             <h2
               className="text-3xl lg:text-[2.75rem] font-extrabold text-heading leading-tight tracking-tight mb-6"
               style={{ fontFamily: 'var(--font-heading)' }}
@@ -49,7 +49,7 @@ export default function ProcessAccordion() {
           </div>
 
           {/* Right Column */}
-          <div className="reveal-right">
+          <div className="">
             <Accordion items={ACCORDION_ITEMS} defaultOpen={0} />
           </div>
         </div>

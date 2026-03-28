@@ -33,7 +33,7 @@ export default function PricingSection() {
           Full Reputation, handled.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 stagger-children">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
           {PRICING_PLANS.map((plan) => {
             const isPopular = plan.badge === 'POPULAR'
 

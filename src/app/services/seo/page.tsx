@@ -82,20 +82,20 @@ export default function SEOPage() {
           <Breadcrumbs items={[{ label: 'Services', href: '/services' }, { label: 'SEO' }]} />
           <div className="max-w-3xl">
             <h1
-              className="text-3xl lg:text-5xl font-extrabold text-black mb-6 reveal"
+              className="text-3xl lg:text-5xl font-extrabold text-black mb-6 "
               style={{ fontFamily: 'var(--font-heading)' }}
             >
               SEO Services That Drive Rankings & Revenue
             </h1>
             <p
-              className="text-gray-500 text-lg max-w-2xl mb-8 reveal"
+              className="text-gray-500 text-lg max-w-2xl mb-8 "
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Stop leaving organic traffic on the table. Our data-driven SEO strategies combine
               technical excellence, premium content, and strategic link building to put your brand
               at the top of Google where your customers are already searching.
             </p>
-            <div className="flex flex-wrap gap-4 reveal">
+            <div className="flex flex-wrap gap-4 ">
               <Link href="/contact" className="btn-primary">
                 Get Started
               </Link>
@@ -113,7 +113,7 @@ export default function SEOPage() {
       {/* Value Props */}
       <section className="bg-[#F5F7FA] py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-6 stagger-children">
+          <div className="grid md:grid-cols-4 gap-6">
             {[
               {
                 icon: 'fa-arrow-trend-up',
@@ -156,7 +156,7 @@ export default function SEOPage() {
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="reveal-left">
+            <div className="">
               <h2
                 className="text-2xl lg:text-3xl font-bold text-black mb-6"
                 style={{ fontFamily: 'var(--font-heading)' }}
@@ -180,7 +180,7 @@ export default function SEOPage() {
                 your goals and budget.
               </p>
             </div>
-            <div className="reveal-right">
+            <div className="">
               <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center">
                 <span className="text-gray-400 text-lg">Image</span>
               </div>
@@ -193,15 +193,15 @@ export default function SEOPage() {
       <section className="bg-[#F5F7FA] py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2
-            className="text-2xl lg:text-3xl font-bold text-black text-center mb-4 reveal"
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-4 "
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Our SEO Services
           </h2>
-          <p className="text-gray-500 text-center max-w-2xl mx-auto mb-12 reveal" style={{ fontFamily: 'var(--font-body)' }}>
+          <p className="text-gray-500 text-center max-w-2xl mx-auto mb-12 " style={{ fontFamily: 'var(--font-body)' }}>
             Four specialized disciplines that work together to dominate your search landscape.
           </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {subServices.map((service) => (
               <ServiceCard
                 key={service.slug}
@@ -218,12 +218,12 @@ export default function SEOPage() {
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2
-            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 reveal"
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 "
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Our SEO Process
           </h2>
-          <div className="grid md:grid-cols-4 gap-8 stagger-children">
+          <div className="grid md:grid-cols-4 gap-8">
             {[
               { step: '01', title: 'Deep Analysis', desc: 'Technical audit, keyword research, competitor analysis, and content gap mapping. We identify every opportunity and obstacle before writing a single word.' },
               { step: '02', title: 'Strategy & Planning', desc: 'We build a prioritized SEO roadmap with clear milestones. Content calendars, link building targets, and technical fixes are all mapped out with timelines.' },
@@ -250,12 +250,12 @@ export default function SEOPage() {
       <section className="bg-[#F5F7FA] py-16">
         <div className="max-w-3xl mx-auto px-4">
           <h2
-            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 reveal"
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 "
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Frequently Asked Questions
           </h2>
-          <div className="reveal">
+          <div className="">
             <Accordion items={FAQ_ITEMS} />
           </div>
         </div>

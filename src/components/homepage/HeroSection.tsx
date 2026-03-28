@@ -48,7 +48,7 @@ export default function HeroSection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
 
             {/* LEFT — 7 cols */}
-            <div className="lg:col-span-7 reveal-left">
+            <div className="lg:col-span-7">
               {/* H1 */}
               <h1
                 className="text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold text-[#000] leading-[1.12] tracking-tight mb-5"
@@ -112,7 +112,7 @@ export default function HeroSection() {
             </div>
 
             {/* RIGHT — 5 cols — Form Card */}
-            <div className="lg:col-span-5 reveal-right" style={{ transitionDelay: '200ms' }}>
+            <div className="lg:col-span-5" style={{ transitionDelay: '200ms' }}>
               <div className="bg-white rounded-2xl p-6 lg:p-7 shadow-xl shadow-black/[0.06] border border-[#004AAD]/12">
                 {/* Stars + Stats */}
                 <div className="text-center mb-3">

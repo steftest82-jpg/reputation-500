@@ -12,7 +12,7 @@ export default function TestimonialsSection() {
           What our clients say
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 stagger-children">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {TESTIMONIALS.map((testimonial, index) => (
             <TestimonialCard
               key={index}

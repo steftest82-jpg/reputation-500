@@ -58,7 +58,7 @@ export default function MediaGallery() {
         </div>
 
         {/* Logo Grid */}
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 stagger-children">
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
           {MEDIA_LOGOS.map((logo) => (
             <div
               key={logo.alt}

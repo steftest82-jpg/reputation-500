@@ -87,7 +87,7 @@ export default function FeaturesChecklist() {
         {/* Two-column layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* LEFT */}
-          <div className="reveal-left">
+          <div className="">
             <h2
               className="text-3xl lg:text-[2.75rem] font-extrabold leading-tight tracking-tight mb-6"
               style={{
@@ -110,7 +110,7 @@ export default function FeaturesChecklist() {
           </div>
 
           {/* RIGHT */}
-          <div className="reveal-right">
+          <div className="">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {checklistItems.map((item) => (
                 <div
@@ -151,7 +151,7 @@ export default function FeaturesChecklist() {
         </div>
 
         {/* Stats row */}
-        <div className="mt-20 stagger-children">
+        <div className="mt-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {statsData.map((stat) => (
               <div

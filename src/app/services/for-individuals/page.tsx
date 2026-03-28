@@ -82,20 +82,20 @@ export default function ForIndividualsPage() {
           <Breadcrumbs items={[{ label: 'Services', href: '/services' }, { label: 'For Individuals' }]} />
           <div className="max-w-3xl">
             <h1
-              className="text-3xl lg:text-5xl font-extrabold text-black mb-6 reveal"
+              className="text-3xl lg:text-5xl font-extrabold text-black mb-6 "
               style={{ fontFamily: 'var(--font-heading)' }}
             >
               Personal Reputation Management
             </h1>
             <p
-              className="text-gray-500 text-lg max-w-2xl mb-8 reveal"
+              className="text-gray-500 text-lg max-w-2xl mb-8 "
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Your name is your most valuable asset. We help executives, entrepreneurs, and public
               figures control what the world sees when they search for you, across Google, AI
               platforms, and social media.
             </p>
-            <div className="flex flex-wrap gap-4 reveal">
+            <div className="flex flex-wrap gap-4 ">
               <Link href="/contact" className="btn-primary">
                 Get Started
               </Link>
@@ -113,7 +113,7 @@ export default function ForIndividualsPage() {
       {/* Value Props */}
       <section className="bg-[#F5F7FA] py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 stagger-children">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 icon: 'fa-search',
@@ -151,7 +151,7 @@ export default function ForIndividualsPage() {
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="reveal-left">
+            <div className="">
               <h2
                 className="text-2xl lg:text-3xl font-bold text-black mb-6"
                 style={{ fontFamily: 'var(--font-heading)' }}
@@ -175,7 +175,7 @@ export default function ForIndividualsPage() {
                 have managed it successfully for clients across 21 countries.
               </p>
             </div>
-            <div className="reveal-right">
+            <div className="">
               <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center">
                 <span className="text-gray-400 text-lg">Image</span>
               </div>
@@ -188,15 +188,15 @@ export default function ForIndividualsPage() {
       <section className="bg-[#F5F7FA] py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2
-            className="text-2xl lg:text-3xl font-bold text-black text-center mb-4 reveal"
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-4 "
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Services for Individuals
           </h2>
-          <p className="text-gray-500 text-center max-w-2xl mx-auto mb-12 reveal" style={{ fontFamily: 'var(--font-body)' }}>
+          <p className="text-gray-500 text-center max-w-2xl mx-auto mb-12 " style={{ fontFamily: 'var(--font-body)' }}>
             Each service is designed to address a specific aspect of your personal online reputation.
           </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {subServices.map((service) => (
               <ServiceCard
                 key={service.slug}
@@ -213,12 +213,12 @@ export default function ForIndividualsPage() {
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2
-            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 reveal"
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 "
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             How We Restore and Build Your Reputation
           </h2>
-          <div className="grid md:grid-cols-4 gap-8 stagger-children">
+          <div className="grid md:grid-cols-4 gap-8">
             {[
               { step: '01', title: 'Reputation Audit', desc: 'We analyze every search result, mention, and profile tied to your name across Google, social media, news, and AI platforms.' },
               { step: '02', title: 'Strategy Design', desc: 'We build a custom plan targeting your weakest points first, mapping out the content, placements, and profiles needed to reshape your search landscape.' },
@@ -245,12 +245,12 @@ export default function ForIndividualsPage() {
       <section className="bg-[#F5F7FA] py-16">
         <div className="max-w-3xl mx-auto px-4">
           <h2
-            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 reveal"
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 "
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Frequently Asked Questions
           </h2>
-          <div className="reveal">
+          <div className="">
             <Accordion items={FAQ_ITEMS} />
           </div>
         </div>

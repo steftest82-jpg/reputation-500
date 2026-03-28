@@ -82,20 +82,20 @@ export default function ForBusinessesPage() {
           <Breadcrumbs items={[{ label: 'Services', href: '/services' }, { label: 'For Businesses' }]} />
           <div className="max-w-3xl">
             <h1
-              className="text-3xl lg:text-5xl font-extrabold text-black mb-6 reveal"
+              className="text-3xl lg:text-5xl font-extrabold text-black mb-6 "
               style={{ fontFamily: 'var(--font-heading)' }}
             >
               Business Reputation Management
             </h1>
             <p
-              className="text-gray-500 text-lg max-w-2xl mb-8 reveal"
+              className="text-gray-500 text-lg max-w-2xl mb-8 "
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Your brand reputation is your most powerful growth lever. We help businesses protect
               their online image, improve star ratings, earn media coverage, and convert digital
               trust into measurable revenue.
             </p>
-            <div className="flex flex-wrap gap-4 reveal">
+            <div className="flex flex-wrap gap-4 ">
               <Link href="/contact" className="btn-primary">
                 Get Started
               </Link>
@@ -113,7 +113,7 @@ export default function ForBusinessesPage() {
       {/* Value Props */}
       <section className="bg-[#F5F7FA] py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-6 stagger-children">
+          <div className="grid md:grid-cols-4 gap-6">
             {[
               {
                 icon: 'fa-star',
@@ -156,7 +156,7 @@ export default function ForBusinessesPage() {
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="reveal-left">
+            <div className="">
               <h2
                 className="text-2xl lg:text-3xl font-bold text-black mb-6"
                 style={{ fontFamily: 'var(--font-heading)' }}
@@ -181,7 +181,7 @@ export default function ForBusinessesPage() {
                 that drives real business outcomes.
               </p>
             </div>
-            <div className="reveal-right">
+            <div className="">
               <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center">
                 <span className="text-gray-400 text-lg">Image</span>
               </div>
@@ -194,15 +194,15 @@ export default function ForBusinessesPage() {
       <section className="bg-[#F5F7FA] py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2
-            className="text-2xl lg:text-3xl font-bold text-black text-center mb-4 reveal"
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-4 "
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Business Reputation Services
           </h2>
-          <p className="text-gray-500 text-center max-w-2xl mx-auto mb-12 reveal" style={{ fontFamily: 'var(--font-body)' }}>
+          <p className="text-gray-500 text-center max-w-2xl mx-auto mb-12 " style={{ fontFamily: 'var(--font-body)' }}>
             A complete toolkit for protecting, building, and leveraging your corporate reputation.
           </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {subServices.map((service) => (
               <ServiceCard
                 key={service.slug}
@@ -219,12 +219,12 @@ export default function ForBusinessesPage() {
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2
-            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 reveal"
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 "
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Our Proven Process for Business Reputation
           </h2>
-          <div className="grid md:grid-cols-4 gap-8 stagger-children">
+          <div className="grid md:grid-cols-4 gap-8">
             {[
               { step: '01', title: 'Brand Audit', desc: 'We map your complete digital footprint including search results, reviews, mentions, backlink profile, and competitor positioning to find every vulnerability and opportunity.' },
               { step: '02', title: 'Strategic Roadmap', desc: 'We prioritize actions by impact. Whether it is review recovery, negative suppression, or authority building, every tactic is sequenced for maximum results in minimum time.' },
@@ -251,12 +251,12 @@ export default function ForBusinessesPage() {
       <section className="bg-[#F5F7FA] py-16">
         <div className="max-w-3xl mx-auto px-4">
           <h2
-            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 reveal"
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 "
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             Frequently Asked Questions
           </h2>
-          <div className="reveal">
+          <div className="">
             <Accordion items={FAQ_ITEMS} />
           </div>
         </div>

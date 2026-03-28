@@ -144,7 +144,7 @@ export default function MarketActivationPage() {
             ]}
           />
 
-          <div className="max-w-3xl reveal">
+          <div className="max-w-3xl ">
             <h1
               className="text-4xl lg:text-5xl font-bold text-[#000] mb-6 leading-tight"
               style={{ fontFamily: 'var(--font-heading)' }}
@@ -183,7 +183,7 @@ export default function MarketActivationPage() {
       {/* ── Value Props ── */}
       <section className="bg-[#F5F7FA] py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 reveal">
+          <div className="text-center mb-12 ">
             <h2
               className="text-3xl lg:text-4xl font-bold text-[#000] mb-4"
               style={{ fontFamily: 'var(--font-heading)' }}
@@ -197,7 +197,7 @@ export default function MarketActivationPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {valueProps.map((prop) => (
               <div
                 key={prop.title}
@@ -225,7 +225,7 @@ export default function MarketActivationPage() {
       <section className="bg-white py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="reveal-left">
+            <div className="">
               <h2
                 className="text-3xl font-bold text-[#000] mb-6"
                 style={{ fontFamily: 'var(--font-heading)' }}
@@ -258,7 +258,7 @@ export default function MarketActivationPage() {
               </div>
             </div>
 
-            <div className="reveal-right">
+            <div className="">
               <div className="bg-[#F5F7FA] rounded-xl border border-[#004AAD]/15 aspect-[4/3] flex items-center justify-center">
                 <div className="text-center p-8">
                   <i className="fas fa-earth-americas text-5xl text-[#004AAD]/30 mb-4" />
@@ -273,7 +273,7 @@ export default function MarketActivationPage() {
       {/* ── Process Steps ── */}
       <section className="bg-white py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 reveal">
+          <div className="text-center mb-12 ">
             <h2
               className="text-3xl lg:text-4xl font-bold text-[#000] mb-4"
               style={{ fontFamily: 'var(--font-heading)' }}
@@ -286,7 +286,7 @@ export default function MarketActivationPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step) => (
               <div key={step.number} className="relative">
                 <div className="text-5xl font-bold text-[#004AAD]/10 mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
@@ -310,7 +310,7 @@ export default function MarketActivationPage() {
       {/* ── FAQ ── */}
       <section className="bg-[#F5F7FA] py-16 lg:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 reveal">
+          <div className="text-center mb-12 ">
             <h2
               className="text-3xl lg:text-4xl font-bold text-[#000] mb-4"
               style={{ fontFamily: 'var(--font-heading)' }}
