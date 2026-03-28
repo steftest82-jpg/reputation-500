@@ -1,109 +1,333 @@
+import Link from 'next/link'
 import type { Metadata } from 'next'
-import ServicePageTemplate from '@/components/ui/ServicePageTemplate'
+import Breadcrumbs from '@/components/ui/Breadcrumbs'
+import Accordion from '@/components/ui/Accordion'
+import CTABanner from '@/components/ui/CTABanner'
+import JsonLd from '@/components/seo/JsonLd'
+import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Our Reputation Management Services | Reputation 500',
-  description:
-    'Explore our full suite of reputation management services for individuals and businesses. From SEO and performance marketing to AI optimization and market activation.',
+  description: 'Explore our full suite of reputation management, SEO, performance marketing, and AI optimization services. Trusted by 78+ clients across 21 countries.',
 }
 
+const SERVICE_CATEGORIES = [
+  {
+    title: 'Market Activation',
+    description: 'Launch into new markets with strategic positioning, thought leadership placement, and targeted media outreach that builds instant credibility.',
+    href: '/services/market-activation',
+    icon: 'fa-rocket',
+  },
+  {
+    title: 'For Individuals',
+    description: 'Protect and elevate your personal brand. Control what the world sees when they search your name across Google, social media, and AI platforms.',
+    href: '/services/for-individuals',
+    icon: 'fa-user-shield',
+  },
+  {
+    title: 'For Businesses',
+    description: 'Comprehensive corporate reputation management that safeguards your brand, improves ratings, and converts trust into measurable revenue growth.',
+    href: '/services/for-businesses',
+    icon: 'fa-building-shield',
+  },
+  {
+    title: 'SEO',
+    description: 'Data-driven search engine optimization that pushes your brand to the top of Google, drives qualified organic traffic, and dominates your niche.',
+    href: '/services/seo',
+    icon: 'fa-magnifying-glass-chart',
+  },
+  {
+    title: 'Performance Marketing',
+    description: 'ROI-focused paid advertising across Google, Meta, LinkedIn, and programmatic channels that turns ad spend into predictable pipeline.',
+    href: '/services/performance-marketing',
+    icon: 'fa-chart-line',
+  },
+  {
+    title: 'AI Optimization',
+    description: 'Future-proof your brand for AI search. Ensure ChatGPT, Gemini, Perplexity, and other AI assistants recommend your brand by name.',
+    href: '/services/ai-optimization',
+    icon: 'fa-microchip',
+  },
+]
+
+const FAQ_ITEMS = [
+  {
+    question: 'What types of reputation management services do you offer?',
+    answer: 'We offer a full 360-degree approach covering personal and business reputation management, SEO, digital PR, content strategy, performance marketing, and AI optimization. Each service is tailored to your specific situation, whether you need to suppress negative search results, build authority through media placements, or improve your star ratings across review platforms.',
+  },
+  {
+    question: 'How long does it take to see results from reputation management?',
+    answer: 'Most clients begin seeing measurable improvements within 30 to 60 days, with significant search result changes occurring within 90 to 120 days. The timeline depends on the severity of the issue and the competitiveness of your industry. We provide monthly performance reports so you can track progress every step of the way.',
+  },
+  {
+    question: 'Do you work with clients outside of Europe?',
+    answer: 'Absolutely. We serve clients across 21 countries spanning Europe, the Middle East, North America, and Asia-Pacific. Our strategies are localized for each market, ensuring your reputation is protected in every region where your brand operates or is searched.',
+  },
+  {
+    question: 'Can you remove negative articles or reviews from Google?',
+    answer: 'While direct removal depends on the platform and legal circumstances, we specialize in suppression strategies that push negative content off the first page of Google. Through strategic content creation, high-authority media placements, and SEO, we replace damaging results with positive, brand-controlled assets.',
+  },
+  {
+    question: 'What makes Reputation 500 different from other agencies?',
+    answer: 'We combine reputation management with deep SEO expertise, AI optimization, and performance marketing under one roof. This integrated approach means every piece of content, every backlink, and every campaign works together toward a single goal. Our 4.8-star rating across review platforms and 32,920+ published articles speak to our track record.',
+  },
+  {
+    question: 'How much do your reputation management services cost?',
+    answer: 'Our plans start at EUR 1,250 per month for the Essential tier and scale based on the scope and complexity of your needs. Every engagement begins with a free reputation analysis so we can recommend the right plan for your situation. There are no long-term contracts required to get started.',
+  },
+]
+
 export default function ServicesPage() {
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Reputation 500',
+    url: SITE_URL,
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Reputation Management Services',
+      itemListElement: SERVICE_CATEGORIES.map((service, index) => ({
+        '@type': 'Offer',
+        itemOfferedAs: {
+          '@type': 'Service',
+          name: service.title,
+          description: service.description,
+          url: `${SITE_URL}${service.href}`,
+        },
+        position: index + 1,
+      })),
+    },
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQ_ITEMS.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  }
+
   return (
-    <ServicePageTemplate
-      breadcrumbs={[{ label: 'Services' }]}
-      title="Our Reputation Management Services"
-      description="Reputation 500 delivers measurable results across every dimension of your online presence. Whether you need to protect a personal brand, strengthen a corporate identity, or expand into new markets, our specialized teams combine deep expertise with proven methodologies to build, manage, and defend reputations at scale."
-      content={[
-        'Your reputation is your most valuable asset in the digital economy. Every search result, review, social mention, and AI-generated summary shapes how the world perceives you or your organization. At Reputation 500, we take a comprehensive, data-driven approach to reputation management that addresses every channel where opinions are formed.',
-        'Our services span six core disciplines, each led by subject-matter experts who collaborate to deliver integrated strategies. From proactive brand building to crisis response, from organic search dominance to paid media precision, we ensure that the narrative surrounding your name or brand is accurate, favorable, and resilient.',
-        'We serve executives, public figures, entrepreneurs, startups, enterprises, and multinational corporations. No matter the size of the challenge, our team applies the same rigor: thorough audits, tailored strategies, transparent reporting, and continuous optimization. Every engagement begins with a confidential consultation to understand your goals and craft a plan that delivers lasting results.',
-        'Explore our service categories below to learn how Reputation 500 can help you take control of the conversation.',
-      ]}
-      subServices={[
-        {
-          slug: 'for-individuals',
-          title: 'Reputation Management for Individuals',
-          description:
-            'Protect and elevate your personal brand with tailored strategies for executives, professionals, and public figures.',
-        },
-        {
-          slug: 'for-businesses',
-          title: 'Reputation Management for Businesses',
-          description:
-            'Strengthen your corporate reputation, manage reviews, and build stakeholder trust with enterprise-grade solutions.',
-        },
-        {
-          slug: 'seo',
-          title: 'SEO Services',
-          description:
-            'Dominate search results with technical SEO, content optimization, and link-building strategies designed for reputation impact.',
-        },
-        {
-          slug: 'performance-marketing',
-          title: 'Performance Marketing Services',
-          description:
-            'Drive qualified traffic and conversions through paid search, social advertising, and data-driven campaign management.',
-        },
-        {
-          slug: 'ai-optimization',
-          title: 'AI Optimization Services',
-          description:
-            'Shape how AI assistants and large language models represent your brand in generated responses and recommendations.',
-        },
-        {
-          slug: 'market-activation',
-          title: 'Market Activation Services',
-          description:
-            'Enter new geographic markets with a reputation-first strategy that builds trust and credibility from day one.',
-        },
-      ]}
-      subServiceBasePath="/services"
-      whyChooseUs={[
-        {
-          title: 'Integrated Expertise Across Channels',
-          description:
-            'Our teams work together across SEO, paid media, AI optimization, and PR to deliver cohesive strategies rather than siloed tactics. This integrated approach ensures consistent messaging and maximum impact.',
-        },
-        {
-          title: 'Transparent, Data-Driven Results',
-          description:
-            'Every campaign is measured against clear KPIs with regular reporting dashboards. You always know exactly what we are doing, why we are doing it, and the results it is producing.',
-        },
-        {
-          title: 'Proven Track Record at Scale',
-          description:
-            'From Fortune 500 companies to high-profile individuals, we have managed reputations across industries and continents. Our case studies demonstrate consistent, measurable improvements in brand perception and search visibility.',
-        },
-      ]}
-      faqs={[
-        {
-          title: 'What types of clients does Reputation 500 work with?',
-          content:
-            'We work with individuals including executives, entrepreneurs, and public figures, as well as businesses ranging from startups to multinational corporations. Our services are tailored to the specific needs, scale, and objectives of each client.',
-        },
-        {
-          title: 'How long does it take to see results from reputation management?',
-          content:
-            'Timelines vary depending on the scope of the engagement. Some improvements, such as review response strategies, can show results within days. SEO-driven reputation changes typically take three to six months for significant movement. We set realistic expectations during our initial consultation and provide ongoing progress reports.',
-        },
-        {
-          title: 'Can you help with an active reputation crisis?',
-          content:
-            'Yes. We offer rapid-response crisis management services that include real-time monitoring, strategic communications, search result suppression, and media outreach. Our crisis team is available to begin work within 24 hours of engagement.',
-        },
-        {
-          title: 'How is Reputation 500 different from other reputation management firms?',
-          content:
-            'We combine six specialized disciplines under one roof, ensuring that every aspect of your online presence is addressed in a coordinated strategy. Our approach is fully transparent, data-driven, and built on long-term partnerships rather than quick fixes.',
-        },
-        {
-          title: 'Do you offer international reputation management?',
-          content:
-            'Yes. Our market activation services are specifically designed for organizations entering new geographic markets. We also support multilingual SEO, international media relations, and region-specific review management across dozens of countries.',
-        },
-      ]}
-      schemaName="Our Reputation Management Services"
-      schemaDescription="Comprehensive reputation management services including personal branding, corporate reputation, SEO, performance marketing, AI optimization, and market activation."
-    />
+    <>
+      <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
+
+      {/* Hero */}
+      <section className="bg-white pt-28 lg:pt-36 pb-12">
+        <div className="max-w-6xl mx-auto px-4">
+          <Breadcrumbs items={[{ label: 'Services' }]} />
+          <div className="max-w-3xl">
+            <h1
+              className="text-3xl lg:text-5xl font-extrabold text-black mb-6 reveal"
+              style={{ fontFamily: 'var(--font-heading)' }}
+            >
+              Our Reputation Management Services
+            </h1>
+            <p
+              className="text-gray-500 text-lg max-w-2xl mb-8 reveal"
+              style={{ fontFamily: 'var(--font-body)' }}
+            >
+              From personal brand protection to enterprise-level reputation strategy, we deliver
+              measurable results across search engines, review platforms, and AI assistants. Trusted
+              by 78+ clients in 21 countries.
+            </p>
+            <div className="flex flex-wrap gap-4 reveal">
+              <Link href="/contact" className="btn-primary">
+                Get Started
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border-2 border-[#004AAD] text-[#004AAD] font-semibold rounded-md hover:bg-[#004AAD] hover:text-white transition-colors"
+              >
+                Book Consultation
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Value Props */}
+      <section className="bg-[#F5F7FA] py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 reveal"
+            style={{ fontFamily: 'var(--font-heading)' }}
+          >
+            Why Brands Choose Reputation 500
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 stagger-children">
+            {[
+              {
+                icon: 'fa-shield-halved',
+                title: '360-Degree Protection',
+                desc: 'We cover Google Search, AI answers, review platforms, social media, and news outlets. No gap in your digital presence goes unmonitored or unmanaged.',
+              },
+              {
+                icon: 'fa-globe',
+                title: 'Global Reach, Local Expertise',
+                desc: 'Serving 21 countries with market-specific strategies. We understand the nuances of reputation management across cultures, languages, and search ecosystems.',
+              },
+              {
+                icon: 'fa-chart-column',
+                title: 'Data-Driven Results',
+                desc: 'Every strategy is backed by analytics. Monthly reports show exactly how your search landscape is changing, from keyword rankings to sentiment shifts.',
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="border border-[#004AAD]/15 rounded-2xl p-8 bg-white card-lift"
+              >
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-[#004AAD]/10 text-[#004AAD] mb-5">
+                  <i className={`fas ${item.icon} text-2xl`} />
+                </div>
+                <h3
+                  className="text-lg font-bold text-black mb-3"
+                  style={{ fontFamily: 'var(--font-heading)' }}
+                >
+                  {item.title}
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="bg-white py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="reveal-left">
+              <h2
+                className="text-2xl lg:text-3xl font-bold text-black mb-6"
+                style={{ fontFamily: 'var(--font-heading)' }}
+              >
+                An Integrated Approach That Actually Works
+              </h2>
+              <p className="text-gray-500 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
+                Most agencies treat reputation management, SEO, and marketing as separate silos. We
+                combine them into a unified strategy where every article published, every backlink
+                earned, and every ad campaign launched reinforces your brand narrative.
+              </p>
+              <p className="text-gray-500 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
+                The result is faster ranking improvements, stronger brand sentiment, and a digital
+                footprint that works harder with less spend. Our clients see an average 73%
+                improvement in first-page search presence within the first 120 days.
+              </p>
+              <p className="text-gray-500" style={{ fontFamily: 'var(--font-body)' }}>
+                Whether you are a public figure protecting your legacy, a startup building
+                credibility, or an enterprise managing crisis communications, our team builds a
+                custom playbook designed for your exact situation and goals.
+              </p>
+            </div>
+            <div className="reveal-right">
+              <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center">
+                <span className="text-gray-400 text-lg">Image</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="bg-[#F5F7FA] py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-4 reveal"
+            style={{ fontFamily: 'var(--font-heading)' }}
+          >
+            Explore Our Service Categories
+          </h2>
+          <p className="text-gray-500 text-center max-w-2xl mx-auto mb-12 reveal" style={{ fontFamily: 'var(--font-body)' }}>
+            Six specialized practice areas, one unified strategy. Select a category to see how we
+            can help.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+            {SERVICE_CATEGORIES.map((service) => (
+              <Link key={service.href} href={service.href} className="group block">
+                <div className="h-full p-6 lg:p-8 border border-[#004AAD]/15 rounded-xl hover:border-[#004AAD]/40 hover:shadow-lg transition-all duration-300 bg-white">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-md bg-[#004AAD]/10 text-[#004AAD] mb-4 group-hover:bg-[#004AAD] group-hover:text-white transition-colors">
+                    <i className={`fas ${service.icon} text-xl`} />
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-black mb-3 group-hover:text-[#004AAD] transition-colors"
+                    style={{ fontFamily: 'var(--font-heading)' }}
+                  >
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
+                    {service.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="bg-white py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 reveal"
+            style={{ fontFamily: 'var(--font-heading)' }}
+          >
+            How We Work
+          </h2>
+          <div className="grid md:grid-cols-4 gap-8 stagger-children">
+            {[
+              { step: '01', title: 'Free Analysis', desc: 'We audit your current online presence, identify risks, and map every mention across search engines, reviews, and AI platforms.' },
+              { step: '02', title: 'Custom Strategy', desc: 'Based on the audit, we build a tailored plan combining the right mix of services to hit your specific goals and timeline.' },
+              { step: '03', title: 'Execute & Publish', desc: 'Our team creates high-authority content, secures media placements, builds backlinks, and launches campaigns at scale.' },
+              { step: '04', title: 'Monitor & Optimize', desc: 'Continuous tracking and monthly reporting ensure your reputation keeps improving. We adapt the strategy as results come in.' },
+            ].map((item, i) => (
+              <div key={i} className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#004AAD] text-white flex items-center justify-center text-xl font-bold" style={{ fontFamily: 'var(--font-heading)' }}>
+                  {item.step}
+                </div>
+                <h3
+                  className="text-lg font-bold text-black mb-2"
+                  style={{ fontFamily: 'var(--font-heading)' }}
+                >
+                  {item.title}
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-[#F5F7FA] py-16">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 reveal"
+            style={{ fontFamily: 'var(--font-heading)' }}
+          >
+            Frequently Asked Questions
+          </h2>
+          <div className="reveal">
+            <Accordion items={FAQ_ITEMS} />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <CTABanner
+        title="Ready to Take Control of Your Online Reputation?"
+        description="Get a free, no-obligation reputation analysis. We will show you exactly what people see when they search your name or brand, and how we can improve it."
+        buttonText="Get Your Free Analysis"
+      />
+    </>
   )
 }

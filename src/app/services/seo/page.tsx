@@ -1,72 +1,272 @@
+import Link from 'next/link'
 import type { Metadata } from 'next'
-import ServicePageTemplate from '@/components/ui/ServicePageTemplate'
-import { SERVICES_DATA } from '@/lib/constants'
+import Breadcrumbs from '@/components/ui/Breadcrumbs'
+import Accordion from '@/components/ui/Accordion'
+import CTABanner from '@/components/ui/CTABanner'
+import ServiceCard from '@/components/ui/ServiceCard'
+import JsonLd from '@/components/seo/JsonLd'
+import { SITE_URL, SERVICES_DATA } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'SEO Services | Reputation 500',
-  description:
-    'Results-driven SEO services that improve search visibility and protect your online reputation. Technical SEO, content strategy, link building, and local search optimization.',
+  title: 'SEO Services That Drive Rankings & Revenue | Reputation 500',
+  description: 'Data-driven SEO services including link building, content writing, content planning, and technical audits. Increase organic traffic and dominate your niche in search.',
 }
 
+const subServices = SERVICES_DATA.seo.subServices
+const subServiceBasePath = '/services/seo'
+
+const FAQ_ITEMS = [
+  {
+    question: 'How long does it take to see results from SEO?',
+    answer: 'Most clients see initial ranking improvements within 4 to 8 weeks, with significant organic traffic growth occurring at the 3 to 6 month mark. SEO is a compounding investment where results accelerate over time. We provide monthly reports so you can track progress from day one, and our strategies are designed to deliver quick wins while building long-term authority.',
+  },
+  {
+    question: 'What is included in your SEO audit?',
+    answer: 'Our comprehensive SEO audit covers technical health (site speed, crawlability, indexation), on-page optimization (title tags, meta descriptions, heading structure, content quality), off-page authority (backlink profile analysis, competitor comparison), and content gap analysis. You receive a prioritized action plan with estimated impact for each recommendation.',
+  },
+  {
+    question: 'How does link building improve search rankings?',
+    answer: 'Backlinks from authoritative websites signal to Google that your content is trustworthy and valuable. Our link building focuses on earning high-quality, relevant links from respected publications and industry sites, not low-quality directories. This approach builds sustainable authority that improves your rankings across your entire site, not just individual pages.',
+  },
+  {
+    question: 'Do you write SEO content in-house or outsource it?',
+    answer: 'All content is produced by our in-house editorial team with deep experience in SEO copywriting. We combine keyword research, search intent analysis, and competitive content gaps to create articles that rank and convert. Every piece goes through editorial review for quality, accuracy, and brand voice alignment before publication.',
+  },
+  {
+    question: 'Can SEO work together with reputation management?',
+    answer: 'Absolutely, and that is one of our biggest advantages. SEO and reputation management share the same battlefield: Google search results. Our integrated approach means that every piece of content, every backlink, and every technical optimization serves both your ranking goals and your reputation strategy. This dual-purpose approach delivers faster results at lower cost than running separate campaigns.',
+  },
+  {
+    question: 'How much do your SEO services cost?',
+    answer: 'Our SEO services are included as part of our reputation management plans starting at EUR 1,250 per month. For standalone SEO engagements, pricing depends on the scope of work, competitiveness of your target keywords, and current state of your site. We always start with a free SEO analysis to scope the opportunity before recommending an investment level.',
+  },
+]
+
 export default function SEOPage() {
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'SEO Services',
+    description: 'Data-driven SEO services including link building, content writing, content strategy, and technical SEO audits. Increase organic traffic and dominate search rankings.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Reputation 500',
+      url: SITE_URL,
+    },
+    url: `${SITE_URL}/services/seo`,
+    areaServed: 'Worldwide',
+    serviceType: 'Search Engine Optimization',
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQ_ITEMS.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  }
+
   return (
-    <ServicePageTemplate
-      breadcrumbs={[
-        { label: 'Services', href: '/services' },
-        { label: 'SEO' },
-      ]}
-      title="SEO Services"
-      description="Search engine optimization is the foundation of online reputation. When people search for your name or brand, the results they see shape their perception instantly. Reputation 500 delivers SEO strategies that improve visibility, control the narrative in search results, and drive qualified organic traffic to your most important digital assets."
-      content={[
-        'Search engines remain the primary channel through which people discover and evaluate brands, professionals, and organizations. Ranking on the first page of Google is not just a traffic strategy; it is a reputation strategy. The content that appears for branded and industry-relevant searches determines whether prospects trust you, competitors outposition you, or negative content defines you.',
-        'Our SEO services are built specifically for reputation impact. While traditional SEO agencies focus solely on traffic volume, we optimize for the quality and sentiment of search results as well as their ranking position. This means prioritizing content that accurately represents your brand, suppressing unfavorable results through ethical white-hat techniques, and building a search presence that reinforces trust and authority.',
-        'We cover every dimension of modern SEO. Our technical SEO audits identify and resolve crawlability issues, site speed problems, mobile usability gaps, and structured data opportunities. Our content strategies produce authoritative, engaging material that ranks for high-value keywords and establishes thought leadership. Our link-building campaigns earn placements on respected, relevant websites that strengthen domain authority and referral visibility.',
-        'Local SEO is equally critical for businesses with physical locations or regional service areas. We optimize Google Business Profiles, build consistent local citations, manage location-based reviews, and ensure that your business appears prominently in map packs and local search results.',
-        'Every SEO engagement is grounded in data. We provide transparent reporting that tracks keyword rankings, organic traffic, search result sentiment, backlink growth, and conversion metrics. Our strategies evolve continuously based on algorithm updates, competitive shifts, and your changing business priorities.',
-      ]}
-      subServices={SERVICES_DATA.seo.subServices}
-      subServiceBasePath="/services/seo"
-      whyChooseUs={[
-        {
-          title: 'Reputation-Focused SEO',
-          description:
-            'Unlike generalist SEO agencies, we optimize for both visibility and sentiment. Every tactic is evaluated not just for its ranking impact but for how it shapes the overall perception of your brand in search results.',
-        },
-        {
-          title: 'White-Hat Methodology',
-          description:
-            'We use only ethical, search-engine-compliant techniques that deliver sustainable results. Our strategies are built to withstand algorithm updates and grow in effectiveness over time, never putting your domain or reputation at risk.',
-        },
-        {
-          title: 'Full-Stack SEO Capabilities',
-          description:
-            'From technical infrastructure and content production to link acquisition and local optimization, we handle every aspect of SEO in-house. This eliminates coordination gaps and ensures that all elements of your SEO strategy work together seamlessly.',
-        },
-      ]}
-      faqs={[
-        {
-          title: 'How is reputation-focused SEO different from standard SEO?',
-          content:
-            'Standard SEO aims to increase traffic volume. Reputation-focused SEO also considers the sentiment, accuracy, and brand alignment of the content that ranks in search results. We optimize to ensure that the top results for your brand present a positive, accurate picture while still driving meaningful traffic and conversions.',
-        },
-        {
-          title: 'How long does it take for SEO to produce results?',
-          content:
-            'SEO is a medium- to long-term investment. Technical improvements can show impact within weeks. Content and link-building efforts typically begin producing measurable ranking improvements within three to six months. We set realistic timelines during strategy development and provide monthly reporting to track progress.',
-        },
-        {
-          title: 'Can SEO help push down negative search results?',
-          content:
-            'Yes. One of the most effective applications of SEO in reputation management is search result suppression. By creating and optimizing high-quality, positive content that outranks negative results, we can significantly reduce the visibility of unfavorable content on the first page of search results.',
-        },
-        {
-          title: 'Do you work with our existing website or create new properties?',
-          content:
-            'We do both. We optimize your existing website for maximum search performance while also developing supplementary web properties, profiles, and content assets that expand your search footprint and provide additional ranking opportunities for branded queries.',
-        },
-      ]}
-      schemaName="SEO Services"
-      schemaDescription="Reputation-focused SEO services including technical SEO, content strategy, link building, and local search optimization for individuals and businesses."
-    />
+    <>
+      <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
+
+      {/* Hero */}
+      <section className="bg-white pt-28 lg:pt-36 pb-12">
+        <div className="max-w-6xl mx-auto px-4">
+          <Breadcrumbs items={[{ label: 'Services', href: '/services' }, { label: 'SEO' }]} />
+          <div className="max-w-3xl">
+            <h1
+              className="text-3xl lg:text-5xl font-extrabold text-black mb-6 reveal"
+              style={{ fontFamily: 'var(--font-heading)' }}
+            >
+              SEO Services That Drive Rankings & Revenue
+            </h1>
+            <p
+              className="text-gray-500 text-lg max-w-2xl mb-8 reveal"
+              style={{ fontFamily: 'var(--font-body)' }}
+            >
+              Stop leaving organic traffic on the table. Our data-driven SEO strategies combine
+              technical excellence, premium content, and strategic link building to put your brand
+              at the top of Google where your customers are already searching.
+            </p>
+            <div className="flex flex-wrap gap-4 reveal">
+              <Link href="/contact" className="btn-primary">
+                Get Started
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border-2 border-[#004AAD] text-[#004AAD] font-semibold rounded-md hover:bg-[#004AAD] hover:text-white transition-colors"
+              >
+                Book Consultation
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Value Props */}
+      <section className="bg-[#F5F7FA] py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-6 stagger-children">
+            {[
+              {
+                icon: 'fa-arrow-trend-up',
+                title: 'Rank Higher, Faster',
+                desc: 'Proven strategies that move your target keywords to page one of Google. We focus on high-intent terms that drive revenue, not vanity metrics.',
+              },
+              {
+                icon: 'fa-pen-nib',
+                title: 'Content That Converts',
+                desc: 'In-house editorial team creating SEO-optimized articles, landing pages, and thought leadership pieces that rank, engage, and convert visitors.',
+              },
+              {
+                icon: 'fa-link',
+                title: 'Authority-Building Links',
+                desc: 'Strategic backlink acquisition from respected publications and industry sites. Every link strengthens your domain authority and competitive moat.',
+              },
+              {
+                icon: 'fa-gear',
+                title: 'Technical Excellence',
+                desc: 'Comprehensive site health management covering speed, crawlability, structured data, core web vitals, and mobile optimization.',
+              },
+            ].map((item, i) => (
+              <div key={i} className="border border-[#004AAD]/15 rounded-2xl p-8 bg-white card-lift">
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-[#004AAD]/10 text-[#004AAD] mb-5">
+                  <i className={`fas ${item.icon} text-2xl`} />
+                </div>
+                <h3 className="text-lg font-bold text-black mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
+                  {item.title}
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="bg-white py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="reveal-left">
+              <h2
+                className="text-2xl lg:text-3xl font-bold text-black mb-6"
+                style={{ fontFamily: 'var(--font-heading)' }}
+              >
+                SEO That Works Harder Because It Is Integrated
+              </h2>
+              <p className="text-gray-500 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
+                Most SEO agencies operate in a vacuum. They chase rankings without considering how
+                those rankings affect your brand perception, reputation, or conversion rates. At
+                Reputation 500, every SEO action is part of a larger strategy that builds authority,
+                trust, and revenue simultaneously.
+              </p>
+              <p className="text-gray-500 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
+                Our team has published over 32,920 articles and built backlink profiles for clients
+                across financial services, technology, real estate, and professional services. We
+                know what it takes to rank in competitive verticals because we do it every day.
+              </p>
+              <p className="text-gray-500" style={{ fontFamily: 'var(--font-body)' }}>
+                Whether you need a full-service SEO engagement or targeted support with link
+                building, content production, or a technical audit, we scale our services to match
+                your goals and budget.
+              </p>
+            </div>
+            <div className="reveal-right">
+              <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center">
+                <span className="text-gray-400 text-lg">Image</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sub-Services Grid */}
+      <section className="bg-[#F5F7FA] py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-4 reveal"
+            style={{ fontFamily: 'var(--font-heading)' }}
+          >
+            Our SEO Services
+          </h2>
+          <p className="text-gray-500 text-center max-w-2xl mx-auto mb-12 reveal" style={{ fontFamily: 'var(--font-body)' }}>
+            Four specialized disciplines that work together to dominate your search landscape.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+            {subServices.map((service) => (
+              <ServiceCard
+                key={service.slug}
+                title={service.title}
+                description={service.description}
+                href={`${subServiceBasePath}/${service.slug}`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="bg-white py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 reveal"
+            style={{ fontFamily: 'var(--font-heading)' }}
+          >
+            Our SEO Process
+          </h2>
+          <div className="grid md:grid-cols-4 gap-8 stagger-children">
+            {[
+              { step: '01', title: 'Deep Analysis', desc: 'Technical audit, keyword research, competitor analysis, and content gap mapping. We identify every opportunity and obstacle before writing a single word.' },
+              { step: '02', title: 'Strategy & Planning', desc: 'We build a prioritized SEO roadmap with clear milestones. Content calendars, link building targets, and technical fixes are all mapped out with timelines.' },
+              { step: '03', title: 'Create & Build', desc: 'Our team produces optimized content, secures high-authority backlinks, implements technical improvements, and optimizes on-page elements in parallel.' },
+              { step: '04', title: 'Track & Refine', desc: 'Weekly ranking monitoring, monthly traffic reports, and quarterly strategy reviews. We double down on what is working and adjust what is not.' },
+            ].map((item, i) => (
+              <div key={i} className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#004AAD] text-white flex items-center justify-center text-xl font-bold" style={{ fontFamily: 'var(--font-heading)' }}>
+                  {item.step}
+                </div>
+                <h3 className="text-lg font-bold text-black mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+                  {item.title}
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-[#F5F7FA] py-16">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2
+            className="text-2xl lg:text-3xl font-bold text-black text-center mb-12 reveal"
+            style={{ fontFamily: 'var(--font-heading)' }}
+          >
+            Frequently Asked Questions
+          </h2>
+          <div className="reveal">
+            <Accordion items={FAQ_ITEMS} />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <CTABanner
+        title="Ready to Dominate Your Search Rankings?"
+        description="Get a free SEO analysis. We will audit your site, map your keyword opportunities, and show you the fastest path to page one rankings."
+        buttonText="Get Your Free SEO Analysis"
+      />
+    </>
   )
 }

@@ -129,10 +129,10 @@ export default function PricingSection() {
         {/* Footer Note */}
         <div className="mt-10 text-center">
           <p className="text-[13px] text-gray-400">
-            All plans require a minimum 6-month commitment. Custom enterprise plans available on request.
+            Note: All deliverables and outcomes are based on a 12-month annual project timeline
           </p>
           <Link
-            href="#packages"
+            href="#compare-plans"
             className="text-[13px] text-primary font-semibold mt-2 block hover:underline"
           >
             Compare packages, details below

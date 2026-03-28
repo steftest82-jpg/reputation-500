@@ -7,6 +7,7 @@ import MediaGallery from '@/components/homepage/MediaGallery'
 import ProcessAccordion from '@/components/homepage/ProcessAccordion'
 import TestimonialsSection from '@/components/homepage/TestimonialsSection'
 import PricingSection from '@/components/homepage/PricingSection'
+import ComparisonTable from '@/components/homepage/ComparisonTable'
 import CTABanner from '@/components/ui/CTABanner'
 
 export const metadata: Metadata = {
@@ -33,6 +34,7 @@ export default function HomePage() {
       <ProcessAccordion />
       <TestimonialsSection />
       <PricingSection />
+      <ComparisonTable />
     </>
   )
 }
