@@ -4,57 +4,72 @@ import ContactForm from '@/components/ui/ContactForm'
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-dark text-white">
+    <footer>
       {/* CTA Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left: Info */}
-          <div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
-              Let&apos;s start a project together
-            </h2>
-            <p className="text-gray-300 text-base leading-relaxed mb-8 max-w-lg">
-              We work closely with you to understand your risk points, brand goals, and target audience.
-              Then we build a practical reputation plan across reviews, search results, PR, and monitoring,
-              with clear reporting and measurable outcomes.
-            </p>
-            <div className="space-y-4">
-              <a
-                href="mailto:info@reputation500.com"
-                className="flex items-start gap-3 group"
+      <section className="bg-[#0B1E3D] relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            {/* Left Column */}
+            <div className="reveal-left">
+              <h2
+                className="text-3xl lg:text-[2.75rem] font-extrabold text-white leading-tight tracking-tight mb-6"
+                style={{ fontFamily: 'var(--font-heading)' }}
               >
-                <div>
-                  <h4 className="text-white font-semibold text-sm mb-1">Send us an email:</h4>
-                  <p className="text-gray-400 group-hover:text-primary transition-colors">
-                    info@reputation500.com
-                  </p>
-                </div>
+                Let&apos;s start a project together
+              </h2>
+              <p
+                className="text-gray-400 text-[15px] leading-relaxed mb-10 max-w-lg"
+                style={{ fontFamily: 'var(--font-body)' }}
+              >
+                Ready to elevate your brand&apos;s reputation? Get in touch with
+                our team and discover how we can help you build lasting trust
+                and credibility online.
+              </p>
+
+              <a href="mailto:info@reputation500.com" className="inline-block group">
+                <span
+                  className="block text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-1"
+                  style={{ fontFamily: 'var(--font-body)' }}
+                >
+                  Send us an email:
+                </span>
+                <span
+                  className="text-white font-medium hover:text-primary transition-colors"
+                  style={{ fontFamily: 'var(--font-body)' }}
+                >
+                  info@reputation500.com
+                </span>
               </a>
             </div>
-          </div>
 
-          {/* Right: Contact Form */}
-          <div>
-            <ContactForm variant="footer" />
+            {/* Right Column */}
+            <div className="reveal-right">
+              <ContactForm variant="footer" />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-white/10 bg-[#081629]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
             <Link href="/">
               <Image
                 src="/images/logo.png"
                 alt="Reputation 500"
-                width={160}
-                height={32}
-                className="h-7 w-auto brightness-0 invert"
+                width={140}
+                height={28}
+                className="brightness-0 invert h-7 w-auto"
               />
             </Link>
-            <p className="text-gray-400 text-sm text-center">
-              &copy; {new Date().getFullYear()} All Rights Reserved by Reputation500, part of ADCX Tech Solutions LTD
+            <p
+              className="text-gray-500 text-xs"
+              style={{ fontFamily: 'var(--font-body)' }}
+            >
+              &copy; {new Date().getFullYear()} Reputation 500. All rights reserved.
             </p>
           </div>
         </div>

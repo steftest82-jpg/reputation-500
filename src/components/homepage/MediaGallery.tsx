@@ -1,55 +1,55 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import Image from "next/image";
+import { useState } from 'react'
+import Image from 'next/image'
 
-const tabs = [
-  "All",
-  "BUSINESS",
-  "FASHION",
-  "TECH",
-  "WEB 3",
-  "HEALTH",
-  "FINANCE",
-  "LIQUOR",
-  "REAL ESTATE",
-  "LIFESTYLE",
-  "ENTERTAINMENT",
-];
+const TABS = [
+  'ALL',
+  'BUSINESS',
+  'FASHION',
+  'TECH',
+  'WEB 3',
+  'HEALTH',
+  'FINANCE',
+  'LIQUOR',
+  'REAL ESTATE',
+  'LIFESTYLE',
+  'ENTERTAINMENT',
+]
 
-const logos = [
-  { src: "/images/media/the-brag.webp", alt: "The Brag" },
-  { src: "/images/media/village-voice.webp", alt: "Village Voice" },
-  { src: "/images/media/womens-journal.webp", alt: "Women's Journal" },
-  { src: "/images/media/us-business-news.webp", alt: "US Business News" },
-  { src: "/images/media/the-standard.webp", alt: "The Standard" },
-  { src: "/images/media/the-advocate.webp", alt: "The Advocate" },
-  { src: "/images/media/denver-gazette.webp", alt: "Denver Gazette" },
-];
+const MEDIA_LOGOS = [
+  { src: '/images/media/the-brag.webp', alt: 'The Brag' },
+  { src: '/images/media/village-voice.webp', alt: 'Village Voice' },
+  { src: '/images/media/womens-journal.webp', alt: "Women's Journal" },
+  { src: '/images/media/us-business-news.webp', alt: 'US Business News' },
+  { src: '/images/media/the-standard.webp', alt: 'The Standard' },
+  { src: '/images/media/the-advocate.webp', alt: 'The Advocate' },
+  { src: '/images/media/denver-gazette.webp', alt: 'Denver Gazette' },
+]
 
 export default function MediaGallery() {
-  const [activeTab, setActiveTab] = useState("All");
+  const [activeTab, setActiveTab] = useState('ALL')
 
   return (
-    <section className="bg-[#F5F7FA] py-16 lg:py-24">
+    <section className="bg-bg-section py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
-          className="text-2xl lg:text-3xl font-bold text-center mb-4"
-          style={{ fontFamily: "var(--font-heading)" }}
+          className="text-2xl lg:text-3xl font-extrabold text-center mb-3 tracking-tight"
+          style={{ fontFamily: 'var(--font-heading)' }}
         >
           We get your article and/or interview featured in
         </h2>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-1 mb-10">
-          {tabs.map((tab) => (
+        <div className="flex flex-wrap justify-center gap-2 mt-6 mb-10">
+          {TABS.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-3 py-1.5 text-xs font-semibold uppercase tracking-wide cursor-pointer transition ${
+              className={`px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider cursor-pointer rounded-full transition-all duration-300 ${
                 activeTab === tab
-                  ? "text-primary border-b-2 border-primary"
-                  : "text-gray-400 hover:text-gray-600"
+                  ? 'bg-primary text-white shadow-sm'
+                  : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'
               }`}
             >
               {tab}
@@ -58,30 +58,30 @@ export default function MediaGallery() {
         </div>
 
         {/* Logo Grid */}
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {logos.map((logo) => (
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 stagger-children">
+          {MEDIA_LOGOS.map((logo) => (
             <div
               key={logo.alt}
-              className="bg-white border border-gray-100 rounded-lg p-4 flex items-center justify-center h-20 hover:shadow-md transition"
+              className="bg-white rounded-xl p-5 flex items-center justify-center h-20 border border-gray-100 hover:shadow-lg hover:border-primary/20 transition-all duration-300 group"
             >
               <Image
                 src={logo.src}
                 alt={logo.alt}
                 width={120}
-                height={48}
-                className="grayscale hover:grayscale-0 transition object-contain"
+                height={40}
+                className="grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 object-contain max-h-10 w-auto"
               />
             </div>
           ))}
         </div>
 
         {/* Load More */}
-        <div className="flex justify-center mt-8">
-          <button className="border border-gray-300 rounded-md px-6 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100 transition">
+        <div className="mt-8 text-center">
+          <button className="bg-white border border-gray-200 rounded-full px-8 py-2.5 text-[13px] font-semibold text-gray-500 hover:text-primary hover:border-primary/30 hover:shadow-sm transition-all">
             Load More
           </button>
         </div>
       </div>
     </section>
-  );
+  )
 }

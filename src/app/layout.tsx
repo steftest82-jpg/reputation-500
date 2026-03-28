@@ -1,19 +1,20 @@
 import type { Metadata } from 'next'
-import { Montserrat, Inter, Syne } from 'next/font/google'
+import { Plus_Jakarta_Sans, DM_Sans, Syne } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import ScrollRevealProvider from '@/components/ui/ScrollRevealProvider'
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from '@/lib/constants'
 import JsonLd from '@/components/seo/JsonLd'
 
-const montserrat = Montserrat({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800'],
   variable: '--font-heading',
   display: 'swap',
 })
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
   variable: '--font-body',
@@ -22,7 +23,7 @@ const inter = Inter({
 
 const syne = Syne({
   subsets: ['latin'],
-  weight: ['600', '700'],
+  weight: ['600', '700', '800'],
   variable: '--font-brand',
   display: 'swap',
 })
@@ -47,10 +48,7 @@ export const metadata: Metadata = {
     title: `${SITE_NAME} | Leading Online Reputation Management Agency`,
     description: SITE_DESCRIPTION,
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 }
 
 const organizationSchema = {
@@ -64,7 +62,6 @@ const organizationSchema = {
     contactType: 'customer service',
     email: 'info@reputation500.com',
   },
-  sameAs: [],
 }
 
 const websiteSchema = {
@@ -74,13 +71,9 @@ const websiteSchema = {
   url: SITE_URL,
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${inter.variable} ${syne.variable}`}>
+    <html lang="en" className={`${jakarta.variable} ${dmSans.variable} ${syne.variable}`}>
       <head>
         <link rel="icon" href="/favicon.png" />
         <link
@@ -93,6 +86,7 @@ export default function RootLayout({
       <body className="antialiased">
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
+        <ScrollRevealProvider />
         <Navbar />
         <main>{children}</main>
         <Footer />

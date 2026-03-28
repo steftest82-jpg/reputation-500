@@ -1,32 +1,29 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from 'react';
 
 const checklistItems = [
-  "Online Reputation Management",
-  "Guaranteed Media Publicity",
-  "Google 1st Page Ranking",
-  "Be in AI Answers / Citations",
-  "Push Negative Search Results Away",
+  'Online Reputation Management',
+  'Guaranteed Media Publicity',
+  'Google 1st Page Ranking',
+  'Be in AI Answers / Citations',
+  'Push Negative Search Results Away',
 ];
 
-const stats = [
-  { target: 10, suffix: "+", label: "Years of experience" },
-  { target: 500, suffix: "+", label: "Reputation Campaigns Delivered" },
-  { target: 78, suffix: "+", label: "International Clients" },
+const statsData = [
+  { target: 10, suffix: '+', label: 'Years of experience' },
+  { target: 500, suffix: '+', label: 'Reputation Campaigns Delivered' },
+  { target: 78, suffix: '+', label: 'International Clients' },
 ];
 
 function AnimatedCounter({
   target,
   suffix,
-  label,
 }: {
   target: number;
   suffix: string;
-  label: string;
 }) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLSpanElement>(null);
   const hasAnimated = useRef(false);
 
   useEffect(() => {
@@ -37,14 +34,22 @@ function AnimatedCounter({
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true;
-          const duration = 1500;
+          const duration = 2000;
           const startTime = performance.now();
+
+          function easeOutCubic(t: number) {
+            return 1 - Math.pow(1 - t, 3);
+          }
 
           function animate(currentTime: number) {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            setCount(Math.floor(eased * target));
+            const easedProgress = easeOutCubic(progress);
+            const current = Math.round(easedProgress * target);
+
+            if (el) {
+              el.textContent = `${current}${suffix}`;
+            }
 
             if (progress < 1) {
               requestAnimationFrame(animate);
@@ -59,89 +64,113 @@ function AnimatedCounter({
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [target]);
+  }, [target, suffix]);
 
   return (
-    <div
+    <span
       ref={ref}
-      className="bg-white border border-gray-200 rounded-xl p-8 text-center"
+      className="text-6xl font-extrabold tracking-tighter"
+      style={{
+        fontFamily: 'var(--font-heading)',
+        color: 'var(--heading, #000)',
+      }}
     >
-      <p
-        className="text-5xl font-bold text-heading mb-2"
-        style={{ fontFamily: "var(--font-heading)" }}
-      >
-        {count}
-        {suffix}
-      </p>
-      <p className="text-sm text-gray-500 mt-1">{label}</p>
-    </div>
-  );
-}
-
-function CheckIcon() {
-  return (
-    <svg
-      className="w-6 h-6 flex-shrink-0"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle cx="12" cy="12" r="12" fill="#004AAD" />
-      <path
-        d="M7.5 12.5L10.5 15.5L16.5 9.5"
-        stroke="white"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+      0{suffix}
+    </span>
   );
 }
 
 export default function FeaturesChecklist() {
   return (
-    <section className="bg-white py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column */}
-          <div>
+    <section className="bg-white py-20 lg:py-28">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Two-column layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* LEFT */}
+          <div className="reveal-left">
             <h2
-              className="text-3xl lg:text-4xl font-bold text-heading leading-tight mb-6"
-              style={{ fontFamily: "var(--font-heading)" }}
+              className="text-3xl lg:text-[2.75rem] font-extrabold leading-tight tracking-tight mb-6"
+              style={{
+                fontFamily: 'var(--font-heading)',
+                color: 'var(--heading, #000)',
+              }}
             >
               Protect, Control &amp; Dominate Your Online Presence
             </h2>
-            <p className="text-gray-500 text-base leading-relaxed">
-              We work closely with you to understand your risk points, brand
-              goals, and target audience. Then we build a practical reputation
-              plan across reviews, search results, PR, and monitoring, with
-              clear reporting and measurable outcomes.
+            <p
+              className="text-gray-500 text-[15px] leading-relaxed max-w-lg"
+              style={{ fontFamily: 'var(--font-body)' }}
+            >
+              We help businesses and individuals take full control of their
+              digital reputation. From suppressing negative search results to
+              building authoritative brand coverage, our proven strategies ensure
+              your online presence reflects the trust and credibility you
+              deserve.
             </p>
           </div>
 
-          {/* Right Column */}
-          <div className="grid grid-cols-2 gap-4 lg:gap-5">
-            {checklistItems.map((item) => (
-              <div key={item} className="flex items-center gap-3">
-                <CheckIcon />
-                <span className="text-sm font-medium text-heading">
-                  {item}
-                </span>
-              </div>
-            ))}
+          {/* RIGHT */}
+          <div className="reveal-right">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {checklistItems.map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-3 bg-white rounded-xl px-5 py-4 border border-gray-100 shadow-sm hover:shadow-md hover:border-[#004AAD]/20 transition-all duration-300"
+                >
+                  {/* Check icon */}
+                  <div className="w-7 h-7 rounded-full bg-[#004AAD] flex items-center justify-center flex-shrink-0">
+                    <svg
+                      width="12"
+                      height="10"
+                      viewBox="0 0 12 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 5.5L4 8.5L11 1.5"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    className="text-sm font-semibold tracking-tight"
+                    style={{
+                      fontFamily: 'var(--font-heading)',
+                      color: 'var(--heading, #000)',
+                    }}
+                  >
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Stats Row */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {stats.map((stat) => (
-            <AnimatedCounter
-              key={stat.label}
-              target={stat.target}
-              suffix={stat.suffix}
-              label={stat.label}
-            />
-          ))}
+        {/* Stats row */}
+        <div className="mt-20 stagger-children">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {statsData.map((stat) => (
+              <div
+                key={stat.label}
+                className="bg-white rounded-2xl p-10 border border-gray-100 text-center card-lift"
+              >
+                <AnimatedCounter
+                  target={stat.target}
+                  suffix={stat.suffix}
+                />
+                <p
+                  className="text-sm text-gray-400 mt-2 font-medium"
+                  style={{ fontFamily: 'var(--font-body)' }}
+                >
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

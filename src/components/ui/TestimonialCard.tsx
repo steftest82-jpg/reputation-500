@@ -7,27 +7,36 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ name, role, text, rating }: TestimonialCardProps) {
   return (
-    <div className="h-full flex flex-col p-6 lg:p-8 border border-border rounded-lg bg-white">
+    <div className="h-full flex flex-col bg-white rounded-2xl p-7 lg:p-8 border border-gray-100 card-lift">
       {/* Stars */}
-      <div className="flex gap-1 mb-4 text-gold">
+      <div className="flex gap-0.5 mb-5">
         {Array.from({ length: rating }).map((_, i) => (
-          <i key={i} className="fas fa-star text-sm" />
+          <i key={i} className="fa-solid fa-star text-[#C9A84C] text-xs" />
         ))}
       </div>
 
       {/* Quote */}
-      <p className="text-text-light text-sm leading-relaxed flex-1 mb-6">
-        {text}
+      <p
+        className="text-gray-500 text-[15px] leading-relaxed flex-1 mb-6"
+        style={{ fontFamily: 'var(--font-body)' }}
+      >
+        &ldquo;{text}&rdquo;
       </p>
 
       {/* Author */}
-      <div className="mt-auto">
-        <h6 className="text-heading font-bold text-sm" style={{ fontFamily: 'var(--font-heading)' }}>
+      <div className="mt-auto pt-5 border-t border-gray-100">
+        <p
+          className="text-sm font-bold text-heading tracking-tight"
+          style={{ fontFamily: 'var(--font-heading)' }}
+        >
           {name}
-        </h6>
-        <span className="text-text-muted text-xs">
+        </p>
+        <p
+          className="text-xs text-gray-400 mt-0.5 leading-relaxed"
+          style={{ fontFamily: 'var(--font-body)' }}
+        >
           {role}
-        </span>
+        </p>
       </div>
     </div>
   )

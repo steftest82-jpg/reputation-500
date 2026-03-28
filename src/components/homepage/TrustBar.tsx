@@ -1,60 +1,77 @@
 export default function TrustBar() {
+  const stats = [
+    {
+      value: '4.8',
+      stars: true,
+      label: 'Star Rating',
+    },
+    {
+      value: '78+',
+      label: 'Global Clients',
+    },
+    {
+      value: '21',
+      label: 'Countries',
+    },
+    {
+      value: '32,920+',
+      label: 'Articles Published',
+    },
+  ];
+
+  const badges = [
+    { platform: 'Google', rating: '4.7' },
+    { platform: 'G2', rating: '4.8' },
+    { platform: 'Clutch', rating: '5.0' },
+    { platform: 'Trustpilot', rating: '4.5' },
+  ];
+
   return (
-    <section className="bg-white py-7 px-4 lg:px-10">
-      <div className="max-w-5xl mx-auto flex items-center justify-center flex-wrap gap-6 lg:gap-9">
-        {/* 4.8 Star Rating */}
-        <div className="text-center">
-          <div className="flex items-baseline gap-1.5 justify-center">
-            <span className="font-bold text-2xl text-[#0B1E3D]">4.8</span>
-            <span className="text-[#C9A84C] text-sm tracking-widest">★★★★★</span>
+    <section className="bg-white py-6 border-b border-gray-100 relative z-10 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex items-center justify-center flex-wrap gap-8 lg:gap-10">
+          {stats.map((stat, i) => (
+            <div key={i} className="contents">
+              {i > 0 && (
+                <div className="hidden lg:block w-px h-10 bg-gradient-to-b from-transparent via-gray-200 to-transparent" />
+              )}
+              <div className="text-center">
+                <span
+                  className="text-2xl font-extrabold text-[#0B1E3D] tracking-tight"
+                  style={{ fontFamily: 'var(--font-heading)' }}
+                >
+                  {stat.value}
+                </span>
+                {stat.stars && (
+                  <span className="text-[#C9A84C] text-xs tracking-widest block">
+                    ★★★★★
+                  </span>
+                )}
+                <span
+                  className="text-[10px] text-gray-400 uppercase tracking-wider mt-0.5 block"
+                  style={{ fontFamily: 'var(--font-body)' }}
+                >
+                  {stat.label}
+                </span>
+              </div>
+            </div>
+          ))}
+
+          {/* Final divider before badges */}
+          <div className="hidden lg:block w-px h-10 bg-gradient-to-b from-transparent via-gray-200 to-transparent" />
+
+          {/* Platform badges */}
+          <div className="flex gap-2">
+            {badges.map((badge) => (
+              <span
+                key={badge.platform}
+                className="bg-gray-50 border border-gray-200/80 rounded-md px-3 py-1.5 text-[11px] font-semibold text-gray-600 hover:border-[#004AAD]/30 hover:bg-[#e8f0fe]/50 transition-all cursor-default"
+                style={{ fontFamily: 'var(--font-body)' }}
+              >
+                {badge.platform} ★ {badge.rating}
+              </span>
+            ))}
           </div>
-          <span className="text-xs text-gray-400 mt-0.5 block">Star Rating</span>
-        </div>
-
-        {/* Divider */}
-        <div className="hidden md:block w-px h-10 bg-gray-200" />
-
-        {/* 78+ Global Clients */}
-        <div className="text-center">
-          <span className="font-bold text-2xl text-[#0B1E3D] block">78+</span>
-          <span className="text-xs text-gray-400">Global Clients</span>
-        </div>
-
-        {/* Divider */}
-        <div className="hidden md:block w-px h-10 bg-gray-200" />
-
-        {/* 21 Countries */}
-        <div className="text-center">
-          <span className="font-bold text-2xl text-[#0B1E3D] block">21</span>
-          <span className="text-xs text-gray-400">Countries</span>
-        </div>
-
-        {/* Divider */}
-        <div className="hidden md:block w-px h-10 bg-gray-200" />
-
-        {/* 32,920+ Articles Published */}
-        <div className="text-center">
-          <span className="font-bold text-2xl text-[#0B1E3D] block">32,920+</span>
-          <span className="text-xs text-gray-400">Articles Published</span>
-        </div>
-
-        {/* Divider */}
-        <div className="hidden md:block w-px h-10 bg-gray-200" />
-
-        {/* Platform Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-2">
-          <span className="bg-gray-100 border border-gray-200 rounded px-3 py-1.5 text-xs font-semibold text-gray-700">
-            Google ★ 4.7
-          </span>
-          <span className="bg-gray-100 border border-gray-200 rounded px-3 py-1.5 text-xs font-semibold text-gray-700">
-            G2 ★ 4.8
-          </span>
-          <span className="bg-gray-100 border border-gray-200 rounded px-3 py-1.5 text-xs font-semibold text-gray-700">
-            Clutch ★ 5.0
-          </span>
-          <span className="bg-gray-100 border border-gray-200 rounded px-3 py-1.5 text-xs font-semibold text-gray-700">
-            Trustpilot ★ 4.5
-          </span>
         </div>
       </div>
     </section>

@@ -1,63 +1,62 @@
-import Accordion from '@/components/ui/Accordion'
 import Link from 'next/link'
+import Accordion from '@/components/ui/Accordion'
 
-const PROCESS_ITEMS = [
+const ACCORDION_ITEMS = [
   {
     title: '01/ Reputation Audit',
     content:
-      'We review Google results, review profiles, brand mentions, and key business listings. You get a comprehensive scorecard plus a prioritized action plan.',
+      'We begin with a comprehensive audit of your current online presence. Our team analyzes search results, reviews, social mentions, and brand sentiment to identify vulnerabilities and opportunities across every digital touchpoint.',
   },
   {
     title: '02/ Strategy & Execution',
     content:
-      'We build the right mix of reputation monitoring, ratings optimization, digital PR, link building, SEO content, and brand messaging, based on impact and effort.',
+      'Based on the audit findings, we craft a tailored reputation strategy combining content creation, media placements, SEO optimization, and review management. Our team executes every element with precision, ensuring consistent brand messaging across all channels.',
   },
   {
     title: '03/ Monitoring & Improvement',
     content:
-      'We track rankings, ratings, sentiment, and mentions continuously. We report progress, react fast to new issues, and keep improving performance.',
+      'Reputation management is an ongoing process. We continuously monitor your digital footprint, track sentiment shifts, and refine our approach to maintain a strong, positive online presence that drives trust and business growth.',
   },
 ]
 
 export default function ProcessAccordion() {
   return (
-    <section className="bg-white py-16 lg:py-24">
+    <section className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left column */}
-          <div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          {/* Left Column */}
+          <div className="reveal-left">
             <h2
-              className="text-3xl lg:text-4xl font-bold text-heading leading-tight mb-6"
+              className="text-3xl lg:text-[2.75rem] font-extrabold text-heading leading-tight tracking-tight mb-6"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
-              Our Proven Reputation Management Process
+              A proven process to protect and elevate your reputation
             </h2>
-            <p className="text-gray-500 text-base leading-relaxed mb-4">
-              Every engagement starts with a clear reputation audit and
-              measurable goals. We map what people see across search results,
-              reviews, social, news, and then prioritize the fastest wins and the
-              highest-impact fixes.
+            <p
+              className="text-gray-500 text-[15px] leading-relaxed mb-4"
+              style={{ fontFamily: 'var(--font-body)' }}
+            >
+              Your online reputation is often the first impression you make. We help individuals and businesses take
+              control of their digital narrative with a structured, results-driven approach.
             </p>
-            <p className="text-gray-500 text-base leading-relaxed">
-              Some cases require additional steps (crisis response,
-              multi-location review workflows, ongoing PR). The method stays
-              consistent: diagnose, execute, measure, and protect your reputation
-              over time.
+            <p
+              className="text-gray-500 text-[15px] leading-relaxed mb-4"
+              style={{ fontFamily: 'var(--font-body)' }}
+            >
+              From comprehensive audits to ongoing monitoring, our three-step process ensures your brand is represented
+              accurately, positively, and prominently across every search result and platform that matters.
             </p>
           </div>
 
-          {/* Right column */}
-          <div>
-            <Accordion items={PROCESS_ITEMS} />
+          {/* Right Column */}
+          <div className="reveal-right">
+            <Accordion items={ACCORDION_ITEMS} defaultOpen={0} />
           </div>
         </div>
 
         {/* CTA */}
-        <div className="mt-12 text-center">
-          <Link
-            href="/contact"
-            className="inline-block border-2 border-primary text-primary font-semibold px-8 py-3 rounded-md hover:bg-primary hover:text-white transition"
-          >
+        <div className="mt-14 text-center">
+          <Link href="/contact" className="btn-outline">
             Book a free consultation
           </Link>
         </div>

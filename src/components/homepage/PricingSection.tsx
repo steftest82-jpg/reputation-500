@@ -1,113 +1,144 @@
-import { PRICING_PLANS } from '@/lib/constants'
 import Link from 'next/link'
+import { PRICING_PLANS } from '@/lib/constants'
+
+function CheckIcon() {
+  return (
+    <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="none">
+      <circle cx="10" cy="10" r="10" fill="currentColor" opacity="0.1" />
+      <path
+        d="M6 10.5L8.5 13L14 7.5"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
 
 export default function PricingSection() {
   return (
-    <section className="bg-white py-16 lg:py-24">
+    <section className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
-          className="text-3xl lg:text-4xl font-bold text-center mb-2"
+          className="text-3xl lg:text-[2.75rem] font-extrabold text-center tracking-tight mb-2"
           style={{ fontFamily: 'var(--font-heading)' }}
         >
-          Online Reputation Management 360 Packages
+          Transparent pricing, real results
         </h2>
-        <h3 className="text-lg text-gray-500 text-center mb-12">
-          Full Reputation, handled.
-        </h3>
+        <p
+          className="text-gray-400 text-[15px] text-center mb-14"
+          style={{ fontFamily: 'var(--font-body)' }}
+        >
+          Choose the plan that fits your reputation goals. All plans include dedicated account management.
+        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
-          {PRICING_PLANS.map((plan) => (
-            <div
-              key={plan.name}
-              className="relative bg-white border border-gray-200 rounded-xl p-6 h-full flex flex-col"
-            >
-              {plan.badge && (
-                <span className="absolute top-0 right-5 -translate-y-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
-                  {plan.badge}
-                </span>
-              )}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 stagger-children">
+          {PRICING_PLANS.map((plan) => {
+            const isPopular = plan.badge === 'POPULAR'
 
-              <h4
-                className="text-xl font-bold text-heading mb-2"
-                style={{ fontFamily: 'var(--font-heading)' }}
+            return (
+              <div
+                key={plan.name}
+                className="relative bg-white rounded-2xl p-7 border border-gray-100 h-full flex flex-col card-lift"
               >
-                {plan.name}
-              </h4>
+                {/* Badge */}
+                {isPopular && (
+                  <span className="absolute -top-3.5 right-6 bg-primary text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-lg shadow-primary/20">
+                    {plan.badge}
+                  </span>
+                )}
 
-              <p className="mb-4">
-                <span className="font-bold text-sm">Great for: </span>
-                <span className="text-sm text-gray-500">{plan.description}</span>
-              </p>
-
-              <div className="flex items-baseline gap-1">
-                <span className="text-lg font-semibold text-gray-400">
-                  {plan.currency}
-                </span>
-                <span
-                  className="text-4xl font-bold text-heading"
+                {/* Plan Name */}
+                <h3
+                  className="text-xl font-bold text-heading tracking-tight mb-2"
                   style={{ fontFamily: 'var(--font-heading)' }}
                 >
-                  {plan.price}
-                </span>
-                <span className="text-sm text-gray-400 ml-1">{plan.period}</span>
-              </div>
+                  {plan.name}
+                </h3>
 
-              <hr className="my-5 border-t border-gray-200" />
-
-              <ul className="space-y-3">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <svg
-                      className="w-5 h-5 text-primary flex-shrink-0 mt-0.5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2.5}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-sm text-gray-600">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <hr className="my-5 border-t border-gray-200" />
-
-              <div>
-                <p className="text-xs font-bold uppercase text-gray-400 mb-1">
-                  Includes:
+                {/* Description */}
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">Great for:</p>
+                <p
+                  className="text-[13px] text-gray-500 leading-relaxed mb-5"
+                  style={{ fontFamily: 'var(--font-body)' }}
+                >
+                  {plan.description}
                 </p>
-                <p className="text-xs text-gray-500 leading-relaxed">
+
+                {/* Price */}
+                <div className="flex items-baseline gap-1 mb-5">
+                  <span className="text-lg font-semibold text-gray-300">{plan.currency}</span>
+                  <span
+                    className="text-4xl font-extrabold text-heading tracking-tighter"
+                    style={{ fontFamily: 'var(--font-heading)' }}
+                  >
+                    {plan.price}
+                  </span>
+                  <span className="text-[13px] text-gray-400 ml-1">{plan.period}</span>
+                </div>
+
+                {/* Divider */}
+                <div className="border-t border-gray-100 my-5" />
+
+                {/* Features */}
+                <ul className="space-y-3 mb-5">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-2.5">
+                      <CheckIcon />
+                      <span
+                        className="text-[13px] text-gray-600 leading-relaxed"
+                        style={{ fontFamily: 'var(--font-body)' }}
+                      >
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Divider */}
+                <div className="border-t border-gray-100 my-5" />
+
+                {/* Includes */}
+                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Includes</p>
+                <p
+                  className="text-[12px] text-gray-500 leading-relaxed"
+                  style={{ fontFamily: 'var(--font-body)' }}
+                >
                   {plan.includes}
                 </p>
-              </div>
 
-              <div className="mt-auto pt-4">
-                <Link
-                  href={`/contact?package=${plan.name}`}
-                  className="block w-full text-center py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition"
-                >
-                  Learn More
-                </Link>
+                {/* CTA */}
+                <div className="mt-auto pt-5">
+                  <Link
+                    href={`/contact?package=${plan.name}`}
+                    className={`block w-full text-center py-3.5 rounded-xl font-semibold text-[13px] transition-all duration-300 ${
+                      isPopular
+                        ? 'bg-primary text-white hover:bg-primary-dark shadow-lg shadow-primary/15'
+                        : 'bg-gray-50 text-heading border border-gray-200 hover:bg-primary hover:text-white hover:border-primary'
+                    }`}
+                  >
+                    Get Started
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
-        <div className="mt-8 text-center">
-          <p className="text-sm text-gray-400">
-            Note: All deliverables and outcomes are based on a 12-month annual
-            project timeline
+        {/* Footer Note */}
+        <div className="mt-10 text-center">
+          <p className="text-[13px] text-gray-400">
+            All plans require a minimum 6-month commitment. Custom enterprise plans available on request.
           </p>
-          <p className="mt-2 text-sm text-primary font-medium">
+          <Link
+            href="#packages"
+            className="text-[13px] text-primary font-semibold mt-2 block hover:underline"
+          >
             Compare packages, details below
-          </p>
-          <div className="mt-4">
-            <i className="fas fa-angle-double-down text-primary text-2xl" />
+          </Link>
+          <div className="mt-3 text-primary text-xl">
+            <i className="fa-solid fa-angles-down" />
           </div>
         </div>
       </div>
