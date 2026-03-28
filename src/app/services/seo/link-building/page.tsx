@@ -119,7 +119,7 @@ export default function LinkBuildingPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-6 mb-6">
             Link Building Services
           </h1>
-          <p className="text-xl text-gray-500 max-w-3xl">
+          <p className="text-xl text-gray-800 max-w-3xl">
             Earn high-authority backlinks that strengthen your domain, improve rankings, and drive
             qualified referral traffic. Every link we build is relevant, editorial, and built to
             last.
@@ -135,7 +135,7 @@ export default function LinkBuildingPage() {
               <SectionHeading subtitle="The Problem">
                 Thin Link Profiles Limit Your Rankings
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Search engines treat backlinks as votes of confidence. Without a strong, diverse link
                 profile, your content struggles to compete regardless of how well-optimized it is.
                 Competitors with more authoritative backlinks consistently outrank pages with better
@@ -146,7 +146,7 @@ export default function LinkBuildingPage() {
               <SectionHeading subtitle="The Solution">
                 Strategic, Authority-Driven Link Acquisition
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Reputation 500 builds your backlink profile through genuine editorial placements on
                 high-authority, relevant websites. Our outreach-driven approach earns links that
                 Google values, compounding your domain strength and pushing your most important pages
@@ -170,7 +170,7 @@ export default function LinkBuildingPage() {
                   {index + 1}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <p className="text-gray-900">{step.description}</p>
               </div>
             ))}
           </div>

@@ -45,7 +45,7 @@ export default function CaseStudiesPage() {
             ]}
           />
           <h1 className="text-4xl md:text-5xl font-bold mt-4 text-white">Case Studies</h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-500">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-800">
             Real results from real campaigns: see how we have delivered for
             clients worldwide.
           </p>
@@ -71,10 +71,10 @@ export default function CaseStudiesPage() {
                 <h3 className="mt-4 text-xl font-semibold text-gray-900">
                   {cs.title}
                 </h3>
-                <p className="mt-3 text-gray-600 leading-relaxed flex-1">
+                <p className="mt-3 text-gray-900 leading-relaxed flex-1">
                   {cs.description}
                 </p>
-                <span className="mt-6 inline-block self-start text-sm font-medium text-gray-600 bg-gray-100 rounded px-3 py-1">
+                <span className="mt-6 inline-block self-start text-sm font-medium text-gray-900 bg-gray-100 rounded px-3 py-1">
                   Coming Soon
                 </span>
               </div>

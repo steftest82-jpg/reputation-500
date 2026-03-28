@@ -119,7 +119,7 @@ export default function GoogleAdsPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-6 mb-6">
             Google Ads Management
           </h1>
-          <p className="text-xl text-gray-500 max-w-3xl">
+          <p className="text-xl text-gray-800 max-w-3xl">
             Turn ad spend into predictable revenue. We build and optimize Google Ads campaigns that
             capture high-intent searches, lower your cost per acquisition, and scale profitably as
             your business grows.
@@ -135,7 +135,7 @@ export default function GoogleAdsPage() {
               <SectionHeading subtitle="The Problem">
                 Wasted Ad Spend With No Clear Return
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Too many businesses pour money into Google Ads without a structured strategy. Broad
                 keywords bleed budget, poor landing pages tank conversion rates, and a lack of proper
                 tracking makes it impossible to know which campaigns actually generate revenue. The
@@ -146,7 +146,7 @@ export default function GoogleAdsPage() {
               <SectionHeading subtitle="The Solution">
                 Data-Driven Campaigns Built for ROI
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Reputation 500 builds Google Ads campaigns from the ground up with profitability as
                 the target metric. We focus on high-intent keywords, tight account structures,
                 rigorous A/B testing, and full-funnel conversion tracking. Every dollar is accounted
@@ -170,7 +170,7 @@ export default function GoogleAdsPage() {
                   {index + 1}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <p className="text-gray-900">{step.description}</p>
               </div>
             ))}
           </div>

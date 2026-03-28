@@ -119,7 +119,7 @@ export default function LinkedInAdsPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-6 mb-6">
             LinkedIn Ads Management
           </h1>
-          <p className="text-xl text-gray-500 max-w-3xl">
+          <p className="text-xl text-gray-800 max-w-3xl">
             Reach the decision-makers who matter most. Our LinkedIn Ads campaigns target prospects by
             job title, company, and seniority to fill your B2B pipeline with qualified leads.
           </p>
@@ -134,7 +134,7 @@ export default function LinkedInAdsPage() {
               <SectionHeading subtitle="The Problem">
                 B2B Leads Are Hard to Find on Consumer Platforms
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Running B2B campaigns on platforms designed for consumer audiences leads to wasted
                 impressions and unqualified leads. Interest-based targeting cannot match the precision
                 needed to reach specific job titles, industries, and company sizes. Sales teams end
@@ -145,7 +145,7 @@ export default function LinkedInAdsPage() {
               <SectionHeading subtitle="The Solution">
                 Precision Targeting on the World's B2B Network
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Reputation 500 leverages LinkedIn's professional data to put your message in front of
                 exactly the right people. We combine job-title targeting, company lists, and ABM
                 strategies with compelling creative to generate leads that your sales team actually
@@ -169,7 +169,7 @@ export default function LinkedInAdsPage() {
                   {index + 1}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <p className="text-gray-900">{step.description}</p>
               </div>
             ))}
           </div>

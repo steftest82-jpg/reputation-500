@@ -41,7 +41,7 @@ export default function BlogPage() {
           <h1 className="text-4xl md:text-5xl font-bold mt-4 text-white">
             Reputation Management Insights
           </h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-500">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-800">
             Expert advice, industry trends, and actionable strategies from our
             team.
           </p>
@@ -61,14 +61,14 @@ export default function BlogPage() {
                 key={post.title}
                 className="border border-gray-200 rounded-lg p-6 flex flex-col"
               >
-                <span className="text-sm text-gray-600">{post.date}</span>
+                <span className="text-sm text-gray-900">{post.date}</span>
                 <h3 className="mt-3 text-xl font-semibold text-gray-900">
                   {post.title}
                 </h3>
-                <p className="mt-3 text-gray-600 leading-relaxed flex-1">
+                <p className="mt-3 text-gray-900 leading-relaxed flex-1">
                   {post.excerpt}
                 </p>
-                <span className="mt-6 inline-block self-start text-sm font-medium text-gray-600 bg-gray-100 rounded px-3 py-1">
+                <span className="mt-6 inline-block self-start text-sm font-medium text-gray-900 bg-gray-100 rounded px-3 py-1">
                   Coming Soon
                 </span>
               </div>

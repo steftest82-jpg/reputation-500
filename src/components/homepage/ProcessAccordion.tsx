@@ -27,20 +27,20 @@ export default function ProcessAccordion() {
           {/* Left Column */}
           <div className="">
             <h2
-              className="text-3xl lg:text-[2.75rem] font-extrabold text-heading leading-tight tracking-tight mb-6"
+              className="text-3xl lg:text-[2.75rem] font-medium text-heading leading-tight tracking-tight mb-6"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
               A proven process to protect and elevate your reputation
             </h2>
             <p
-              className="text-gray-500 text-base leading-relaxed mb-4"
+              className="text-gray-800 text-base leading-relaxed mb-4"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Your online reputation is often the first impression you make. We help individuals and businesses take
               control of their digital narrative with a structured, results-driven approach.
             </p>
             <p
-              className="text-gray-500 text-base leading-relaxed mb-4"
+              className="text-gray-800 text-base leading-relaxed mb-4"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               From comprehensive audits to ongoing monitoring, our three-step process ensures your brand is represented

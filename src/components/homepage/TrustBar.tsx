@@ -37,7 +37,7 @@ export default function TrustBar() {
               )}
               <div className="text-center">
                 <span
-                  className="text-2xl font-extrabold text-[#0B1E3D] tracking-tight"
+                  className="text-2xl font-medium text-[#0B1E3D] tracking-tight"
                   style={{ fontFamily: 'var(--font-heading)' }}
                 >
                   {stat.value}
@@ -48,7 +48,7 @@ export default function TrustBar() {
                   </span>
                 )}
                 <span
-                  className="text-sm text-gray-600 uppercase tracking-wider mt-0.5 block"
+                  className="text-sm text-gray-900 uppercase tracking-wider mt-0.5 block"
                   style={{ fontFamily: 'var(--font-body)' }}
                 >
                   {stat.label}
@@ -65,7 +65,7 @@ export default function TrustBar() {
             {badges.map((badge) => (
               <span
                 key={badge.platform}
-                className="bg-gray-50 border border-gray-200/80 rounded-md px-3 py-1.5 text-sm font-semibold text-gray-600 hover:border-[#004AAD]/30 hover:bg-[#e8f0fe]/50 transition-all cursor-default"
+                className="bg-gray-50 border border-gray-200/80 rounded-md px-3 py-1.5 text-sm font-semibold text-gray-900 hover:border-[#004AAD]/30 hover:bg-[#e8f0fe]/50 transition-all cursor-default"
                 style={{ fontFamily: 'var(--font-body)' }}
               >
                 {badge.platform} ★ {badge.rating}

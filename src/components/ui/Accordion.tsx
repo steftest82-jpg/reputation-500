@@ -49,7 +49,7 @@ export default function Accordion({ items, defaultOpen = 0 }: AccordionProps) {
                 className={`flex items-center justify-center w-7 h-7 rounded-full transition-all duration-300 flex-shrink-0 ml-4 ${
                   isOpen
                     ? 'bg-[#004AAD] text-white rotate-180'
-                    : 'bg-gray-100 text-gray-500'
+                    : 'bg-gray-100 text-gray-800'
                 }`}
               >
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +62,7 @@ export default function Accordion({ items, defaultOpen = 0 }: AccordionProps) {
                 isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
               }`}
             >
-              <div className="px-6 pb-5 text-gray-500 text-sm leading-relaxed">
+              <div className="px-6 pb-5 text-gray-800 text-sm leading-relaxed">
                 {body}
               </div>
             </div>

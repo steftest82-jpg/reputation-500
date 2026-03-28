@@ -119,7 +119,7 @@ export default function ContentWritingPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-6 mb-6">
             SEO Content Writing
           </h1>
-          <p className="text-xl text-gray-500 max-w-3xl">
+          <p className="text-xl text-gray-800 max-w-3xl">
             Content that earns rankings and earns trust. We write research-backed, search-optimized
             articles, landing pages, and blog posts that attract organic traffic and convert readers
             into customers.
@@ -135,7 +135,7 @@ export default function ContentWritingPage() {
               <SectionHeading subtitle="The Problem">
                 Generic Content Fails to Rank or Convert
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Publishing content without a search strategy wastes resources. Thin articles that
                 ignore keyword intent sit buried on page five. Meanwhile, keyword-stuffed copy may
                 attract clicks but repels the readers you need to convert. The result is a blog full
@@ -146,7 +146,7 @@ export default function ContentWritingPage() {
               <SectionHeading subtitle="The Solution">
                 Research-Driven Writing That Serves Both Algorithms and Audiences
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Reputation 500 combines deep keyword research with expert storytelling. Every piece
                 of content is built on a data-driven brief, written by skilled authors, and
                 optimized for both search engines and human readers. The outcome is content that
@@ -170,7 +170,7 @@ export default function ContentWritingPage() {
                   {index + 1}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <p className="text-gray-900">{step.description}</p>
               </div>
             ))}
           </div>

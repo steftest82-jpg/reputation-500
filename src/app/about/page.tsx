@@ -51,7 +51,7 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-5xl font-bold mt-4 text-white">
             About Reputation 500
           </h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-500">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-800">
             Protecting and elevating brands across the globe since day one.
           </p>
         </div>
@@ -99,7 +99,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold text-gray-900">
                   {v.title}
                 </h3>
-                <p className="mt-3 text-gray-600 leading-relaxed">
+                <p className="mt-3 text-gray-900 leading-relaxed">
                   {v.description}
                 </p>
               </div>
@@ -115,7 +115,7 @@ export default function AboutPage() {
             {stats.map((s) => (
               <div key={s.label}>
                 <p className="text-4xl font-bold">{s.value}</p>
-                <p className="mt-2 text-gray-500 text-sm uppercase tracking-wide">
+                <p className="mt-2 text-gray-800 text-sm uppercase tracking-wide">
                   {s.label}
                 </p>
               </div>
@@ -131,7 +131,7 @@ export default function AboutPage() {
             title="Our Leadership"
             subtitle="Meet the team behind Reputation 500."
           />
-          <p className="mt-8 text-gray-500 italic">
+          <p className="mt-8 text-gray-800 italic">
             Team profiles coming soon.
           </p>
         </div>

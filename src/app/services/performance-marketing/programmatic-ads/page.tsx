@@ -119,7 +119,7 @@ export default function ProgrammaticAdsPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-6 mb-6">
             Programmatic Advertising
           </h1>
-          <p className="text-xl text-gray-500 max-w-3xl">
+          <p className="text-xl text-gray-800 max-w-3xl">
             Reach your audience across the entire open web with data-driven programmatic campaigns.
             From display and video to native and connected TV, we deliver precision targeting at
             massive scale.
@@ -135,7 +135,7 @@ export default function ProgrammaticAdsPage() {
               <SectionHeading subtitle="The Problem">
                 Walled Gardens Limit Your Reach
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Relying solely on Google and Meta for digital advertising means competing in
                 overcrowded auctions while missing the vast majority of the internet. Your potential
                 customers spend time across thousands of websites, apps, and streaming platforms that
@@ -146,7 +146,7 @@ export default function ProgrammaticAdsPage() {
               <SectionHeading subtitle="The Solution">
                 Data-Powered Campaigns Across the Open Web
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Reputation 500 uses demand-side platform technology to place your ads across premium
                 publisher inventory worldwide. We combine first-party data, contextual signals, and
                 behavioral targeting to find your audience wherever they browse, watch, or listen,
@@ -170,7 +170,7 @@ export default function ProgrammaticAdsPage() {
                   {index + 1}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <p className="text-gray-900">{step.description}</p>
               </div>
             ))}
           </div>

@@ -119,7 +119,7 @@ export default function SeoAuditPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-6 mb-6">
             SEO Audit Services
           </h1>
-          <p className="text-xl text-gray-500 max-w-3xl">
+          <p className="text-xl text-gray-800 max-w-3xl">
             Discover exactly what is holding your site back from higher rankings. Our comprehensive
             audits cover technical health, on-page optimization, and off-page authority with a clear,
             prioritized fix-it plan.
@@ -135,7 +135,7 @@ export default function SeoAuditPage() {
               <SectionHeading subtitle="The Problem">
                 Invisible Issues Silently Sabotage Rankings
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Crawl errors, slow page speeds, duplicate content, thin pages, and toxic backlinks
                 can quietly erode your organic visibility over time. Without a systematic audit, these
                 issues compound unnoticed while competitors continue to pull ahead in the search
@@ -146,7 +146,7 @@ export default function SeoAuditPage() {
               <SectionHeading subtitle="The Solution">
                 A Complete Diagnostic With a Clear Fix-It Plan
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Reputation 500 performs a 360-degree SEO audit that examines your site from the
                 perspective of search engines, users, and competitors. We document every issue, grade
                 its severity, estimate its impact, and deliver a prioritized action plan your team
@@ -170,7 +170,7 @@ export default function SeoAuditPage() {
                   {index + 1}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <p className="text-gray-900">{step.description}</p>
               </div>
             ))}
           </div>

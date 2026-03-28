@@ -17,7 +17,7 @@ export default function TestimonialCard({ name, role, text, rating }: Testimonia
 
       {/* Quote */}
       <p
-        className="text-gray-500 text-base leading-relaxed flex-1 mb-6"
+        className="text-gray-800 text-base leading-relaxed flex-1 mb-6"
         style={{ fontFamily: 'var(--font-body)' }}
       >
         &ldquo;{text}&rdquo;
@@ -32,7 +32,7 @@ export default function TestimonialCard({ name, role, text, rating }: Testimonia
           {name}
         </p>
         <p
-          className="text-sm text-gray-600 mt-0.5 leading-relaxed"
+          className="text-sm text-gray-900 mt-0.5 leading-relaxed"
           style={{ fontFamily: 'var(--font-body)' }}
         >
           {role}

@@ -6,9 +6,9 @@
   --color-primary-light: #e8f0fe;
   --color-accent: #FF4612;
   --color-heading: #000000;
-  --color-text: #1a1a1a;
-  --color-text-light: #3d3d3d;
-  --color-text-muted: #6b6b6b;
+  --color-text: #000000;
+  --color-text-light: #1a1a1a;
+  --color-text-muted: #4a4a4a;
   --color-gold: #9a7b2d;
   --color-bg: #FFFFFF;
   --color-bg-dark: #0B1E3D;
@@ -17,8 +17,8 @@
   --color-border-light: #E5E7EB;
   --color-surface: #FAFBFC;
 
-  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
-  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-heading: 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
   --font-brand: 'Syne', system-ui, sans-serif;
 }
 
@@ -32,7 +32,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  color: var(--color-text);
+  color: #000000;
   background-color: var(--color-bg);
   font-size: 18px;
   line-height: 1.7;
@@ -41,8 +41,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  font-weight: 700;
-  color: var(--color-heading);
+  font-weight: 500;
+  color: #000000;
   line-height: 1.15;
   letter-spacing: -0.025em;
 }

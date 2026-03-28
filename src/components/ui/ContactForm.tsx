@@ -14,8 +14,8 @@ export default function ContactForm({ variant = 'default', prefilledPackage }: C
   const isFooter = variant === 'footer'
 
   const inputClass = isFooter
-    ? 'w-full px-4 py-2.5 bg-white/[0.07] border border-white/10 rounded-lg text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-[#004AAD]/60 focus:ring-2 focus:ring-[#004AAD]/20 transition-all duration-300'
-    : 'w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-600 focus:outline-none focus:border-[#004AAD] focus:ring-2 focus:ring-[#004AAD]/10 focus:bg-white transition-all duration-300'
+    ? 'w-full px-4 py-2.5 bg-white/[0.07] border border-white/10 rounded-lg text-sm text-white placeholder:text-gray-800 focus:outline-none focus:border-[#004AAD]/60 focus:ring-2 focus:ring-[#004AAD]/20 transition-all duration-300'
+    : 'w-full px-4 py-2.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-900 focus:outline-none focus:border-[#004AAD] focus:ring-2 focus:ring-[#004AAD]/10 focus:bg-white transition-all duration-300'
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -90,7 +90,7 @@ export default function ContactForm({ variant = 'default', prefilledPackage }: C
           className="mt-0.5 w-4 h-4 rounded accent-[#004AAD] cursor-pointer"
         />
         <label
-          className={`text-sm ${isFooter ? 'text-gray-500' : 'text-gray-500'}`}
+          className={`text-sm ${isFooter ? 'text-gray-800' : 'text-gray-800'}`}
           style={{ fontFamily: 'var(--font-body)' }}
         >
           I have read and agree to the{' '}

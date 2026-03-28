@@ -82,13 +82,13 @@ export default function ForIndividualsPage() {
           <Breadcrumbs items={[{ label: 'Services', href: '/services' }, { label: 'For Individuals' }]} />
           <div className="max-w-3xl">
             <h1
-              className="text-3xl lg:text-5xl font-extrabold text-black mb-6 "
+              className="text-3xl lg:text-5xl font-medium text-black mb-6 "
               style={{ fontFamily: 'var(--font-heading)' }}
             >
               Personal Reputation Management
             </h1>
             <p
-              className="text-gray-500 text-lg max-w-2xl mb-8 "
+              className="text-gray-800 text-lg max-w-2xl mb-8 "
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Your name is your most valuable asset. We help executives, entrepreneurs, and public
@@ -138,7 +138,7 @@ export default function ForIndividualsPage() {
                 <h3 className="text-lg font-bold text-black mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
+                <p className="text-gray-800 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
                   {item.desc}
                 </p>
               </div>
@@ -158,18 +158,18 @@ export default function ForIndividualsPage() {
               >
                 Your Digital First Impression Matters More Than Ever
               </h2>
-              <p className="text-gray-500 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
+              <p className="text-gray-800 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
                 Before a handshake, a meeting, or a contract, people search your name. What they
                 find shapes their opinion in seconds. A single negative article, an outdated profile,
                 or a lack of online presence can cost you opportunities you never even knew existed.
               </p>
-              <p className="text-gray-500 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
+              <p className="text-gray-800 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
                 Our personal reputation management service builds a robust, positive digital identity
                 around your name. We combine strategic content creation, high-authority media
                 placements, and technical SEO to ensure that every search result on page one works in
                 your favor.
               </p>
-              <p className="text-gray-500" style={{ fontFamily: 'var(--font-body)' }}>
+              <p className="text-gray-800" style={{ fontFamily: 'var(--font-body)' }}>
                 Whether you are a C-suite executive navigating a career transition, a professional
                 dealing with unfair press, or a public figure looking to strengthen your narrative, we
                 have managed it successfully for clients across 21 countries.
@@ -177,7 +177,7 @@ export default function ForIndividualsPage() {
             </div>
             <div className="">
               <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center">
-                <span className="text-gray-600 text-lg">Image</span>
+                <span className="text-gray-900 text-lg">Image</span>
               </div>
             </div>
           </div>
@@ -193,7 +193,7 @@ export default function ForIndividualsPage() {
           >
             Services for Individuals
           </h2>
-          <p className="text-gray-500 text-center max-w-2xl mx-auto mb-12 " style={{ fontFamily: 'var(--font-body)' }}>
+          <p className="text-gray-800 text-center max-w-2xl mx-auto mb-12 " style={{ fontFamily: 'var(--font-body)' }}>
             Each service is designed to address a specific aspect of your personal online reputation.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -232,7 +232,7 @@ export default function ForIndividualsPage() {
                 <h3 className="text-lg font-bold text-black mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
+                <p className="text-gray-800 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
                   {item.desc}
                 </p>
               </div>

@@ -41,7 +41,7 @@ export default function ServicesGrid() {
 
         {/* Heading */}
         <h2
-          className="text-3xl lg:text-[2.75rem] font-extrabold text-center max-w-2xl mx-auto mb-14 leading-tight tracking-tight"
+          className="text-3xl lg:text-[2.75rem] font-medium text-center max-w-2xl mx-auto mb-14 leading-tight tracking-tight"
           style={{
             fontFamily: 'var(--font-heading)',
             color: 'var(--heading, #000)',
@@ -71,7 +71,7 @@ export default function ServicesGrid() {
               </h4>
 
               <p
-                className="text-gray-500 text-base leading-relaxed"
+                className="text-gray-800 text-base leading-relaxed"
                 style={{ fontFamily: 'var(--font-body)' }}
               >
                 {service.description}

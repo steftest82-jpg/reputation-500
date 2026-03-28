@@ -36,7 +36,7 @@ export default function SectionHeading({ label, title, subtitle, description, ce
         </h2>
       )}
       {effectiveDesc && (
-        <p className={`text-base lg:text-lg leading-relaxed ${light ? 'text-gray-500' : 'text-text-light'}`}>
+        <p className={`text-base lg:text-lg leading-relaxed ${light ? 'text-gray-800' : 'text-text-light'}`}>
           {effectiveDesc}
         </p>
       )}

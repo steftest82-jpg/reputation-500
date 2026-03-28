@@ -91,7 +91,7 @@ export default function RatingsOptimizationPage() {
             >
               Ratings Optimization for Businesses
             </h1>
-            <p className="text-lg text-gray-500 leading-relaxed">
+            <p className="text-lg text-gray-800 leading-relaxed">
               Star ratings are the first thing potential customers see when evaluating your business. Our ratings optimization service helps you systematically earn more positive reviews, manage negative feedback professionally, and build the social proof that drives purchasing decisions.
             </p>
           </div>

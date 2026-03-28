@@ -69,7 +69,7 @@ function AnimatedCounter({
   return (
     <span
       ref={ref}
-      className="text-6xl font-extrabold tracking-tighter"
+      className="text-6xl font-medium tracking-tighter"
       style={{
         fontFamily: 'var(--font-heading)',
         color: 'var(--heading, #000)',
@@ -89,7 +89,7 @@ export default function FeaturesChecklist() {
           {/* LEFT */}
           <div className="">
             <h2
-              className="text-3xl lg:text-[2.75rem] font-extrabold leading-tight tracking-tight mb-6"
+              className="text-3xl lg:text-[2.75rem] font-medium leading-tight tracking-tight mb-6"
               style={{
                 fontFamily: 'var(--font-heading)',
                 color: 'var(--heading, #000)',
@@ -98,7 +98,7 @@ export default function FeaturesChecklist() {
               Protect, Control &amp; Dominate Your Online Presence
             </h2>
             <p
-              className="text-gray-500 text-base leading-relaxed max-w-lg"
+              className="text-gray-800 text-base leading-relaxed max-w-lg"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               We help businesses and individuals take full control of their
@@ -163,7 +163,7 @@ export default function FeaturesChecklist() {
                   suffix={stat.suffix}
                 />
                 <p
-                  className="text-sm text-gray-600 mt-2 font-medium"
+                  className="text-sm text-gray-900 mt-2 font-medium"
                   style={{ fontFamily: 'var(--font-body)' }}
                 >
                   {stat.label}

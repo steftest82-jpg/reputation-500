@@ -123,13 +123,13 @@ export default function ServicesPage() {
           <Breadcrumbs items={[{ label: 'Services' }]} />
           <div className="max-w-3xl">
             <h1
-              className="text-3xl lg:text-5xl font-extrabold text-black mb-6 "
+              className="text-3xl lg:text-5xl font-medium text-black mb-6 "
               style={{ fontFamily: 'var(--font-heading)' }}
             >
               Our Reputation Management Services
             </h1>
             <p
-              className="text-gray-500 text-lg max-w-2xl mb-8 "
+              className="text-gray-800 text-lg max-w-2xl mb-8 "
               style={{ fontFamily: 'var(--font-body)' }}
             >
               From personal brand protection to enterprise-level reputation strategy, we deliver
@@ -191,7 +191,7 @@ export default function ServicesPage() {
                 >
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
+                <p className="text-gray-800 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
                   {item.desc}
                 </p>
               </div>
@@ -211,17 +211,17 @@ export default function ServicesPage() {
               >
                 An Integrated Approach That Actually Works
               </h2>
-              <p className="text-gray-500 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
+              <p className="text-gray-800 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
                 Most agencies treat reputation management, SEO, and marketing as separate silos. We
                 combine them into a unified strategy where every article published, every backlink
                 earned, and every ad campaign launched reinforces your brand narrative.
               </p>
-              <p className="text-gray-500 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
+              <p className="text-gray-800 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
                 The result is faster ranking improvements, stronger brand sentiment, and a digital
                 footprint that works harder with less spend. Our clients see an average 73%
                 improvement in first-page search presence within the first 120 days.
               </p>
-              <p className="text-gray-500" style={{ fontFamily: 'var(--font-body)' }}>
+              <p className="text-gray-800" style={{ fontFamily: 'var(--font-body)' }}>
                 Whether you are a public figure protecting your legacy, a startup building
                 credibility, or an enterprise managing crisis communications, our team builds a
                 custom playbook designed for your exact situation and goals.
@@ -229,7 +229,7 @@ export default function ServicesPage() {
             </div>
             <div className="">
               <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center">
-                <span className="text-gray-600 text-lg">Image</span>
+                <span className="text-gray-900 text-lg">Image</span>
               </div>
             </div>
           </div>
@@ -245,7 +245,7 @@ export default function ServicesPage() {
           >
             Explore Our Service Categories
           </h2>
-          <p className="text-gray-500 text-center max-w-2xl mx-auto mb-12 " style={{ fontFamily: 'var(--font-body)' }}>
+          <p className="text-gray-800 text-center max-w-2xl mx-auto mb-12 " style={{ fontFamily: 'var(--font-body)' }}>
             Six specialized practice areas, one unified strategy. Select a category to see how we
             can help.
           </p>
@@ -262,7 +262,7 @@ export default function ServicesPage() {
                   >
                     {service.title}
                   </h3>
-                  <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
+                  <p className="text-gray-800 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
                     {service.description}
                   </p>
                 </div>
@@ -298,7 +298,7 @@ export default function ServicesPage() {
                 >
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
+                <p className="text-gray-800 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
                   {item.desc}
                 </p>
               </div>

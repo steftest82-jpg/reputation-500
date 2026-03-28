@@ -82,13 +82,13 @@ export default function SEOPage() {
           <Breadcrumbs items={[{ label: 'Services', href: '/services' }, { label: 'SEO' }]} />
           <div className="max-w-3xl">
             <h1
-              className="text-3xl lg:text-5xl font-extrabold text-black mb-6 "
+              className="text-3xl lg:text-5xl font-medium text-black mb-6 "
               style={{ fontFamily: 'var(--font-heading)' }}
             >
               SEO Services That Drive Rankings & Revenue
             </h1>
             <p
-              className="text-gray-500 text-lg max-w-2xl mb-8 "
+              className="text-gray-800 text-lg max-w-2xl mb-8 "
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Stop leaving organic traffic on the table. Our data-driven SEO strategies combine
@@ -143,7 +143,7 @@ export default function SEOPage() {
                 <h3 className="text-lg font-bold text-black mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
+                <p className="text-gray-800 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
                   {item.desc}
                 </p>
               </div>
@@ -163,18 +163,18 @@ export default function SEOPage() {
               >
                 SEO That Works Harder Because It Is Integrated
               </h2>
-              <p className="text-gray-500 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
+              <p className="text-gray-800 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
                 Most SEO agencies operate in a vacuum. They chase rankings without considering how
                 those rankings affect your brand perception, reputation, or conversion rates. At
                 Reputation 500, every SEO action is part of a larger strategy that builds authority,
                 trust, and revenue simultaneously.
               </p>
-              <p className="text-gray-500 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
+              <p className="text-gray-800 mb-4" style={{ fontFamily: 'var(--font-body)' }}>
                 Our team has published over 32,920 articles and built backlink profiles for clients
                 across financial services, technology, real estate, and professional services. We
                 know what it takes to rank in competitive verticals because we do it every day.
               </p>
-              <p className="text-gray-500" style={{ fontFamily: 'var(--font-body)' }}>
+              <p className="text-gray-800" style={{ fontFamily: 'var(--font-body)' }}>
                 Whether you need a full-service SEO engagement or targeted support with link
                 building, content production, or a technical audit, we scale our services to match
                 your goals and budget.
@@ -182,7 +182,7 @@ export default function SEOPage() {
             </div>
             <div className="">
               <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center">
-                <span className="text-gray-600 text-lg">Image</span>
+                <span className="text-gray-900 text-lg">Image</span>
               </div>
             </div>
           </div>
@@ -198,7 +198,7 @@ export default function SEOPage() {
           >
             Our SEO Services
           </h2>
-          <p className="text-gray-500 text-center max-w-2xl mx-auto mb-12 " style={{ fontFamily: 'var(--font-body)' }}>
+          <p className="text-gray-800 text-center max-w-2xl mx-auto mb-12 " style={{ fontFamily: 'var(--font-body)' }}>
             Four specialized disciplines that work together to dominate your search landscape.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -237,7 +237,7 @@ export default function SEOPage() {
                 <h3 className="text-lg font-bold text-black mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
+                <p className="text-gray-800 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
                   {item.desc}
                 </p>
               </div>

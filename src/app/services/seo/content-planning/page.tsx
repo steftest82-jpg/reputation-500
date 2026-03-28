@@ -119,7 +119,7 @@ export default function ContentPlanningPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-6 mb-6">
             Content Planning & Strategy
           </h1>
-          <p className="text-xl text-gray-500 max-w-3xl">
+          <p className="text-xl text-gray-800 max-w-3xl">
             Stop guessing what to publish next. Our data-driven content plans map every article to a
             keyword opportunity and every keyword to a business goal, so nothing you publish goes to
             waste.
@@ -135,7 +135,7 @@ export default function ContentPlanningPage() {
               <SectionHeading subtitle="The Problem">
                 Publishing Without a Plan Burns Budget
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Many teams publish content based on gut feel or trending topics with no connection to
                 search demand. The result is a blog filled with random articles that cannibalize each
                 other, miss high-value keywords, and fail to build the topical authority search
@@ -147,7 +147,7 @@ export default function ContentPlanningPage() {
               <SectionHeading subtitle="The Solution">
                 A Strategic Roadmap Built on Data
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Reputation 500 creates content plans grounded in keyword research, competitor
                 analysis, and buyer journey mapping. We architect topic clusters that build authority,
                 prioritize production based on impact potential, and deliver an editorial calendar
@@ -172,7 +172,7 @@ export default function ContentPlanningPage() {
                   {index + 1}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <p className="text-gray-900">{step.description}</p>
               </div>
             ))}
           </div>

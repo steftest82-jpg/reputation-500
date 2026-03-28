@@ -119,7 +119,7 @@ export default function MetaAdsPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-6 mb-6">
             Meta Ads Management
           </h1>
-          <p className="text-xl text-gray-500 max-w-3xl">
+          <p className="text-xl text-gray-800 max-w-3xl">
             Reach your ideal customers where they scroll most. We create full-funnel Facebook and
             Instagram ad campaigns that combine audience science with scroll-stopping creative to
             deliver measurable leads and sales.
@@ -135,7 +135,7 @@ export default function MetaAdsPage() {
               <SectionHeading subtitle="The Problem">
                 Rising Costs and Declining Ad Performance
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Many advertisers experience increasing CPMs, creative fatigue, and audience saturation
                 on Meta platforms. Without a systematic approach to testing and funnel architecture,
                 campaigns plateau quickly and cost-per-lead climbs. Privacy changes have added
@@ -146,7 +146,7 @@ export default function MetaAdsPage() {
               <SectionHeading subtitle="The Solution">
                 Creative-Led Campaigns With Full-Funnel Strategy
               </SectionHeading>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-900 mt-4">
                 Reputation 500 combats rising costs with a creative-first approach. We continuously
                 test new visuals, copy angles, and formats while building multi-stage funnels that
                 nurture cold audiences into paying customers. Server-side tracking ensures accurate
@@ -170,7 +170,7 @@ export default function MetaAdsPage() {
                   {index + 1}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <p className="text-gray-900">{step.description}</p>
               </div>
             ))}
           </div>

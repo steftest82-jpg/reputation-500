@@ -94,8 +94,8 @@ export default function Navbar() {
                           activeDropdown === link.label
                             ? 'text-[#004AAD]'
                             : scrolled
-                              ? 'text-gray-600 hover:text-[#004AAD]'
-                              : 'text-gray-600 hover:text-[#004AAD]'
+                              ? 'text-gray-900 hover:text-[#004AAD]'
+                              : 'text-gray-900 hover:text-[#004AAD]'
                         }`}
                         style={{ fontFamily: 'var(--font-heading)' }}
                         onClick={() =>
@@ -131,7 +131,7 @@ export default function Navbar() {
                             <Link
                               key={child.href}
                               href={child.href}
-                              className="flex items-center px-4 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-[#e8f0fe] hover:text-[#004AAD] transition-all duration-150 font-medium"
+                              className="flex items-center px-4 py-2.5 rounded-lg text-sm text-gray-900 hover:bg-[#e8f0fe] hover:text-[#004AAD] transition-all duration-150 font-medium"
                               style={{ fontFamily: 'var(--font-body)' }}
                               onClick={() => setActiveDropdown(null)}
                             >
@@ -144,7 +144,7 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href={link.href}
-                      className="inline-flex items-center px-4 py-2.5 text-base font-medium text-gray-600 hover:text-[#004AAD] transition-all duration-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
+                      className="inline-flex items-center px-4 py-2.5 text-base font-medium text-gray-900 hover:text-[#004AAD] transition-all duration-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
                       style={{ fontFamily: 'var(--font-heading)' }}
                     >
                       {link.label}
@@ -228,7 +228,7 @@ export default function Navbar() {
             </Link>
             <button
               onClick={() => setMobileOpen(false)}
-              className="p-2 -mr-2 text-gray-600 hover:text-gray-600 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+              className="p-2 -mr-2 text-gray-900 hover:text-gray-900 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
               aria-label="Close navigation menu"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
@@ -257,7 +257,7 @@ export default function Navbar() {
                     >
                       {link.label}
                       <svg
-                        className={`w-4 h-4 text-gray-600 transition-transform duration-300 ${
+                        className={`w-4 h-4 text-gray-900 transition-transform duration-300 ${
                           mobileDropdown === link.label ? 'rotate-180' : ''
                         }`}
                         fill="none"
@@ -279,7 +279,7 @@ export default function Navbar() {
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block px-4 py-2.5 text-base text-gray-500 hover:text-[#004AAD] font-medium transition-colors rounded-lg"
+                            className="block px-4 py-2.5 text-base text-gray-800 hover:text-[#004AAD] font-medium transition-colors rounded-lg"
                             style={{ fontFamily: 'var(--font-body)' }}
                             onClick={() => setMobileOpen(false)}
                           >

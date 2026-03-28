@@ -34,7 +34,7 @@ export default function MediaGallery() {
     <section className="bg-bg-section py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
-          className="text-2xl lg:text-3xl font-extrabold text-center mb-3 tracking-tight"
+          className="text-2xl lg:text-3xl font-medium text-center mb-3 tracking-tight"
           style={{ fontFamily: 'var(--font-heading)' }}
         >
           We get your article and/or interview featured in
@@ -49,7 +49,7 @@ export default function MediaGallery() {
               className={`px-3 py-1.5 text-sm font-semibold uppercase tracking-wider cursor-pointer rounded-full transition-all duration-300 ${
                 activeTab === tab
                   ? 'bg-primary text-white shadow-sm'
-                  : 'text-gray-600 hover:text-gray-600 hover:bg-gray-100'
+                  : 'text-gray-900 hover:text-gray-900 hover:bg-gray-100'
               }`}
             >
               {tab}
@@ -77,7 +77,7 @@ export default function MediaGallery() {
 
         {/* Load More */}
         <div className="mt-8 text-center">
-          <button className="bg-white border border-gray-200 rounded-full px-8 py-2.5 text-sm font-semibold text-gray-500 hover:text-primary hover:border-primary/30 hover:shadow-sm transition-all">
+          <button className="bg-white border border-gray-200 rounded-full px-8 py-2.5 text-sm font-semibold text-gray-800 hover:text-primary hover:border-primary/30 hover:shadow-sm transition-all">
             Load More
           </button>
         </div>

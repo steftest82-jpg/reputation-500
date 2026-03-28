@@ -44,7 +44,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 text-center">
           <Breadcrumbs items={[{ label: 'Contact', href: '/contact' }]} />
           <h1 className="text-4xl md:text-5xl font-bold mt-4 text-white">Contact Us</h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-500">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-800">
             Ready to take control of your online reputation? Get in touch with
             our team today.
           </p>
@@ -72,7 +72,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-gray-900">Office</h3>
                   <p>ADCX Tech Solutions LTD</p>
-                  <p className="text-gray-500 text-sm mt-1">
+                  <p className="text-gray-800 text-sm mt-1">
                     Serving clients across 21 countries worldwide.
                   </p>
                 </div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                     Business Hours
                   </h3>
                   <p>Monday &ndash; Friday: 9:00 AM &ndash; 6:00 PM (GMT)</p>
-                  <p className="text-gray-500 text-sm mt-1">
+                  <p className="text-gray-800 text-sm mt-1">
                     We aim to respond within 24 hours.
                   </p>
                 </div>

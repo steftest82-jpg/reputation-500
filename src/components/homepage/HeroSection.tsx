@@ -51,7 +51,7 @@ export default function HeroSection() {
             <div className="lg:col-span-7">
               {/* H1 */}
               <h1
-                className="text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold text-[#000] leading-[1.12] tracking-tight mb-5"
+                className="text-3xl md:text-4xl lg:text-[2.8rem] font-medium text-[#000] leading-[1.12] tracking-tight mb-5"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
                 Leading Online Reputation Management Agency
@@ -59,7 +59,7 @@ export default function HeroSection() {
 
               {/* Description */}
               <p
-                className="text-gray-600 text-base lg:text-base leading-relaxed mb-6 max-w-xl"
+                className="text-gray-900 text-base lg:text-base leading-relaxed mb-6 max-w-xl"
                 style={{ fontFamily: 'var(--font-body)' }}
               >
                 Reputation 500 is an online reputation management agency helping

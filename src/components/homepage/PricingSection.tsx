@@ -21,13 +21,13 @@ export default function PricingSection() {
     <section className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
-          className="text-3xl lg:text-[2.75rem] font-extrabold text-center tracking-tight mb-2"
+          className="text-3xl lg:text-[2.75rem] font-medium text-center tracking-tight mb-2"
           style={{ fontFamily: 'var(--font-heading)' }}
         >
           Online Reputation Management 360 Packages
         </h2>
         <p
-          className="text-gray-600 text-base text-center mb-14"
+          className="text-gray-900 text-base text-center mb-14"
           style={{ fontFamily: 'var(--font-body)' }}
         >
           Full Reputation, handled.
@@ -58,9 +58,9 @@ export default function PricingSection() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm font-bold text-gray-600 uppercase tracking-wider">Great for:</p>
+                <p className="text-sm font-bold text-gray-900 uppercase tracking-wider">Great for:</p>
                 <p
-                  className="text-sm text-gray-500 leading-relaxed mb-5"
+                  className="text-sm text-gray-800 leading-relaxed mb-5"
                   style={{ fontFamily: 'var(--font-body)' }}
                 >
                   {plan.description}
@@ -68,14 +68,14 @@ export default function PricingSection() {
 
                 {/* Price */}
                 <div className="flex items-baseline gap-1 mb-5">
-                  <span className="text-lg font-semibold text-gray-500">{plan.currency}</span>
+                  <span className="text-lg font-semibold text-gray-800">{plan.currency}</span>
                   <span
-                    className="text-4xl font-extrabold text-heading tracking-tighter"
+                    className="text-4xl font-medium text-heading tracking-tighter"
                     style={{ fontFamily: 'var(--font-heading)' }}
                   >
                     {plan.price}
                   </span>
-                  <span className="text-sm text-gray-600 ml-1">{plan.period}</span>
+                  <span className="text-sm text-gray-900 ml-1">{plan.period}</span>
                 </div>
 
                 {/* Divider */}
@@ -87,7 +87,7 @@ export default function PricingSection() {
                     <li key={i} className="flex items-start gap-2.5">
                       <CheckIcon />
                       <span
-                        className="text-sm text-gray-600 leading-relaxed"
+                        className="text-sm text-gray-900 leading-relaxed"
                         style={{ fontFamily: 'var(--font-body)' }}
                       >
                         {feature}
@@ -100,9 +100,9 @@ export default function PricingSection() {
                 <div className="border-t border-gray-100 my-5" />
 
                 {/* Includes */}
-                <p className="text-sm font-bold text-gray-600 uppercase tracking-wider mb-1">Includes</p>
+                <p className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-1">Includes</p>
                 <p
-                  className="text-sm text-gray-500 leading-relaxed"
+                  className="text-sm text-gray-800 leading-relaxed"
                   style={{ fontFamily: 'var(--font-body)' }}
                 >
                   {plan.includes}
@@ -128,7 +128,7 @@ export default function PricingSection() {
 
         {/* Footer Note */}
         <div className="mt-10 text-center">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-900">
             Note: All deliverables and outcomes are based on a 12-month annual project timeline
           </p>
           <Link

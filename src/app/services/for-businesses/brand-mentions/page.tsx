@@ -91,7 +91,7 @@ export default function BrandMentionsBusinessesPage() {
             >
               Brand Mentions for Businesses
             </h1>
-            <p className="text-lg text-gray-500 leading-relaxed">
+            <p className="text-lg text-gray-800 leading-relaxed">
               Every reference to your company across the internet is an opportunity or a risk. Our brand mention services give you complete visibility into how and where your business is discussed online, with actionable strategies to amplify positive coverage and mitigate negative references.
             </p>
           </div>

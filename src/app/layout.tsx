@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Plus_Jakarta_Sans, DM_Sans, Syne } from 'next/font/google'
+import { Montserrat, Inter, Syne } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -7,14 +7,14 @@ import ScrollRevealProvider from '@/components/ui/ScrollRevealProvider'
 import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from '@/lib/constants'
 import JsonLd from '@/components/seo/JsonLd'
 
-const jakarta = Plus_Jakarta_Sans({
+const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-heading',
   display: 'swap',
 })
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
   variable: '--font-body',
@@ -73,7 +73,7 @@ const websiteSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${dmSans.variable} ${syne.variable}`}>
+    <html lang="en" className={`${montserrat.variable} ${inter.variable} ${syne.variable}`}>
       <head>
         <link rel="icon" href="/favicon.png" />
         <link

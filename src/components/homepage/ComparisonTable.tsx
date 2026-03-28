@@ -4,7 +4,7 @@ const Check = () => (
   </svg>
 );
 
-const Dash = () => <span className="text-gray-500">&mdash;</span>;
+const Dash = () => <span className="text-gray-800">&mdash;</span>;
 
 type CellValue = string | number | "check" | "dash";
 
@@ -176,7 +176,7 @@ export default function ComparisonTable() {
               <tr>
                 <th
                   colSpan={2}
-                  className="text-xl font-extrabold text-left py-3 pr-3"
+                  className="text-xl font-medium text-left py-3 pr-3"
                   style={{ fontFamily: "var(--font-heading)", width: "40%" }}
                 >
                   Compare Plans
@@ -216,19 +216,19 @@ export default function ComparisonTable() {
                   >
                     {row.feature}
                     {row.sub && (
-                      <span className="block text-sm text-gray-600 mt-0.5">{row.sub}</span>
+                      <span className="block text-sm text-gray-900 mt-0.5">{row.sub}</span>
                     )}
                   </td>
-                  <td className="py-4 px-3 text-center text-sm text-gray-600 border-b border-[#004AAD]/10 border-l border-[#004AAD]/10">
+                  <td className="py-4 px-3 text-center text-sm text-gray-900 border-b border-[#004AAD]/10 border-l border-[#004AAD]/10">
                     {renderCell(row.essential)}
                   </td>
-                  <td className="py-4 px-3 text-center text-sm text-gray-600 border-b border-[#004AAD]/10 border-l border-[#004AAD]/10">
+                  <td className="py-4 px-3 text-center text-sm text-gray-900 border-b border-[#004AAD]/10 border-l border-[#004AAD]/10">
                     {renderCell(row.enhanced)}
                   </td>
-                  <td className="py-4 px-3 text-center text-sm text-gray-600 border-b border-[#004AAD]/10 border-l border-[#004AAD]/10">
+                  <td className="py-4 px-3 text-center text-sm text-gray-900 border-b border-[#004AAD]/10 border-l border-[#004AAD]/10">
                     {renderCell(row.elite)}
                   </td>
-                  <td className="py-4 px-3 text-center text-sm text-gray-600 border-b border-[#004AAD]/10 border-l border-[#004AAD]/10">
+                  <td className="py-4 px-3 text-center text-sm text-gray-900 border-b border-[#004AAD]/10 border-l border-[#004AAD]/10">
                     {renderCell(row.ultimate)}
                   </td>
                 </tr>

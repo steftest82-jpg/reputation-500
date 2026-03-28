@@ -6,7 +6,7 @@ export default function TestimonialsSection() {
     <section className="bg-bg-section py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
-          className="text-3xl lg:text-[2.75rem] font-extrabold text-center mb-14 tracking-tight"
+          className="text-3xl lg:text-[2.75rem] font-medium text-center mb-14 tracking-tight"
           style={{ fontFamily: 'var(--font-heading)' }}
         >
           What our clients say
