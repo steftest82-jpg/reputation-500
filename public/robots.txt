@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://reputation500.com
+
+# Sitemaps
+Sitemap: https://reputation500.com/sitemap.xml
