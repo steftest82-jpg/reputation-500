@@ -14,16 +14,16 @@ const rotatingTexts = [
 ]
 
 const clientLogos = [
-  { src: '/images/clients/ey.png', alt: 'EY', w: 60 },
-  { src: '/images/clients/cbi.png', alt: 'CBI', w: 90 },
-  { src: '/images/clients/xm.png', alt: 'XM', w: 80 },
-  { src: '/images/clients/eurofast.png', alt: 'Eurofast', w: 110 },
-  { src: '/images/clients/serhant.png', alt: 'SERHANT', w: 120 },
-  { src: '/images/clients/deluxe-holiday.png', alt: 'Deluxe Holiday', w: 90 },
-  { src: '/images/clients/uexo.png', alt: 'UEXO', w: 80 },
-  { src: '/images/clients/rcx.png', alt: 'RCX', w: 90 },
-  { src: '/images/clients/livex.png', alt: 'LiveX', w: 90 },
-  { src: '/images/clients/exness.png', alt: 'Exness', w: 90 },
+  { src: '/images/clients/ey.png', alt: 'EY', w: 80, h: 45 },
+  { src: '/images/clients/cbi.png', alt: 'CBI', w: 120, h: 50 },
+  { src: '/images/clients/xm.png', alt: 'XM', w: 100, h: 45 },
+  { src: '/images/clients/eurofast.png', alt: 'Eurofast', w: 140, h: 35 },
+  { src: '/images/clients/serhant.png', alt: 'SERHANT', w: 150, h: 35 },
+  { src: '/images/clients/deluxe-holiday.png', alt: 'Deluxe Holiday Homes', w: 110, h: 55 },
+  { src: '/images/clients/uexo.png', alt: 'UEXO', w: 100, h: 45 },
+  { src: '/images/clients/rcx.png', alt: 'RCX Global', w: 110, h: 45 },
+  { src: '/images/clients/livex.png', alt: 'Liv-Ex', w: 110, h: 40 },
+  { src: '/images/clients/exness.png', alt: 'Exness', w: 110, h: 38 },
 ]
 
 export default function HeroSection() {
@@ -42,19 +42,16 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden bg-[#0B1E3D]">
-      {/* Subtle gradient overlays */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(0,74,173,0.12),_transparent_50%)]" />
-
-      <div className="relative pt-28 lg:pt-36 pb-16 lg:pb-24">
+    <section className="bg-white">
+      <div className="pt-28 lg:pt-36 pb-16 lg:pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
 
             {/* LEFT — 7 cols */}
             <div className="lg:col-span-7 reveal-left">
               {/* H1 */}
               <h1
-                className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.12] tracking-tight mb-5"
+                className="text-3xl md:text-4xl lg:text-[2.8rem] font-extrabold text-[#000] leading-[1.12] tracking-tight mb-5"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
                 Leading Online Reputation Management Agency
@@ -62,7 +59,7 @@ export default function HeroSection() {
 
               {/* Description */}
               <p
-                className="text-gray-300 text-[15px] leading-relaxed mb-6 max-w-xl"
+                className="text-gray-600 text-[15px] lg:text-base leading-relaxed mb-6 max-w-xl"
                 style={{ fontFamily: 'var(--font-body)' }}
               >
                 Reputation 500 is an online reputation management agency helping
@@ -73,12 +70,12 @@ export default function HeroSection() {
               </p>
 
               {/* Typing Animation */}
-              <div className="flex items-center gap-1 mb-8">
-                <span className="text-gray-400 text-sm" style={{ fontFamily: 'var(--font-body)' }}>
+              <div className="flex items-center gap-1 mb-10">
+                <span className="text-[#004AAD] text-base font-medium" style={{ fontFamily: 'var(--font-body)' }}>
                   Trusted by{' '}
                 </span>
                 <span
-                  className={`text-[#C9A84C] text-sm font-semibold transition-all duration-300 ${
+                  className={`text-[#004AAD] text-base font-bold underline decoration-[#004AAD]/30 underline-offset-4 transition-all duration-300 ${
                     fade ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'
                   }`}
                   style={{ fontFamily: 'var(--font-heading)' }}
@@ -86,37 +83,27 @@ export default function HeroSection() {
                   {rotatingTexts[currentTextIndex]}
                 </span>
                 <span
-                  className="text-[#C9A84C] text-sm font-light ml-0.5 animate-[cursor-blink_1s_step-end_infinite]"
+                  className="text-[#004AAD] text-base font-light ml-0.5 animate-[cursor-blink_1s_step-end_infinite]"
                 >
                   |
                 </span>
               </div>
 
-              {/* Client Logos Grid */}
-              <div className="grid grid-cols-5 gap-x-6 gap-y-5 items-center max-w-lg">
+              {/* Client Logos — Full Color, Prominent */}
+              <div className="grid grid-cols-5 gap-x-8 gap-y-6 items-center max-w-2xl">
                 {clientLogos.map((logo) => (
                   <div key={logo.alt} className="flex items-center justify-center">
                     <Image
                       src={logo.src}
                       alt={logo.alt}
                       width={logo.w}
-                      height={36}
-                      className="object-contain transition-all duration-400"
+                      height={logo.h}
+                      className="object-contain hover:scale-105 transition-transform duration-300"
                       style={{
                         width: 'auto',
                         height: 'auto',
-                        maxHeight: '32px',
+                        maxHeight: `${logo.h}px`,
                         maxWidth: `${logo.w}px`,
-                        filter: 'grayscale(1) brightness(5) contrast(0.5)',
-                        opacity: 0.6,
-                      }}
-                      onMouseOver={(e) => {
-                        e.currentTarget.style.filter = 'grayscale(0) brightness(1) contrast(1)'
-                        e.currentTarget.style.opacity = '1'
-                      }}
-                      onMouseOut={(e) => {
-                        e.currentTarget.style.filter = 'grayscale(1) brightness(5) contrast(0.5)'
-                        e.currentTarget.style.opacity = '0.6'
                       }}
                     />
                   </div>
@@ -126,12 +113,12 @@ export default function HeroSection() {
 
             {/* RIGHT — 5 cols — Form Card */}
             <div className="lg:col-span-5 reveal-right" style={{ transitionDelay: '200ms' }}>
-              <div className="bg-white rounded-2xl p-6 shadow-2xl shadow-black/10 border border-[#004AAD]/10">
+              <div className="bg-white rounded-2xl p-6 lg:p-7 shadow-xl shadow-black/[0.06] border border-[#004AAD]/12">
                 {/* Stars + Stats */}
-                <div className="text-center mb-4">
+                <div className="text-center mb-3">
                   <div className="text-[#C9A84C] text-lg tracking-[0.15em]">★★★★★</div>
                   <p
-                    className="text-[10px] font-bold text-gray-400 tracking-[0.12em] uppercase mt-1"
+                    className="text-[10px] font-bold text-[#C9A84C] tracking-[0.12em] uppercase mt-1"
                     style={{ fontFamily: 'var(--font-heading)' }}
                   >
                     4.8 Stars · 32,920+ Articles Published
@@ -139,13 +126,11 @@ export default function HeroSection() {
                 </div>
 
                 <p
-                  className="text-[13px] text-gray-500 text-center leading-relaxed mb-4"
-                  style={{ fontFamily: 'var(--font-body)' }}
+                  className="text-[15px] font-semibold text-gray-800 text-center leading-snug mb-5"
+                  style={{ fontFamily: 'var(--font-heading)' }}
                 >
                   Guaranteed Coverage in Forbes, Entrepreneur, IB Times &amp; More
                 </p>
-
-                <div className="border-t border-[#004AAD]/10 mb-4" />
 
                 <ContactForm variant="default" />
               </div>
