@@ -43,7 +43,7 @@ export default function ContactPage() {
       <section className="bg-bg-dark pt-24 pb-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <Breadcrumbs items={[{ label: 'Contact', href: '/contact' }]} />
-          <h1 className="text-4xl md:text-5xl font-bold mt-4">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mt-4 text-white">Contact Us</h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
             Ready to take control of your online reputation? Get in touch with
             our team today.

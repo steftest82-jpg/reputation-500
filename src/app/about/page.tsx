@@ -48,7 +48,7 @@ export default function AboutPage() {
       <section className="bg-bg-dark pt-24 pb-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <Breadcrumbs items={[{ label: 'About', href: '/about' }]} />
-          <h1 className="text-4xl md:text-5xl font-bold mt-4">
+          <h1 className="text-4xl md:text-5xl font-bold mt-4 text-white">
             About Reputation 500
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-300">

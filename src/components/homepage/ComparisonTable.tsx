@@ -182,25 +182,25 @@ export default function ComparisonTable() {
                   Compare Plans
                 </th>
                 <th
-                  className="text-[#004AAD] font-bold text-sm text-center py-3 border-b-3 border-[#004AAD]"
+                  className="text-[#004AAD] font-bold text-sm text-center py-3 border-b-3 border-[#004AAD] border-l border-[#004AAD]/10"
                   style={{ width: "15%" }}
                 >
                   Essential
                 </th>
                 <th
-                  className="text-[#004AAD] font-bold text-sm text-center py-3 border-b-3 border-[#004AAD]"
+                  className="text-[#004AAD] font-bold text-sm text-center py-3 border-b-3 border-[#004AAD] border-l border-[#004AAD]/10"
                   style={{ width: "15%" }}
                 >
                   Enhanced
                 </th>
                 <th
-                  className="text-[#004AAD] font-bold text-sm text-center py-3 border-b-3 border-[#004AAD]"
+                  className="text-[#004AAD] font-bold text-sm text-center py-3 border-b-3 border-[#004AAD] border-l border-[#004AAD]/10"
                   style={{ width: "15%" }}
                 >
                   Elite
                 </th>
                 <th
-                  className="text-[#004AAD] font-bold text-sm text-center py-3 border-b-3 border-[#004AAD]"
+                  className="text-[#004AAD] font-bold text-sm text-center py-3 border-b-3 border-[#004AAD] border-l border-[#004AAD]/10"
                   style={{ width: "15%" }}
                 >
                   Ultimate
@@ -212,23 +212,23 @@ export default function ComparisonTable() {
                 <tr key={i}>
                   <td
                     colSpan={2}
-                    className="py-4 px-3 text-left font-medium text-gray-800 text-sm border-b border-gray-100"
+                    className="py-4 px-3 text-left font-medium text-gray-800 text-sm border-b border-[#004AAD]/10"
                   >
                     {row.feature}
                     {row.sub && (
                       <span className="block text-xs text-gray-400 mt-0.5">{row.sub}</span>
                     )}
                   </td>
-                  <td className="py-4 px-3 text-center text-sm text-gray-600 border-b border-gray-100">
+                  <td className="py-4 px-3 text-center text-sm text-gray-600 border-b border-[#004AAD]/10 border-l border-[#004AAD]/10">
                     {renderCell(row.essential)}
                   </td>
-                  <td className="py-4 px-3 text-center text-sm text-gray-600 border-b border-gray-100">
+                  <td className="py-4 px-3 text-center text-sm text-gray-600 border-b border-[#004AAD]/10 border-l border-[#004AAD]/10">
                     {renderCell(row.enhanced)}
                   </td>
-                  <td className="py-4 px-3 text-center text-sm text-gray-600 border-b border-gray-100">
+                  <td className="py-4 px-3 text-center text-sm text-gray-600 border-b border-[#004AAD]/10 border-l border-[#004AAD]/10">
                     {renderCell(row.elite)}
                   </td>
-                  <td className="py-4 px-3 text-center text-sm text-gray-600 border-b border-gray-100">
+                  <td className="py-4 px-3 text-center text-sm text-gray-600 border-b border-[#004AAD]/10 border-l border-[#004AAD]/10">
                     {renderCell(row.ultimate)}
                   </td>
                 </tr>

@@ -12,7 +12,7 @@ export default function Footer() {
             {/* Left Column */}
             <div>
               <h2
-                className="text-3xl lg:text-4xl font-extrabold leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 via-pink-400 via-red-400 via-orange-400 to-yellow-400"
+                className="text-3xl lg:text-4xl font-extrabold leading-tight mb-6 text-white"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
                 Let&apos;s start a project together

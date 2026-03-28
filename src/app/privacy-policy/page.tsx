@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
           <Breadcrumbs
             items={[{ label: 'Privacy Policy', href: '/privacy-policy' }]}
           />
-          <h1 className="text-4xl md:text-5xl font-bold mt-4">
+          <h1 className="text-4xl md:text-5xl font-bold mt-4 text-white">
             Privacy Policy
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-300">

@@ -21,7 +21,7 @@ export default function TermsOfServicePage() {
               { label: 'Terms of Service', href: '/terms-of-service' },
             ]}
           />
-          <h1 className="text-4xl md:text-5xl font-bold mt-4">
+          <h1 className="text-4xl md:text-5xl font-bold mt-4 text-white">
             Terms of Service
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
