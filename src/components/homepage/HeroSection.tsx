@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import ContactForm from '@/components/ui/ContactForm'
 
 const rotatingTexts = [
@@ -96,23 +95,22 @@ export default function HeroSection() {
                 className="grid items-center mt-2"
                 style={{
                   gridTemplateColumns: 'repeat(5, 1fr)',
-                  gap: '24px 32px',
-                  maxWidth: '520px',
+                  gap: '28px 36px',
+                  maxWidth: '560px',
                 }}
               >
                 {clientLogos.map((logo) => (
                   <div
                     key={logo.alt}
                     className="flex items-center justify-center"
-                    style={{ height: '48px' }}
+                    style={{ height: '58px' }}
                   >
-                    <Image
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                       src={logo.src}
                       alt={logo.alt}
-                      width={120}
-                      height={48}
                       className="object-contain"
-                      style={{ maxHeight: '40px', width: 'auto', height: 'auto' }}
+                      style={{ maxHeight: logo.alt === 'EY' ? '54px' : '48px', width: 'auto', height: 'auto' }}
                     />
                   </div>
                 ))}
