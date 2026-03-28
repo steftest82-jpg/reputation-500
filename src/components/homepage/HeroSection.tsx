@@ -14,16 +14,18 @@ const rotatingTexts = [
 ]
 
 const clientLogos = [
-  { src: '/images/clients/ey.png', alt: 'EY', w: 80, h: 45 },
-  { src: '/images/clients/cbi.png', alt: 'CBI', w: 120, h: 50 },
-  { src: '/images/clients/xm.png', alt: 'XM', w: 100, h: 45 },
-  { src: '/images/clients/eurofast.png', alt: 'Eurofast', w: 140, h: 35 },
-  { src: '/images/clients/serhant.png', alt: 'SERHANT', w: 150, h: 35 },
-  { src: '/images/clients/deluxe-holiday.png', alt: 'Deluxe Holiday Homes', w: 110, h: 55 },
-  { src: '/images/clients/uexo.png', alt: 'UEXO', w: 100, h: 45 },
-  { src: '/images/clients/rcx.png', alt: 'RCX Global', w: 110, h: 45 },
-  { src: '/images/clients/livex.png', alt: 'Liv-Ex', w: 110, h: 40 },
-  { src: '/images/clients/exness.png', alt: 'Exness', w: 110, h: 38 },
+  // Row 1
+  { src: '/images/clients/ey.png', alt: 'EY' },
+  { src: '/images/clients/cbi.png', alt: 'CBI' },
+  { src: '/images/clients/xm.png', alt: 'XM' },
+  { src: '/images/clients/eurofast.png', alt: 'Eurofast' },
+  { src: '/images/clients/serhant.png', alt: 'SERHANT' },
+  // Row 2
+  { src: '/images/clients/deluxe-holiday.png', alt: 'Deluxe Holiday Homes' },
+  { src: '/images/clients/uexo.png', alt: 'UEXO' },
+  { src: '/images/clients/rcx.png', alt: 'RCX Global' },
+  { src: '/images/clients/livex.png', alt: 'Liv Ex' },
+  { src: '/images/clients/exness.png', alt: 'Exness' },
 ]
 
 export default function HeroSection() {
@@ -89,22 +91,28 @@ export default function HeroSection() {
                 </span>
               </div>
 
-              {/* Client Logos: Full Color, Prominent */}
-              <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-5 items-center max-w-2xl">
+              {/* Client Logos: 5 per row, matching screenshot spacing */}
+              <div
+                className="grid items-center mt-2"
+                style={{
+                  gridTemplateColumns: 'repeat(5, 1fr)',
+                  gap: '24px 32px',
+                  maxWidth: '520px',
+                }}
+              >
                 {clientLogos.map((logo) => (
-                  <div key={logo.alt} className="flex items-center justify-center">
+                  <div
+                    key={logo.alt}
+                    className="flex items-center justify-center"
+                    style={{ height: '48px' }}
+                  >
                     <Image
                       src={logo.src}
                       alt={logo.alt}
-                      width={logo.w}
-                      height={logo.h}
-                      className="object-contain hover:scale-105 transition-transform duration-300"
-                      style={{
-                        width: 'auto',
-                        height: 'auto',
-                        maxHeight: `${logo.h}px`,
-                        maxWidth: `${logo.w}px`,
-                      }}
+                      width={120}
+                      height={48}
+                      className="object-contain"
+                      style={{ maxHeight: '40px', width: 'auto', height: 'auto' }}
                     />
                   </div>
                 ))}
