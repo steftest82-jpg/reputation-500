@@ -37,7 +37,7 @@ export default function BlogPage() {
       {/* Hero */}
       <section className="bg-bg-dark pt-24 pb-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <Breadcrumbs items={[{ label: 'Blog', href: '/blog' }]} />
+          <Breadcrumbs light items={[{ label: 'Blog', href: '/blog' }]} />
           <h1 className="text-4xl md:text-5xl font-bold mt-4 text-white">
             Reputation Management Insights
           </h1>

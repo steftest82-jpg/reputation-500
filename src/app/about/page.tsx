@@ -47,7 +47,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="bg-bg-dark pt-24 pb-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <Breadcrumbs items={[{ label: 'About', href: '/about' }]} />
+          <Breadcrumbs light items={[{ label: 'About', href: '/about' }]} />
           <h1 className="text-4xl md:text-5xl font-bold mt-4 text-white">
             About Reputation 500
           </h1>

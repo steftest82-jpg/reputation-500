@@ -7,7 +7,7 @@ interface BreadcrumbItem {
   href?: string
 }
 
-export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
+export default function Breadcrumbs({ items, light }: { items: BreadcrumbItem[]; light?: boolean }) {
   const allItems = [{ label: 'Home', href: '/' }, ...items]
 
   const schemaData = {
@@ -24,17 +24,17 @@ export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
   return (
     <>
       <JsonLd data={schemaData} />
-      <nav aria-label="Breadcrumb" className="text-sm text-text-muted mb-6">
+      <nav aria-label="Breadcrumb" className={`text-sm mb-6 ${light ? 'text-gray-400' : 'text-gray-500'}`}>
         <ol className="flex flex-wrap items-center gap-1">
           {allItems.map((item, index) => (
             <li key={index} className="flex items-center gap-1">
               {index > 0 && <span className="mx-1">/</span>}
               {item.href && index < allItems.length - 1 ? (
-                <Link href={item.href} className="hover:text-primary transition-colors">
+                <Link href={item.href} className={`transition-colors ${light ? 'hover:text-white' : 'hover:text-primary'}`}>
                   {item.label}
                 </Link>
               ) : (
-                <span className="text-heading font-medium">{item.label}</span>
+                <span className={`font-medium ${light ? 'text-white' : 'text-gray-900'}`}>{item.label}</span>
               )}
             </li>
           ))}

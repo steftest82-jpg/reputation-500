@@ -18,7 +18,7 @@ export default function TestimonialsPage() {
       {/* Hero */}
       <section className="bg-bg-dark pt-24 pb-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <Breadcrumbs
+          <Breadcrumbs light
             items={[
               { label: 'About', href: '/about' },
               { label: 'Testimonials', href: '/about/testimonials' },
