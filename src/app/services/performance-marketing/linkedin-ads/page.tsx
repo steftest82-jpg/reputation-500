@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Accordion from '@/components/ui/Accordion';
-import CTABanner from '@/components/ui/CTABanner';
+import ServiceCTA from '@/components/ui/ServiceCTA';
 import JsonLd from '@/components/seo/JsonLd';
 import { SITE_URL } from '@/lib/constants';
 
@@ -206,12 +206,7 @@ export default function LinkedInAdsPage() {
       </section>
 
       {/* CTA */}
-      <CTABanner
-        title="Fill Your B2B Pipeline With Qualified Leads"
-        description="Book a strategy call to see how LinkedIn Ads can reach your ideal buyers."
-        buttonText="Book a Strategy Call"
-        buttonHref="/contact"
-      />
+      <ServiceCTA serviceName="LinkedIn Ads" />
     </>
   );
 }

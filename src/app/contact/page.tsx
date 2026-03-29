@@ -70,14 +70,6 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-gray-900">Office</h3>
-                  <p>ADCX Tech Solutions LTD</p>
-                  <p className="text-gray-800 text-sm mt-1">
-                    Serving clients across 21 countries worldwide.
-                  </p>
-                </div>
-
-                <div>
                   <h3 className="font-semibold text-gray-900">
                     Business Hours
                   </h3>

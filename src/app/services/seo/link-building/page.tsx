@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Accordion from '@/components/ui/Accordion';
-import CTABanner from '@/components/ui/CTABanner';
+import ServiceCTA from '@/components/ui/ServiceCTA';
 import JsonLd from '@/components/seo/JsonLd';
 import { SITE_URL } from '@/lib/constants';
 
@@ -207,12 +207,7 @@ export default function LinkBuildingPage() {
       </section>
 
       {/* CTA */}
-      <CTABanner
-        title="Ready to Build Authority That Ranks?"
-        description="Get a free backlink audit and discover the link gaps holding your site back."
-        buttonText="Get Your Free Audit"
-        buttonHref="/contact"
-      />
+      <ServiceCTA serviceName="Link Building" />
     </>
   );
 }

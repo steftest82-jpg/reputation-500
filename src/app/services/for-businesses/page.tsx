@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import Accordion from '@/components/ui/Accordion'
-import CTABanner from '@/components/ui/CTABanner'
+import ServiceCTA from '@/components/ui/ServiceCTA'
 import ServiceCard from '@/components/ui/ServiceCard'
 import JsonLd from '@/components/seo/JsonLd'
 import { SITE_URL, SERVICES_DATA } from '@/lib/constants'
@@ -155,8 +155,7 @@ export default function ForBusinessesPage() {
       {/* Content Section */}
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="">
+          <div className="max-w-3xl mx-auto">
               <h2
                 className="text-2xl lg:text-3xl font-bold text-black mb-6"
                 style={{ fontFamily: 'var(--font-heading)' }}
@@ -180,12 +179,6 @@ export default function ForBusinessesPage() {
                 across 21 countries transform their digital reputation into a competitive advantage
                 that drives real business outcomes.
               </p>
-            </div>
-            <div className="">
-              <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center">
-                <span className="text-gray-900 text-lg">Image</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -263,11 +256,7 @@ export default function ForBusinessesPage() {
       </section>
 
       {/* CTA */}
-      <CTABanner
-        title="Ready to Protect and Grow Your Business Reputation?"
-        description="Get a free brand reputation analysis. We will audit your search results, review profiles, and media presence, then show you the fastest path to improvement."
-        buttonText="Get Your Free Brand Audit"
-      />
+      <ServiceCTA serviceName="Business Reputation Management" />
     </>
   )
 }

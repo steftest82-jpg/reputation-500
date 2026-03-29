@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Accordion from '@/components/ui/Accordion';
-import CTABanner from '@/components/ui/CTABanner';
+import ServiceCTA from '@/components/ui/ServiceCTA';
 import JsonLd from '@/components/seo/JsonLd';
 import { SITE_URL } from '@/lib/constants';
 
@@ -207,12 +207,7 @@ export default function ContentWritingPage() {
       </section>
 
       {/* CTA */}
-      <CTABanner
-        title="Need Content That Actually Ranks?"
-        description="Request a sample brief and see how our SEO content writing process can fuel your organic growth."
-        buttonText="Request a Sample Brief"
-        buttonHref="/contact"
-      />
+      <ServiceCTA serviceName="SEO Content Writing" />
     </>
   );
 }

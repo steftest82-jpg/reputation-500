@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Accordion from '@/components/ui/Accordion';
-import CTABanner from '@/components/ui/CTABanner';
+import ServiceCTA from '@/components/ui/ServiceCTA';
 import JsonLd from '@/components/seo/JsonLd';
 import { SITE_URL } from '@/lib/constants';
 
@@ -207,12 +207,7 @@ export default function MetaAdsPage() {
       </section>
 
       {/* CTA */}
-      <CTABanner
-        title="Scale Your Meta Ads Profitably"
-        description="Request a free creative and funnel audit to see where your Meta campaigns can improve."
-        buttonText="Get Your Free Audit"
-        buttonHref="/contact"
-      />
+      <ServiceCTA serviceName="Meta Ads" />
     </>
   );
 }

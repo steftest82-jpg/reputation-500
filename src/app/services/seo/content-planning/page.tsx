@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Accordion from '@/components/ui/Accordion';
-import CTABanner from '@/components/ui/CTABanner';
+import ServiceCTA from '@/components/ui/ServiceCTA';
 import JsonLd from '@/components/seo/JsonLd';
 import { SITE_URL } from '@/lib/constants';
 
@@ -209,12 +209,7 @@ export default function ContentPlanningPage() {
       </section>
 
       {/* CTA */}
-      <CTABanner
-        title="Ready for a Content Strategy That Delivers?"
-        description="Let us build a data-driven content roadmap tailored to your growth goals."
-        buttonText="Get Your Content Roadmap"
-        buttonHref="/contact"
-      />
+      <ServiceCTA serviceName="Content Planning" />
     </>
   );
 }

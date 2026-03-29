@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import SectionHeading from '@/components/ui/SectionHeading'
 import Accordion from '@/components/ui/Accordion'
-import CTABanner from '@/components/ui/CTABanner'
+import ServiceCTA from '@/components/ui/ServiceCTA'
 import JsonLd from '@/components/seo/JsonLd'
 import { SITE_URL } from '@/lib/constants'
 
@@ -213,10 +213,7 @@ export default function RatingsOptimizationPage() {
       </section>
 
       {/* CTA */}
-      <CTABanner
-        title="Turn Your Reviews Into a Competitive Advantage"
-        description="Get a free review audit and see how ratings optimization can increase customer trust and revenue."
-      />
+      <ServiceCTA serviceName="Ratings Optimization" />
     </>
   )
 }

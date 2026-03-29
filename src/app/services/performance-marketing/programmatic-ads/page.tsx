@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Accordion from '@/components/ui/Accordion';
-import CTABanner from '@/components/ui/CTABanner';
+import ServiceCTA from '@/components/ui/ServiceCTA';
 import JsonLd from '@/components/seo/JsonLd';
 import { SITE_URL } from '@/lib/constants';
 
@@ -207,12 +207,7 @@ export default function ProgrammaticAdsPage() {
       </section>
 
       {/* CTA */}
-      <CTABanner
-        title="Expand Your Reach Beyond Walled Gardens"
-        description="Discover how programmatic advertising can put your brand in front of the right audience at scale."
-        buttonText="Schedule a Consultation"
-        buttonHref="/contact"
-      />
+      <ServiceCTA serviceName="Programmatic Advertising" />
     </>
   );
 }

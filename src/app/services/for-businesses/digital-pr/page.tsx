@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import SectionHeading from '@/components/ui/SectionHeading'
 import Accordion from '@/components/ui/Accordion'
-import CTABanner from '@/components/ui/CTABanner'
+import ServiceCTA from '@/components/ui/ServiceCTA'
 import JsonLd from '@/components/seo/JsonLd'
 import { SITE_URL } from '@/lib/constants'
 
@@ -213,10 +213,7 @@ export default function DigitalPRPage() {
       </section>
 
       {/* CTA */}
-      <CTABanner
-        title="Earn the Media Coverage Your Brand Deserves"
-        description="Schedule a free consultation and learn how digital PR can build your authority and improve search rankings."
-      />
+      <ServiceCTA serviceName="Digital PR" />
     </>
   )
 }

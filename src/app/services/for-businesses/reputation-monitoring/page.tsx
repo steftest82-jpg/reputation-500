@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import SectionHeading from '@/components/ui/SectionHeading'
 import Accordion from '@/components/ui/Accordion'
-import CTABanner from '@/components/ui/CTABanner'
+import ServiceCTA from '@/components/ui/ServiceCTA'
 import JsonLd from '@/components/seo/JsonLd'
 import { SITE_URL } from '@/lib/constants'
 
@@ -213,10 +213,7 @@ export default function ReputationMonitoringBusinessesPage() {
       </section>
 
       {/* CTA */}
-      <CTABanner
-        title="Never Be Caught Off Guard Again"
-        description="Start with a free reputation scan and see what your monitoring dashboard could look like."
-      />
+      <ServiceCTA serviceName="Reputation Monitoring" />
     </>
   )
 }

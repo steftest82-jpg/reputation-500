@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import SectionHeading from '@/components/ui/SectionHeading'
 import Accordion from '@/components/ui/Accordion'
-import CTABanner from '@/components/ui/CTABanner'
+import ServiceCTA from '@/components/ui/ServiceCTA'
 import JsonLd from '@/components/seo/JsonLd'
 import { SITE_URL } from '@/lib/constants'
 
@@ -213,10 +213,7 @@ export default function PersonalReputationManagementPage() {
       </section>
 
       {/* CTA */}
-      <CTABanner
-        title="Ready to Reclaim Your Online Reputation?"
-        description="Get a free personal reputation audit and learn how we can help you build the search presence you deserve."
-      />
+      <ServiceCTA serviceName="Personal Reputation Management" />
     </>
   )
 }

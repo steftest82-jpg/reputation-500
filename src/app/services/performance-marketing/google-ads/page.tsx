@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Accordion from '@/components/ui/Accordion';
-import CTABanner from '@/components/ui/CTABanner';
+import ServiceCTA from '@/components/ui/ServiceCTA';
 import JsonLd from '@/components/seo/JsonLd';
 import { SITE_URL } from '@/lib/constants';
 
@@ -207,12 +207,7 @@ export default function GoogleAdsPage() {
       </section>
 
       {/* CTA */}
-      <CTABanner
-        title="Ready to Make Google Ads Profitable?"
-        description="Get a free account audit and discover how much revenue you are leaving on the table."
-        buttonText="Get Your Free Account Audit"
-        buttonHref="/contact"
-      />
+      <ServiceCTA serviceName="Google Ads" />
     </>
   );
 }

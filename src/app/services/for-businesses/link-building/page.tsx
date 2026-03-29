@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import SectionHeading from '@/components/ui/SectionHeading'
 import Accordion from '@/components/ui/Accordion'
-import CTABanner from '@/components/ui/CTABanner'
+import ServiceCTA from '@/components/ui/ServiceCTA'
 import JsonLd from '@/components/seo/JsonLd'
 import { SITE_URL } from '@/lib/constants'
 
@@ -213,10 +213,7 @@ export default function LinkBuildingBusinessesPage() {
       </section>
 
       {/* CTA */}
-      <CTABanner
-        title="Build the Authority Your Rankings Need"
-        description="Get a free backlink audit and learn how strategic link building can transform your search performance."
-      />
+      <ServiceCTA serviceName="Link Building" />
     </>
   )
 }

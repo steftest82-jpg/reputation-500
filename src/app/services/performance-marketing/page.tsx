@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import Accordion from '@/components/ui/Accordion'
-import CTABanner from '@/components/ui/CTABanner'
+import ServiceCTA from '@/components/ui/ServiceCTA'
 import ServiceCard from '@/components/ui/ServiceCard'
 import JsonLd from '@/components/seo/JsonLd'
 import { SITE_URL, SERVICES_DATA } from '@/lib/constants'
@@ -227,8 +227,7 @@ export default function PerformanceMarketingPage() {
       {/* ── Content Section (Two Columns) ── */}
       <section className="bg-white py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="">
+          <div className="max-w-3xl mx-auto">
               <h2
                 className="text-3xl font-bold text-[#000] mb-6"
                 style={{ fontFamily: 'var(--font-heading)' }}
@@ -257,16 +256,6 @@ export default function PerformanceMarketingPage() {
                   budget goes and why.
                 </p>
               </div>
-            </div>
-
-            <div className="">
-              <div className="bg-[#F5F7FA] rounded-xl border border-[#004AAD]/15 aspect-[4/3] flex items-center justify-center">
-                <div className="text-center p-8">
-                  <i className="fas fa-chart-pie text-5xl text-[#004AAD]/30 mb-4" />
-                  <p className="text-sm text-[#555]">Campaign Performance Dashboard</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -354,11 +343,7 @@ export default function PerformanceMarketingPage() {
       </section>
 
       {/* ── CTA Banner ── */}
-      <CTABanner
-        title="Ready to Turn Ad Spend Into Predictable Growth?"
-        description="Book a free campaign audit and discover how much more ROI your paid media budget can deliver."
-        buttonText="Get Your Free Audit"
-      />
+      <ServiceCTA serviceName="Performance Marketing" />
     </>
   )
 }

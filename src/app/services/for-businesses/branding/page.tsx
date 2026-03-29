@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import SectionHeading from '@/components/ui/SectionHeading'
 import Accordion from '@/components/ui/Accordion'
-import CTABanner from '@/components/ui/CTABanner'
+import ServiceCTA from '@/components/ui/ServiceCTA'
 import JsonLd from '@/components/seo/JsonLd'
 import { SITE_URL } from '@/lib/constants'
 
@@ -213,10 +213,7 @@ export default function BrandingPage() {
       </section>
 
       {/* CTA */}
-      <CTABanner
-        title="Build a Brand That Commands Attention"
-        description="Schedule a free brand consultation and discover how strategic branding can differentiate your business."
-      />
+      <ServiceCTA serviceName="Branding" />
     </>
   )
 }

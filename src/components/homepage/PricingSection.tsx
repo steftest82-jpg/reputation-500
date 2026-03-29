@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { PRICING_PLANS } from '@/lib/constants'
+import PricingCTA from '@/components/homepage/PricingCTA'
 
 function CheckIcon() {
   return (
@@ -110,16 +111,7 @@ export default function PricingSection() {
 
                 {/* CTA */}
                 <div className="mt-auto pt-5">
-                  <Link
-                    href={`/contact?package=${plan.name}`}
-                    className={`block w-full text-center py-3.5 rounded-xl font-semibold text-sm transition-all duration-300 ${
-                      isPopular
-                        ? 'bg-primary text-white hover:bg-primary-dark shadow-lg shadow-primary/15'
-                        : 'bg-gray-50 text-heading border border-gray-200 hover:bg-primary hover:text-white hover:border-primary'
-                    }`}
-                  >
-                    Get Started
-                  </Link>
+                  <PricingCTA planName={plan.name} isPopular={isPopular} />
                 </div>
               </div>
             )
