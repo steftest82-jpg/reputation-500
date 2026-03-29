@@ -45,7 +45,7 @@ export default function CaseStudiesPage() {
             ]}
           />
           <h1 className="text-4xl md:text-5xl font-bold mt-4 text-white">Case Studies</h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-800">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
             Real results from real campaigns: see how we have delivered for
             clients worldwide.
           </p>

@@ -80,7 +80,7 @@ export default function ServicePageTemplate({
           <h1 className="text-3xl lg:text-5xl font-bold text-white mb-6 max-w-3xl" style={{ fontFamily: 'var(--font-heading)' }}>
             {title}
           </h1>
-          <p className="text-lg text-gray-800 max-w-2xl leading-relaxed">
+          <p className="text-lg text-gray-300 max-w-2xl leading-relaxed">
             {description}
           </p>
         </div>

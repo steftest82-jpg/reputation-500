@@ -51,7 +51,7 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-5xl font-bold mt-4 text-white">
             About Reputation 500
           </h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-800">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
             Protecting and elevating brands across the globe since day one.
           </p>
         </div>
