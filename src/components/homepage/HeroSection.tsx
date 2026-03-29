@@ -124,8 +124,8 @@ export default function HeroSection() {
                 <div className="text-center mb-3">
                   <div className="text-[#9a7b2d] text-lg tracking-[0.15em]">★★★★★</div>
                   <p
-                    className="text-[14px] font-bold text-[#9a7b2d] tracking-[0.12em] uppercase mt-1"
-                    style={{ fontFamily: 'var(--font-heading)' }}
+                    className="font-bold text-[#9a7b2d] tracking-[0.12em] uppercase mt-1"
+                    style={{ fontFamily: 'var(--font-heading)', fontSize: '14px' }}
                   >
                     4.8 Stars · 32,920+ Articles Published
                   </p>

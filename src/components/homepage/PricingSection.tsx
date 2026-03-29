@@ -27,8 +27,8 @@ export default function PricingSection() {
           Online Reputation Management 360 Packages
         </h2>
         <p
-          className="text-[#204ABD] text-[20px] text-center mb-14"
-          style={{ fontFamily: 'var(--font-body)' }}
+          className="text-[#204ABD] text-center mb-14"
+          style={{ fontFamily: 'var(--font-body)', fontSize: '20px' }}
         >
           Full Reputation, handled.
         </p>

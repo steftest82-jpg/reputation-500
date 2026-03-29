@@ -25,13 +25,13 @@ export default function CTABanner({
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href={buttonHref}
-            className="inline-flex items-center px-8 py-3.5 text-sm bg-primary text-white font-semibold rounded-md hover:bg-primary-dark transition-colors"
+            className="inline-flex items-center justify-center px-8 py-3 text-sm bg-primary text-white font-semibold rounded-md border-2 border-primary hover:bg-primary-dark hover:border-primary-dark transition-colors h-[50px]"
           >
             {buttonText || 'Get Your Reputation Analysis'}
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center px-8 py-3.5 text-sm border-2 border-primary text-primary font-semibold rounded-md hover:bg-primary hover:text-white transition-colors"
+            className="inline-flex items-center justify-center px-8 py-3 text-sm border-2 border-primary text-primary font-semibold rounded-md hover:bg-primary hover:text-white transition-colors h-[50px]"
           >
             Book a free consultation
           </Link>
