@@ -1,6 +1,6 @@
 export const SITE_NAME = 'Reputation 500'
 export const SITE_DESCRIPTION = 'Reputation 500 is an online reputation management agency helping individuals and businesses control what shows up in Google Search, reviews, and brand mentions.'
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://reputation500.com'
+export const SITE_URL = 'https://reputation500.com'
 export const CONTACT_EMAIL = 'info@reputation500.com'
 export const LOGO_URL = '/images/logo.png'
 
