@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, FormEvent, useEffect } from 'react'
+import { useState, FormEvent, useEffect, useCallback } from 'react'
+import { createPortal } from 'react-dom'
 
 interface InquiryModalProps {
   isOpen: boolean
@@ -11,20 +12,30 @@ interface InquiryModalProps {
   inquiryName: string
 }
 
-export default function InquiryModal({ isOpen, onClose, title, subtitle, inquiryType, inquiryName }: InquiryModalProps) {
+function ModalContent({ onClose, title, subtitle, inquiryType, inquiryName }: Omit<InquiryModalProps, 'isOpen'>) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
+  const handleBackdropClick = useCallback((e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      onClose()
+    }
+  }, [onClose])
+
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    }
+    document.addEventListener('keydown', handleEscape)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', handleEscape)
       document.body.style.overflow = ''
     }
-    return () => { document.body.style.overflow = '' }
-  }, [isOpen])
+  }, [onClose])
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    e.stopPropagation()
     setStatus('sending')
 
     const formData = new FormData(e.currentTarget)
@@ -59,22 +70,34 @@ export default function InquiryModal({ isOpen, onClose, title, subtitle, inquiry
     }
   }
 
-  if (!isOpen) return null
-
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
+    <div
+      className="fixed inset-0 flex items-center justify-center p-4"
+      style={{ zIndex: 99999, position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
+      onClick={handleBackdropClick}
+      onMouseMove={(e) => e.stopPropagation()}
+      onMouseOver={(e) => e.stopPropagation()}
+      onMouseEnter={(e) => e.stopPropagation()}
+    >
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
-
-      {/* Modal */}
       <div
-        className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 animate-[scaleIn_0.2s_ease-out]"
-        style={{ animation: 'scaleIn 0.2s ease-out' }}
+        className="absolute inset-0"
+        style={{ backgroundColor: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(4px)', zIndex: 1 }}
+      />
+
+      {/* Modal Card */}
+      <div
+        className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8"
+        style={{ position: 'relative', zIndex: 2 }}
+        onClick={(e) => e.stopPropagation()}
+        onMouseMove={(e) => e.stopPropagation()}
       >
         {/* Close button */}
         <button
           onClick={onClose}
+          type="button"
           className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition-colors"
+          style={{ zIndex: 3 }}
           aria-label="Close"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
@@ -165,13 +188,21 @@ export default function InquiryModal({ isOpen, onClose, title, subtitle, inquiry
           </form>
         )}
       </div>
-
-      <style jsx>{`
-        @keyframes scaleIn {
-          from { opacity: 0; transform: scale(0.95); }
-          to { opacity: 1; transform: scale(1); }
-        }
-      `}</style>
     </div>
+  )
+}
+
+export default function InquiryModal({ isOpen, ...props }: InquiryModalProps) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!isOpen || !mounted) return null
+
+  return createPortal(
+    <ModalContent {...props} />,
+    document.body
   )
 }
