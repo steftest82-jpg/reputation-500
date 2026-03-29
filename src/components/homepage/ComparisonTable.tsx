@@ -43,11 +43,11 @@ const rows: Row[] = [
   },
   {
     feature: "Social Media Posts",
-    sub: "(X, Li, FB, IG, Threads, TikTok, YT)",
+    sub: "(X, Li, FB, IG, Threads, TikTok, YT, Pinterest)",
     essential: 320,
-    enhanced: 554,
-    elite: 624,
-    ultimate: 1040,
+    enhanced: 524,
+    elite: 660,
+    ultimate: 816,
   },
   {
     feature: "Press Releases (as needed)",
@@ -112,8 +112,8 @@ const rows: Row[] = [
   {
     feature: "Premium Guaranteed Features",
     sub: "(e.g. CEO Weekly, Dubai Weekly, Grid, etc)",
-    essential: "dash",
-    enhanced: "dash",
+    essential: "check",
+    enhanced: "check",
     elite: "check",
     ultimate: "check",
   },
