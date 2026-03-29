@@ -127,6 +127,15 @@ export default function Navbar() {
                         }`}
                       >
                         <div className="bg-white rounded-xl shadow-xl shadow-black/[0.05] border border-gray-100 p-2 min-w-[220px]">
+                          {/* Parent page link */}
+                          <Link
+                            href={link.href}
+                            className="flex items-center px-4 py-2.5 rounded-lg text-sm text-[#004AAD] hover:bg-[#e8f0fe] transition-all duration-150 font-semibold border-b border-gray-100 mb-1"
+                            style={{ fontFamily: 'var(--font-body)' }}
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            {link.label} Overview
+                          </Link>
                           {link.children.map((child) => (
                             <Link
                               key={child.href}

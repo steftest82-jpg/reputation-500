@@ -1,4 +1,5 @@
-import Link from 'next/link'
+'use client'
+
 import ContactForm from '@/components/ui/ContactForm'
 
 export default function Footer() {
@@ -54,14 +55,14 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             {/* Logo */}
-            <Link href="/" aria-label="Reputation 500 Home">
+            <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} aria-label="Back to top">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/logo.png"
                 alt="Reputation 500"
                 className="h-6 w-auto brightness-0 invert"
               />
-            </Link>
+            </a>
 
             {/* Copyright */}
             <p
