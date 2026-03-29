@@ -286,6 +286,15 @@ export default function Navbar() {
                       }`}
                     >
                       <div className="ml-4 pl-4 border-l-2 border-gray-100 space-y-0.5 py-1">
+                        {/* Parent page link */}
+                        <Link
+                          href={link.href}
+                          className="block px-4 py-2.5 text-base text-[#004AAD] hover:text-[#003580] font-semibold transition-colors rounded-lg"
+                          style={{ fontFamily: 'var(--font-body)' }}
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {link.label} Overview
+                        </Link>
                         {link.children.map((child) => (
                           <Link
                             key={child.href}
