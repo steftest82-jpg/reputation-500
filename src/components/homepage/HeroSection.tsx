@@ -52,7 +52,7 @@ export default function HeroSection() {
             <div className="lg:col-span-7">
               {/* H1 */}
               <h1
-                className="text-3xl md:text-4xl lg:text-[2.8rem] font-medium text-[#000] leading-[1.12] tracking-tight mb-5"
+                className="text-3xl md:text-4xl lg:text-[2.8rem] font-semibold text-[#000] leading-[1.12] tracking-tight mb-5"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
                 Leading Online Reputation Management Agency
@@ -110,7 +110,7 @@ export default function HeroSection() {
                       src={logo.src}
                       alt={logo.alt}
                       className="object-contain"
-                      style={{ maxHeight: logo.alt === 'EY' ? '54px' : '48px', width: 'auto', height: 'auto' }}
+                      style={{ maxHeight: logo.alt === 'EY' ? '59px' : '53px', width: 'auto', height: 'auto' }}
                     />
                   </div>
                 ))}
@@ -119,12 +119,12 @@ export default function HeroSection() {
 
             {/* RIGHT: 5 cols: Form Card */}
             <div className="lg:col-span-5" style={{ transitionDelay: '200ms' }}>
-              <div className="bg-white rounded-2xl p-6 lg:p-7 shadow-xl shadow-black/[0.06] border border-[#004AAD]/12">
+              <div className="bg-white rounded-2xl p-6 lg:p-7 shadow-xl shadow-black/[0.06] border border-[#204ABD]">
                 {/* Stars + Stats */}
                 <div className="text-center mb-3">
                   <div className="text-[#9a7b2d] text-lg tracking-[0.15em]">★★★★★</div>
                   <p
-                    className="text-sm font-bold text-[#9a7b2d] tracking-[0.12em] uppercase mt-1"
+                    className="text-[14px] font-bold text-[#9a7b2d] tracking-[0.12em] uppercase mt-1"
                     style={{ fontFamily: 'var(--font-heading)' }}
                   >
                     4.8 Stars · 32,920+ Articles Published
@@ -132,7 +132,7 @@ export default function HeroSection() {
                 </div>
 
                 <p
-                  className="text-base font-semibold text-gray-800 text-center leading-snug mb-5"
+                  className="text-[22px] font-semibold text-gray-800 text-center leading-snug mb-5"
                   style={{ fontFamily: 'var(--font-heading)' }}
                 >
                   Guaranteed Coverage in Forbes, Entrepreneur, IB Times &amp; More

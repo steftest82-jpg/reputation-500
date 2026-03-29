@@ -27,7 +27,7 @@ export default function HomePage() {
       <ServicesGrid />
       <CTABanner
         title="Ready to Take Control of Your Reputation?"
-        description="Get a free reputation analysis and discover how we can protect and grow your online presence."
+        description="Get a reputation analysis and discover how we can protect and grow your online presence."
       />
       <FeaturesChecklist />
       <MediaGallery />

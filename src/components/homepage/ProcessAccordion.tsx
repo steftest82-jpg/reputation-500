@@ -27,7 +27,7 @@ export default function ProcessAccordion() {
           {/* Left Column */}
           <div className="">
             <h2
-              className="text-3xl lg:text-[2.75rem] font-medium text-heading leading-tight tracking-tight mb-6"
+              className="text-[36px] font-semibold text-heading leading-tight tracking-tight mb-6"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
               A proven process to protect and elevate your reputation

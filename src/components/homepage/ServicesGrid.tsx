@@ -24,7 +24,7 @@ const services = [
 export default function ServicesGrid() {
   return (
     <section
-      className="py-20 lg:py-28"
+      className="py-10 lg:py-14"
       style={{ backgroundColor: 'var(--bg-section, #F5F7FA)' }}
     >
       <div className="max-w-7xl mx-auto px-4">
@@ -41,7 +41,7 @@ export default function ServicesGrid() {
 
         {/* Heading */}
         <h2
-          className="text-3xl lg:text-[2.75rem] font-medium text-center max-w-2xl mx-auto mb-14 leading-tight tracking-tight"
+          className="text-[36px] lg:text-[36px] font-semibold text-center max-w-2xl mx-auto mb-14 leading-tight tracking-tight"
           style={{
             fontFamily: 'var(--font-heading)',
             color: 'var(--heading, #000)',
@@ -61,7 +61,7 @@ export default function ServicesGrid() {
               <div className="w-10 h-1 rounded-full bg-[#004AAD] mb-6 group-hover:w-16 transition-all duration-500" />
 
               <h4
-                className="text-xl font-bold mb-3 tracking-tight"
+                className="text-[22px] font-semibold mb-3 tracking-tight"
                 style={{
                   fontFamily: 'var(--font-heading)',
                   color: 'var(--heading, #000)',

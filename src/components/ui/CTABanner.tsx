@@ -9,7 +9,7 @@ interface CTABannerProps {
 
 export default function CTABanner({
   title = 'Ready to Take Control of Your Reputation?',
-  description = 'Get a free reputation analysis and discover how we can protect and grow your online presence.',
+  description = 'Get a reputation analysis and discover how we can protect and grow your online presence.',
   buttonText,
   buttonHref = '/contact',
 }: CTABannerProps) {
@@ -25,13 +25,13 @@ export default function CTABanner({
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href={buttonHref}
-            className="inline-flex items-center px-8 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary-dark transition-colors"
+            className="inline-flex items-center px-8 py-3.5 text-sm bg-primary text-white font-semibold rounded-md hover:bg-primary-dark transition-colors"
           >
             {buttonText || 'Get Your Reputation Analysis'}
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center px-8 py-3 border-2 border-primary text-primary font-semibold rounded-md hover:bg-primary hover:text-white transition-colors"
+            className="inline-flex items-center px-8 py-3.5 text-sm border-2 border-primary text-primary font-semibold rounded-md hover:bg-primary hover:text-white transition-colors"
           >
             Book a free consultation
           </Link>

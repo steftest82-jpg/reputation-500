@@ -79,7 +79,7 @@ const rows: Row[] = [
   },
   {
     feature: "Wikipedia Page or Wikidata",
-    sub: "Extra charge:Optional",
+    sub: "Extra charge=Optional",
     essential: "€550 One time fee",
     enhanced: "€450 One time fee",
     elite: "check",
@@ -95,7 +95,7 @@ const rows: Row[] = [
   },
   {
     feature: "Wikipedia Link",
-    sub: "Extra charge:Optional",
+    sub: "Extra charge=Optional",
     essential: "€600 One time fee",
     enhanced: "€480 One time fee",
     elite: "check",
@@ -119,7 +119,7 @@ const rows: Row[] = [
   },
   {
     feature: "Entrepreneur UK or ME or CEO Middle East full feature",
-    sub: "Extra charge:Optional",
+    sub: "Extra charge=Optional",
     essential: "€4700 One time fee",
     enhanced: "€3900 One time fee",
     elite: "€3,500 One time fee",

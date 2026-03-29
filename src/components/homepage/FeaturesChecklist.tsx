@@ -8,6 +8,7 @@ const checklistItems = [
   'Google 1st Page Ranking',
   'Be in AI Answers / Citations',
   'Push Negative Search Results Away',
+  'Results oriented with proven record',
 ];
 
 const statsData = [
@@ -69,7 +70,7 @@ function AnimatedCounter({
   return (
     <span
       ref={ref}
-      className="text-6xl font-medium tracking-tighter"
+      className="text-[28px] font-semibold tracking-tighter"
       style={{
         fontFamily: 'var(--font-heading)',
         color: 'var(--heading, #000)',
@@ -89,7 +90,7 @@ export default function FeaturesChecklist() {
           {/* LEFT */}
           <div className="">
             <h2
-              className="text-3xl lg:text-[2.75rem] font-medium leading-tight tracking-tight mb-6"
+              className="text-[36px] font-semibold leading-tight tracking-tight mb-6"
               style={{
                 fontFamily: 'var(--font-heading)',
                 color: 'var(--heading, #000)',

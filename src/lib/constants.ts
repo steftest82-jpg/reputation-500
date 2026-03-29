@@ -105,6 +105,12 @@ export const TESTIMONIALS = [
     text: 'I had the pleasure of working with Savvas on developing the PR launch strategy for my B2B company targeting high-net-worth individuals (HNWIs) in the trust fund space. I was genuinely impressed by his ability to "spider-connect" the PR angle with a comprehensive trust marketing strategy.',
     rating: 5,
   },
+  {
+    name: 'Giovani',
+    role: 'Board Director & Strategic Advisor @ Commercial Bank International',
+    text: 'Savvas is a great curator of style with substance, a great legacy story teller and a great marketing strategist. I don\'t usually do recommendations, but I\'m making an exception because I have been genuinely impressed in a way that I haven\'t before when it comes to working with brands. Highly recommended!',
+    rating: 5,
+  },
 ]
 
 export const PRICING_PLANS = [

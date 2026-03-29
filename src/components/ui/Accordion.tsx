@@ -38,7 +38,7 @@ export default function Accordion({ items, defaultOpen = 0 }: AccordionProps) {
               onClick={() => setOpenIndex(isOpen ? null : index)}
             >
               <h3
-                className={`text-base font-bold transition-colors ${
+                className={`text-[20px] font-semibold transition-colors ${
                   isOpen ? 'text-[#004AAD]' : 'text-gray-900'
                 }`}
                 style={{ fontFamily: 'var(--font-heading)' }}
@@ -62,7 +62,7 @@ export default function Accordion({ items, defaultOpen = 0 }: AccordionProps) {
                 isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
               }`}
             >
-              <div className="px-6 pb-5 text-gray-800 text-sm leading-relaxed">
+              <div className="px-6 pb-5 text-gray-800 text-[16px] leading-relaxed">
                 {body}
               </div>
             </div>

@@ -29,7 +29,7 @@ export default function TrustBar() {
   return (
     <section className="bg-white py-6 border-b border-gray-100 relative z-10 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)]">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-center flex-wrap gap-8 lg:gap-10">
+        <div className="flex items-center justify-center flex-wrap gap-4 lg:gap-6">
           {stats.map((stat, i) => (
             <div key={i} className="contents">
               {i > 0 && (

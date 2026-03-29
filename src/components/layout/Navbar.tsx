@@ -157,7 +157,9 @@ export default function Navbar() {
             {/* CTA Button - Desktop */}
             <div className="hidden lg:block">
               <Link
-                href="/contact"
+                href="https://rep500.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-lg transition-all duration-200"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
@@ -304,14 +306,16 @@ export default function Navbar() {
 
             {/* Mobile CTA */}
             <div className="pt-6 px-2">
-              <Link
-                href="/contact"
+              <a
+                href="https://rep500.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary flex items-center justify-center w-full px-6 py-3.5 text-base font-semibold rounded-xl transition-all duration-200"
                 style={{ fontFamily: 'var(--font-heading)' }}
                 onClick={() => setMobileOpen(false)}
               >
                 Get Your Reputation Analysis
-              </Link>
+              </a>
             </div>
           </nav>
         </div>

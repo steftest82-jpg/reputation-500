@@ -21,13 +21,13 @@ export default function PricingSection() {
     <section className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
-          className="text-3xl lg:text-[2.75rem] font-medium text-center tracking-tight mb-2"
+          className="text-[36px] font-medium text-center tracking-tight mb-2"
           style={{ fontFamily: 'var(--font-heading)' }}
         >
           Online Reputation Management 360 Packages
         </h2>
         <p
-          className="text-gray-900 text-base text-center mb-14"
+          className="text-[#204ABD] text-[20px] text-center mb-14"
           style={{ fontFamily: 'var(--font-body)' }}
         >
           Full Reputation, handled.
@@ -44,14 +44,14 @@ export default function PricingSection() {
               >
                 {/* Badge */}
                 {isPopular && (
-                  <span className="absolute -top-3.5 right-6 bg-primary text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg shadow-primary/20">
+                  <span className="absolute -top-3.5 right-6 bg-primary text-white px-4 py-1 rounded-full text-[12px] font-bold uppercase tracking-wider shadow-lg shadow-primary/20">
                     {plan.badge}
                   </span>
                 )}
 
                 {/* Plan Name */}
                 <h3
-                  className="text-xl font-bold text-heading tracking-tight mb-2"
+                  className="text-xl font-bold text-[#204ABD] tracking-tight mb-4"
                   style={{ fontFamily: 'var(--font-heading)' }}
                 >
                   {plan.name}
@@ -70,7 +70,7 @@ export default function PricingSection() {
                 <div className="flex items-baseline gap-1 mb-5">
                   <span className="text-lg font-semibold text-gray-800">{plan.currency}</span>
                   <span
-                    className="text-4xl font-medium text-heading tracking-tighter"
+                    className="text-4xl font-semibold text-heading tracking-tighter"
                     style={{ fontFamily: 'var(--font-heading)' }}
                   >
                     {plan.price}
@@ -87,7 +87,7 @@ export default function PricingSection() {
                     <li key={i} className="flex items-start gap-2.5">
                       <CheckIcon />
                       <span
-                        className="text-sm text-gray-900 leading-relaxed"
+                        className="text-[16px] text-gray-900 leading-relaxed"
                         style={{ fontFamily: 'var(--font-body)' }}
                       >
                         {feature}
