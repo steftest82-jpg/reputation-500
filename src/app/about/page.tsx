@@ -6,29 +6,29 @@ import { SITE_NAME, SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: `About Us | ${SITE_NAME}`,
-  description: 'Reputation 500 is an online reputation management agency founded by Savvas Agathangelou, Stefanos Moschopoulos, and Alexandros Tzoulis. With 10+ years of experience, 78+ clients across 21 countries, and 32,920+ articles published, we protect and elevate brands worldwide.',
+  description: 'Reputation 500 is an online reputation management agency founded by Savvas Agathangelou, Stefanos Moschopoulos, and Alex Tzoulis. With 10+ years of experience, 78+ clients across 21 countries, and 32,920+ articles published, we protect and elevate brands worldwide.',
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
     title: `About Reputation 500 | Online Reputation Management Agency`,
-    description: 'Meet the team behind Reputation 500. Founded by Savvas Agathangelou, Stefanos Moschopoulos, and Alexandros Tzoulis to help businesses and individuals take control of their online narrative.',
+    description: 'Meet the team behind Reputation 500. Founded by Savvas Agathangelou, Stefanos Moschopoulos, and Alex Tzoulis to help businesses and individuals take control of their online narrative.',
   },
 }
 
 const founders = [
   {
     name: 'Savvas Agathangelou',
-    role: 'Co-Founder & CEO',
+    role: 'Co-Founder',
     bio: 'Savvas leads the strategic direction of Reputation 500 with over a decade of hands-on experience in digital PR, online reputation management, and brand positioning. His ability to connect PR strategy with measurable business outcomes has earned the trust of executives, fund managers, and multinational brands across EMEA, the UK, and the US.',
   },
   {
     name: 'Stefanos Moschopoulos',
-    role: 'Co-Founder & CTO',
+    role: 'Co-Founder',
     bio: 'Stefanos drives the technology and data infrastructure behind Reputation 500. With deep expertise in SEO engineering, AI optimization, and analytics platforms, he ensures every campaign is built on solid technical foundations and measurable performance data.',
   },
   {
-    name: 'Alexandros Tzoulis',
-    role: 'Co-Founder & COO',
-    bio: 'Alexandros oversees operations and client delivery at Reputation 500. His background in project management, media relations, and process optimization ensures that every engagement runs smoothly, on time, and with the level of quality our clients expect.',
+    name: 'Alex Tzoulis',
+    role: 'Co-Founder',
+    bio: 'Alex oversees operations and client delivery at Reputation 500. His background in project management, media relations, and process optimization ensures that every engagement runs smoothly, on time, and with the level of quality our clients expect.',
   },
 ]
 
@@ -72,9 +72,9 @@ const aboutSchema = {
   description: 'Reputation 500 is an online reputation management agency helping individuals and businesses control what shows up in Google Search, reviews, and brand mentions.',
   foundingDate: '2016',
   founders: [
-    { '@type': 'Person', name: 'Savvas Agathangelou', jobTitle: 'Co-Founder & CEO' },
-    { '@type': 'Person', name: 'Stefanos Moschopoulos', jobTitle: 'Co-Founder & CTO' },
-    { '@type': 'Person', name: 'Alexandros Tzoulis', jobTitle: 'Co-Founder & COO' },
+    { '@type': 'Person', name: 'Savvas Agathangelou', jobTitle: 'Co-Founder' },
+    { '@type': 'Person', name: 'Stefanos Moschopoulos', jobTitle: 'Co-Founder' },
+    { '@type': 'Person', name: 'Alex Tzoulis', jobTitle: 'Co-Founder' },
   ],
   parentOrganization: {
     '@type': 'Organization',
@@ -118,7 +118,7 @@ export default function AboutPage() {
                   Reputation 500 is an online reputation management agency that helps individuals, executives, and businesses take full control of what appears when someone searches their name or brand. We combine digital PR, SEO content, review management, link building, and AI optimization into a single, measurable reputation strategy.
                 </p>
                 <p>
-                  Founded by Savvas Agathangelou, Stefanos Moschopoulos, and Alexandros Tzoulis, Reputation 500 was built on the belief that every person and business deserves to be represented accurately and positively online. We have grown from a specialist consultancy into a full-service reputation management agency, serving 78+ clients across 21 countries with more than 32,920 articles published.
+                  Founded by Savvas Agathangelou, Stefanos Moschopoulos, and Alex Tzoulis, Reputation 500 was built on the belief that every person and business deserves to be represented accurately and positively online. We have grown from a specialist consultancy into a full-service reputation management agency, serving 78+ clients across 21 countries with more than 32,920 articles published.
                 </p>
                 <p>
                   As part of ADCX Tech Solutions LTD, we combine strategic communications expertise with advanced technology to deliver measurable, lasting results. Our clients include Fortune 500 executives, FinTech companies, real estate firms, trading brokers, and high-profile individuals across Europe, the Middle East, and North America.

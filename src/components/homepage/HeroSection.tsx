@@ -136,8 +136,8 @@ export default function HeroSection() {
                 </div>
 
                 <p
-                  className="text-[22px] font-semibold text-gray-800 text-center leading-snug mb-5"
-                  style={{ fontFamily: 'var(--font-heading)' }}
+                  className="font-semibold text-gray-800 text-center leading-snug mb-5"
+                  style={{ fontFamily: 'var(--font-heading)', fontSize: '22px' }}
                 >
                   Guaranteed Coverage in Forbes, Entrepreneur, IB Times &amp; More
                 </p>

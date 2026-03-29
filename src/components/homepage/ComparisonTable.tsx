@@ -43,11 +43,11 @@ const rows: Row[] = [
   },
   {
     feature: "Social Media Posts",
-    sub: "X, Li, FB, IG, Threads, TikTok, YT, Pinterest",
+    sub: "(X, Li, FB, IG, Threads, TikTok, YT)",
     essential: 320,
-    enhanced: 524,
-    elite: 660,
-    ultimate: 816,
+    enhanced: 554,
+    elite: 624,
+    ultimate: 1040,
   },
   {
     feature: "Press Releases (as needed)",
@@ -75,7 +75,7 @@ const rows: Row[] = [
     essential: 11,
     enhanced: 20,
     elite: 30,
-    ultimate: 53,
+    ultimate: 33,
   },
   {
     feature: "Wikipedia Page or Wikidata",
@@ -103,15 +103,15 @@ const rows: Row[] = [
   },
   {
     feature: "VIP Features Guaranteed",
-    sub: "e.g. Forbes, The Luxury Playbook, IBTimes, etc",
-    essential: "dash",
+    sub: "(e.g. Forbes, The Luxury Playbook, IBTimes, etc)",
+    essential: "1+",
     enhanced: "3+",
-    elite: "3 + 1 Digital cover Featured guaranteed",
-    ultimate: "1 Digital cover Featured guaranteed",
+    elite: "3 + 1 Digital cover Feature guaranteed",
+    ultimate: "3 + 1 Digital cover Feature guaranteed",
   },
   {
     feature: "Premium Guaranteed Features",
-    sub: "e.g. CEO Weekly, Dubai Weekly, Cnd, etc",
+    sub: "(e.g. CEO Weekly, Dubai Weekly, Grid, etc)",
     essential: "dash",
     enhanced: "dash",
     elite: "check",
@@ -119,10 +119,10 @@ const rows: Row[] = [
   },
   {
     feature: "Entrepreneur UK or ME or CEO Middle East full feature",
-    sub: "Extra charge=Optional",
+    sub: "If extra charge=Optional",
     essential: "€4700 One time fee",
     enhanced: "€3900 One time fee",
-    elite: "€3,500 One time fee",
+    elite: "€3300 One time fee",
     ultimate: "dash",
   },
   {
@@ -150,6 +150,7 @@ const rows: Row[] = [
   },
   {
     feature: "Ongoing Brand Discovery Analysis and optimisation for ultimate results",
+    sub: "(+Reporting)",
     essential: "Monthly",
     enhanced: "Monthly",
     elite: "Weekly",
