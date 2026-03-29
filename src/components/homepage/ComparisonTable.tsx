@@ -123,7 +123,7 @@ const rows: Row[] = [
     essential: "€4700 One time fee",
     enhanced: "€3900 One time fee",
     elite: "€3300 One time fee",
-    ultimate: "dash",
+    ultimate: "check",
   },
   {
     feature: "On-page SEO Optimization",
