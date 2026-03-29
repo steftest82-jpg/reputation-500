@@ -71,17 +71,17 @@ const faqs = [
   {
     title: 'How far in advance should we start reputation building before entering a new market?',
     content:
-      'We recommend beginning market activation 3 to 6 months before your planned launch. This allows time to establish local search presence, secure media placements, build citation profiles on platforms your audience trusts, and generate initial reviews. For highly competitive markets or regulated industries, starting earlier gives you a stronger foundation and reduces the risk of a slow start.',
+      'We recommend beginning market activation 3 to 6 months before your planned launch, depending on the competitiveness of the market and the complexity of local regulations. This lead time allows us to establish local search presence through Google Business Profiles and directory listings, secure media placements in respected regional publications, build citation profiles on the platforms your audience trusts, and generate initial reviews that provide social proof from day one. For highly competitive markets or regulated industries such as financial services or healthcare, starting 6 to 9 months early gives you a stronger foundation and reduces the risk of a slow start. The earlier you begin building local credibility, the more cost-effective your launch advertising becomes, since prospects who find positive search results and reviews convert at significantly higher rates.',
   },
   {
     title: 'Which countries and regions do you support for market activation?',
     content:
-      'We support market activation across North America, Europe, the United Kingdom, the Middle East, Asia-Pacific, and Latin America. Our network includes in-market specialists in over 30 countries who provide local expertise in language, culture, media landscape, regulatory environment, and consumer behavior. If your target market is not listed, contact us and we will assess coverage.',
+      'We support market activation across North America, Europe, the United Kingdom, the Middle East, Asia-Pacific, and Latin America, with active campaigns currently running in over 21 countries. Our network includes in-market specialists in over 30 countries who provide local expertise in language, culture, media landscape, regulatory environment, and consumer behavior, ensuring your activation strategy is authentically localized rather than simply translated. Each market activation plan is built around the specific search engines, review platforms, social networks, and media outlets that dominate in your target geography. If your target market is not listed, contact us and we will assess coverage and timeline for establishing the necessary local partnerships.',
   },
   {
     title: 'Do you handle content translation and cultural localization?',
     content:
-      'Yes, and we go far beyond direct translation. Our in-market writers adapt your messaging to reflect local language nuances, cultural expectations, humor, formality levels, and industry-specific terminology. This ensures your content reads naturally and resonates with the target audience, rather than feeling like a foreign brand that has run its website through a translation tool.',
+      'Yes, and we go far beyond direct translation. Our in-market writers adapt your messaging to reflect local language nuances, cultural expectations, humor, formality levels, and industry-specific terminology that only native speakers understand intuitively. We also conduct local keyword research to ensure your content targets the search terms your audience actually uses, which often differ significantly from direct translations of your English keywords. This ensures your content reads naturally and resonates with the target audience, rather than feeling like a foreign brand that has run its website through a translation tool. The result is locally authentic content that ranks well in regional search engines and builds genuine credibility with your new audience.',
   },
   {
     title: 'What makes a reputation-first market entry different from a standard launch?',
@@ -292,6 +292,25 @@ export default function MarketActivationPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Related Services ── */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-[28px] font-semibold text-center mb-8" style={{ fontFamily: 'var(--font-heading)' }}>
+            Explore Related Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <Link href="/services/for-businesses" className="block p-6 bg-[#F5F7FA] rounded-2xl border border-[#004AAD]/15 hover:border-[#004AAD]/30 transition-all card-lift">
+              <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>Business Reputation Management</h3>
+              <p className="text-gray-600" style={{ fontSize: '15px' }}>Protect your company brand, improve star ratings, and turn online trust into measurable revenue.</p>
+            </Link>
+            <Link href="/services/performance-marketing" className="block p-6 bg-[#F5F7FA] rounded-2xl border border-[#004AAD]/15 hover:border-[#004AAD]/30 transition-all card-lift">
+              <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>Performance Marketing</h3>
+              <p className="text-gray-600" style={{ fontSize: '15px' }}>ROI-driven paid media campaigns across Google, Meta, and LinkedIn that drive qualified leads.</p>
+            </Link>
           </div>
         </div>
       </section>

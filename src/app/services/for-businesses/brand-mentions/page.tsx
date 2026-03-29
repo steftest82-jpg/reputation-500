@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'Brand Mentions for Businesses | Reputation 500',
   description:
     'Track and amplify your brand mentions across the digital landscape. Reputation 500 monitors every reference to your company and turns them into growth opportunities.',
+  alternates: { canonical: 'https://reputation500.com/services/for-businesses/brand-mentions' },
+  openGraph: {
+    title: 'Brand Mentions for Businesses | Reputation 500',
+    description: 'Track and amplify your brand mentions across the digital landscape. Reputation 500 monitors every reference to your company and turns them into growth opportunities.',
+  },
 }
 
 const faqs = [

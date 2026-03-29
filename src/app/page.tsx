@@ -12,7 +12,8 @@ import CTABanner from '@/components/ui/CTABanner'
 
 export const metadata: Metadata = {
   title: 'Reputation 500 | Leading Online Reputation Management Agency',
-  description: 'Reputation 500 is an online reputation management agency helping individuals and businesses control what shows up in Google Search, reviews, and brand mentions. Trusted by 78+ clients across 21 countries.',
+  description: 'Reputation 500 is an online reputation management agency helping individuals and businesses control Google Search results, reviews, and brand mentions. Trusted by 78+ clients in 21 countries.',
+  alternates: { canonical: 'https://reputation500.com' },
   openGraph: {
     title: 'Reputation 500 | Leading Online Reputation Management Agency',
     description: 'Online reputation management for individuals and businesses. PR, SEO, review management, and brand protection.',

@@ -22,11 +22,11 @@ const FAQ_ITEMS = [
   },
   {
     question: 'What is included in your SEO audit?',
-    answer: 'Our comprehensive SEO audit covers technical health (site speed, crawlability, indexation), on-page optimization (title tags, meta descriptions, heading structure, content quality), off-page authority (backlink profile analysis, competitor comparison), and content gap analysis. You receive a prioritized action plan with estimated impact for each recommendation.',
+    answer: 'Our comprehensive SEO audit covers technical health including site speed, crawlability, indexation status, and Core Web Vitals compliance, as well as on-page optimization factors like title tags, meta descriptions, heading structure, internal linking, and content quality. We also analyze your off-page authority through a full backlink profile audit, competitor backlink comparison, and referring domain quality assessment, combined with a content gap analysis that identifies high-value topics your competitors rank for but you do not. The audit typically reviews over 200 individual ranking factors and is completed within 5 to 10 business days. You receive a prioritized action plan with estimated traffic impact for each recommendation, so you know exactly where to invest for the greatest return.',
   },
   {
     question: 'How does link building improve search rankings?',
-    answer: 'Backlinks from authoritative websites signal to Google that your content is trustworthy and valuable. Our link building focuses on earning high-quality, relevant links from respected publications and industry sites, not low-quality directories. This approach builds sustainable authority that improves your rankings across your entire site, not just individual pages.',
+    answer: 'Backlinks from authoritative websites signal to Google that your content is trustworthy and valuable, functioning as third-party endorsements that carry significant weight in search algorithms. Our link building focuses on earning high-quality, relevant links from respected publications, industry sites, and authoritative news outlets, not low-quality directories or spammy link networks. We use a combination of digital PR, guest content, data-driven studies, and relationship-based outreach to secure placements that deliver both SEO value and referral traffic. This approach builds sustainable domain authority that improves your rankings across your entire site, not just individual pages, and creates a competitive moat that is difficult for rivals to replicate.',
   },
   {
     question: 'Do you write SEO content in-house or outsource it?',
@@ -38,7 +38,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'How much do your SEO services cost?',
-    answer: 'Our SEO services are included as part of our reputation management plans starting at EUR 1,250 per month. For standalone SEO engagements, pricing depends on the scope of work, competitiveness of your target keywords, and current state of your site. We always start with a free SEO analysis to scope the opportunity before recommending an investment level.',
+    answer: 'Our SEO services are included as part of our reputation management plans starting at EUR 1,250 per month, which covers content creation, link building, technical optimization, and monthly reporting. For standalone SEO engagements, pricing depends on the scope of work, competitiveness of your target keywords, and the current state of your site. We always start with a free SEO analysis that includes a technical audit, keyword opportunity assessment, and competitive benchmarking to scope the opportunity before recommending an investment level. There are no long-term contracts required, and our flexible engagement model allows you to scale services up or down as your organic growth strategy evolves.',
   },
 ]
 
@@ -235,6 +235,25 @@ export default function SEOPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-[28px] font-semibold text-center mb-8" style={{ fontFamily: 'var(--font-heading)' }}>
+            Explore Related Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <Link href="/services/for-businesses" className="block p-6 bg-[#F5F7FA] rounded-2xl border border-[#004AAD]/15 hover:border-[#004AAD]/30 transition-all card-lift">
+              <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>Business Reputation Management</h3>
+              <p className="text-gray-600" style={{ fontSize: '15px' }}>Protect your company brand, improve star ratings, and turn online trust into measurable revenue.</p>
+            </Link>
+            <Link href="/services/performance-marketing" className="block p-6 bg-[#F5F7FA] rounded-2xl border border-[#004AAD]/15 hover:border-[#004AAD]/30 transition-all card-lift">
+              <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>Performance Marketing</h3>
+              <p className="text-gray-600" style={{ fontSize: '15px' }}>ROI-driven paid media campaigns across Google, Meta, and LinkedIn that drive qualified leads.</p>
+            </Link>
           </div>
         </div>
       </section>

@@ -77,12 +77,12 @@ const faqs = [
   {
     title: 'What platforms do you run paid campaigns on?',
     content:
-      'We manage campaigns across Google Ads (Search, Display, Shopping, YouTube, Performance Max), Meta Ads (Facebook and Instagram), LinkedIn Ads, Microsoft Advertising, TikTok Ads, X Ads, and programmatic display and video networks. Channel selection is based on where your target audience is most active and where we can deliver the strongest return on ad spend.',
+      'We manage campaigns across Google Ads (Search, Display, Shopping, YouTube, Performance Max), Meta Ads (Facebook and Instagram), LinkedIn Ads, Microsoft Advertising, TikTok Ads, X Ads, and programmatic display and video networks including premium inventory through demand-side platforms. Channel selection is based on where your target audience is most active and where we can deliver the strongest return on ad spend for your specific business model. Each platform is managed by certified specialists who understand the unique targeting capabilities, ad formats, and optimization levers of their channel. We also coordinate messaging across channels to ensure consistent brand narrative and accurate cross-channel attribution, so you get a unified view of performance rather than siloed platform reports.',
   },
   {
     title: 'What kind of budget do I need for performance marketing?',
     content:
-      'Effective budgets vary by industry and competitive landscape. Most of our clients invest between EUR 3,000 and EUR 50,000 per month in ad spend, plus management fees. During our free consultation we provide budget recommendations based on your goals, target cost per acquisition, and market conditions so you can plan with confidence.',
+      'Effective budgets vary by industry, competitive landscape, and the number of channels you want to activate simultaneously. Most of our clients invest between EUR 3,000 and EUR 50,000 per month in ad spend, plus management fees that scale with campaign complexity. During our free consultation we provide detailed budget recommendations based on your revenue goals, target cost per acquisition, average customer lifetime value, and current market conditions so you can plan with confidence. We also build spend scenarios showing projected outcomes at different investment levels, helping you choose the right starting point and understand exactly when and how to scale for maximum return.',
   },
   {
     title: 'How quickly will I see results from paid advertising?',
@@ -97,7 +97,7 @@ const faqs = [
   {
     title: 'Can you take over campaigns I am already running?',
     content:
-      'Absolutely. We begin with a comprehensive audit of your existing ad accounts to identify immediate efficiency gains. We then restructure campaigns where needed while preserving historical data and learnings. Most clients see a 20-40% improvement in cost efficiency within the first 60 days of our management.',
+      'Absolutely. We begin with a comprehensive audit of your existing ad accounts to identify immediate efficiency gains, wasted spend, audience overlap, and creative fatigue across all active campaigns. We then restructure campaigns where needed while preserving historical data, conversion learnings, and any audience segments that are already performing well. Our onboarding process includes migrating tracking to server-side conversion APIs where possible and aligning attribution models to give you a more accurate picture of true campaign performance. Most clients see a 20 to 40 percent improvement in cost efficiency within the first 60 days of our management, with continued gains as we optimize creative, bidding strategies, and audience targeting.',
   },
 ]
 
@@ -323,6 +323,25 @@ export default function PerformanceMarketingPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Related Services ── */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-[28px] font-semibold text-center mb-8" style={{ fontFamily: 'var(--font-heading)' }}>
+            Explore Related Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <Link href="/services/seo" className="block p-6 bg-[#F5F7FA] rounded-2xl border border-[#004AAD]/15 hover:border-[#004AAD]/30 transition-all card-lift">
+              <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>SEO Services</h3>
+              <p className="text-gray-600" style={{ fontSize: '15px' }}>Data-driven SEO strategies that increase organic traffic and dominate search rankings.</p>
+            </Link>
+            <Link href="/services/ai-optimization" className="block p-6 bg-[#F5F7FA] rounded-2xl border border-[#004AAD]/15 hover:border-[#004AAD]/30 transition-all card-lift">
+              <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>AI Optimization</h3>
+              <p className="text-gray-600" style={{ fontSize: '15px' }}>Ensure your brand is accurately cited by ChatGPT, Claude, Perplexity, and Google AI Overviews.</p>
+            </Link>
           </div>
         </div>
       </section>

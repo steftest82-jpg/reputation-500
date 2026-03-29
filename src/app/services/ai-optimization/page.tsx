@@ -76,7 +76,7 @@ const faqs = [
   {
     title: 'Which AI platforms do you optimize for?',
     content:
-      'We optimize for all major AI assistants and AI-powered search products: OpenAI ChatGPT, Anthropic Claude, Google Gemini and AI Overviews, Perplexity, Microsoft Copilot, Bing Chat, and emerging voice assistants. Our methodology targets both the training data layer (what models learn during pre-training) and the retrieval layer (what models access in real-time via RAG), giving you comprehensive coverage.',
+      'We optimize for all major AI assistants and AI-powered search products: OpenAI ChatGPT, Anthropic Claude, Google Gemini and AI Overviews, Perplexity, Microsoft Copilot, Bing Chat, and emerging voice assistants that are rapidly gaining market share. Our methodology targets both the training data layer, which determines what models learn during pre-training and fine-tuning, and the retrieval layer, which controls what models access in real-time via retrieval-augmented generation (RAG). This dual-layer approach gives you comprehensive coverage across AI systems that update on different cycles and rely on different source hierarchies. We continuously expand our platform coverage as new AI search products emerge, ensuring your brand stays visible regardless of which AI assistant your audience prefers.',
   },
   {
     title: 'Can you fix inaccurate information that AI is saying about my brand?',
@@ -91,7 +91,7 @@ const faqs = [
   {
     title: 'How do you measure AI optimization success?',
     content:
-      'We track AI mention frequency, response accuracy, sentiment, citation ranking (where you appear relative to competitors in AI answers), and coverage across different query types. Clients receive monthly reports showing how AI-generated answers about their brand evolve over time, along with competitive benchmarks that show how you compare to key rivals in AI visibility.',
+      'We track AI mention frequency, response accuracy, sentiment, citation ranking (where you appear relative to competitors in AI answers), and coverage across different query types and prompt variations. Our proprietary monitoring system runs hundreds of brand-relevant prompts across all major AI platforms on a weekly basis to detect changes in how your brand is represented. Clients receive monthly reports showing how AI-generated answers about their brand evolve over time, along with competitive benchmarks that show how you compare to key rivals in AI visibility. We also flag any new inaccuracies or negative sentiment shifts immediately so they can be addressed before they become embedded in model behavior.',
   },
   {
     title: 'How long does it take to see improvement in AI-generated responses?',
@@ -292,6 +292,25 @@ export default function AIOptimizationPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Related Services ── */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-[28px] font-semibold text-center mb-8" style={{ fontFamily: 'var(--font-heading)' }}>
+            Explore Related Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <Link href="/services/seo" className="block p-6 bg-[#F5F7FA] rounded-2xl border border-[#004AAD]/15 hover:border-[#004AAD]/30 transition-all card-lift">
+              <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>SEO Services</h3>
+              <p className="text-gray-600" style={{ fontSize: '15px' }}>Data-driven SEO strategies that increase organic traffic and dominate search rankings.</p>
+            </Link>
+            <Link href="/services/for-businesses" className="block p-6 bg-[#F5F7FA] rounded-2xl border border-[#004AAD]/15 hover:border-[#004AAD]/30 transition-all card-lift">
+              <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>Business Reputation Management</h3>
+              <p className="text-gray-600" style={{ fontSize: '15px' }}>Protect your company brand, improve star ratings, and turn online trust into measurable revenue.</p>
+            </Link>
           </div>
         </div>
       </section>

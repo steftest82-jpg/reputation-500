@@ -9,6 +9,11 @@ import { SITE_URL } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'Our Reputation Management Services | Reputation 500',
   description: 'Explore our full suite of reputation management, SEO, performance marketing, and AI optimization services. Trusted by 78+ clients across 21 countries.',
+  alternates: { canonical: 'https://reputation500.com/services' },
+  openGraph: {
+    title: 'Our Reputation Management Services | Reputation 500',
+    description: 'Explore our full suite of reputation management, SEO, performance marketing, and AI optimization services. Trusted by 78+ clients across 21 countries.',
+  },
 }
 
 const SERVICE_CATEGORIES = [
@@ -53,7 +58,7 @@ const SERVICE_CATEGORIES = [
 const FAQ_ITEMS = [
   {
     question: 'What types of reputation management services do you offer?',
-    answer: 'We offer a full 360-degree approach covering personal and business reputation management, SEO, digital PR, content strategy, performance marketing, and AI optimization. Each service is tailored to your specific situation, whether you need to suppress negative search results, build authority through media placements, or improve your star ratings across review platforms.',
+    answer: 'We offer a full 360-degree approach covering personal and business reputation management, SEO, digital PR, content strategy, performance marketing, and AI optimization for platforms like ChatGPT, Claude, and Perplexity. Each service is tailored to your specific situation, whether you need to suppress negative search results, build authority through media placements, improve your star ratings across review platforms, or ensure AI assistants recommend your brand accurately. Our team has published over 32,920 articles and manages campaigns across 21 countries, giving us the scale and expertise to handle everything from individual executive reputation to enterprise-level brand management. Every engagement starts with a free reputation analysis so we can identify which combination of services will deliver the fastest, most measurable impact for your specific goals.',
   },
   {
     question: 'How long does it take to see results from reputation management?',
@@ -61,19 +66,19 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Do you work with clients outside of Europe?',
-    answer: 'Absolutely. We serve clients across 21 countries spanning Europe, the Middle East, North America, and Asia-Pacific. Our strategies are localized for each market, ensuring your reputation is protected in every region where your brand operates or is searched.',
+    answer: 'Absolutely. We serve clients across 21 countries spanning Europe, the Middle East, North America, and Asia-Pacific, with dedicated in-market specialists who understand local media landscapes, review platforms, and cultural nuances. Our strategies are localized for each market, including native-language content creation, region-specific SEO, and placement in locally respected publications. We also handle multilingual AI optimization to ensure your brand is accurately represented in AI-generated answers regardless of the language or geography. This global reach with local depth ensures your reputation is protected in every region where your brand operates or is searched.',
   },
   {
     question: 'Can you remove negative articles or reviews from Google?',
-    answer: 'While direct removal depends on the platform and legal circumstances, we specialize in suppression strategies that push negative content off the first page of Google. Through strategic content creation, high-authority media placements, and SEO, we replace damaging results with positive, brand-controlled assets.',
+    answer: 'While direct removal depends on the platform and legal circumstances, we specialize in proven suppression strategies that push negative content off the first page of Google. Through strategic content creation, high-authority media placements, and advanced SEO techniques, we replace damaging results with positive, brand-controlled assets that you own. Our team has successfully suppressed negative results for the majority of our clients within 90 to 120 days, with some seeing first-page improvements in as few as 30 days. We also implement ongoing monitoring so that if negative content resurfaces or new threats appear, we can respond immediately to protect your search landscape.',
   },
   {
     question: 'What makes Reputation 500 different from other agencies?',
-    answer: 'We combine reputation management with deep SEO expertise, AI optimization, and performance marketing under one roof. This integrated approach means every piece of content, every backlink, and every campaign works together toward a single goal. Our 4.8-star rating across review platforms and 32,920+ published articles speak to our track record.',
+    answer: 'We combine reputation management with deep SEO expertise, AI optimization, and performance marketing under one roof, which eliminates the fragmentation that happens when you work with multiple agencies. This integrated approach means every piece of content, every backlink, and every campaign works together toward a single goal, delivering faster results with less total spend. We also bring genuine international capability, serving clients across 21 countries with in-market specialists who understand local media, culture, and search ecosystems. Our 4.8-star rating across review platforms and 32,920+ published articles speak to our consistent track record of delivering measurable outcomes for individuals and businesses alike.',
   },
   {
     question: 'How much do your reputation management services cost?',
-    answer: 'Our plans start at EUR 1,250 per month for the Essential tier and scale based on the scope and complexity of your needs. Every engagement begins with a free reputation analysis so we can recommend the right plan for your situation. There are no long-term contracts required to get started.',
+    answer: 'Our plans start at EUR 1,250 per month for the Essential tier and scale based on the scope and complexity of your needs, with Professional and Enterprise tiers available for more demanding campaigns. Every engagement begins with a free reputation analysis so we can recommend the right plan for your situation, including a detailed breakdown of what each tier delivers. There are no long-term contracts required to get started, and you can upgrade or adjust your plan as your needs evolve. Most clients see a positive return on their investment within the first 90 to 120 days through improved search visibility, higher ratings, and increased customer trust.',
   },
 ]
 

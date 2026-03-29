@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'Branding Services for Businesses | Reputation 500',
   description:
     'Build a strong, consistent brand identity that resonates with your audience. Reputation 500 helps businesses develop brand strategies that drive recognition, trust, and growth.',
+  alternates: { canonical: 'https://reputation500.com/services/for-businesses/branding' },
+  openGraph: {
+    title: 'Branding Services for Businesses | Reputation 500',
+    description: 'Build a strong, consistent brand identity that resonates with your audience. Reputation 500 helps businesses develop brand strategies that drive recognition, trust, and growth.',
+  },
 }
 
 const faqs = [

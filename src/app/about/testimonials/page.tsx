@@ -4,6 +4,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import CTABanner from '@/components/ui/CTABanner';
 import TestimonialCard from '@/components/ui/TestimonialCard';
 import { SITE_NAME, SITE_URL, TESTIMONIALS } from '@/lib/constants';
+import JsonLd from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: `Client Testimonials | ${SITE_NAME}`,
@@ -12,9 +13,25 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/about/testimonials` },
 };
 
+const ratingSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Reputation 500',
+  url: 'https://reputation500.com',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.8',
+    bestRating: '5',
+    ratingCount: '78',
+    reviewCount: '6',
+  },
+}
+
 export default function TestimonialsPage() {
   return (
     <>
+      <JsonLd data={ratingSchema} />
+
       {/* Hero */}
       <section className="bg-bg-dark pt-24 pb-16 text-white">
         <div className="container mx-auto px-4 text-center">

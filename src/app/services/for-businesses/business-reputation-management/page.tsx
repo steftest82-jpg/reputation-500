@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'Business Reputation Management | Reputation 500',
   description:
     'End-to-end reputation management for companies. Reputation 500 helps businesses control their search presence, manage reviews, and build lasting brand trust online.',
+  alternates: { canonical: 'https://reputation500.com/services/for-businesses/business-reputation-management' },
+  openGraph: {
+    title: 'Business Reputation Management | Reputation 500',
+    description: 'End-to-end reputation management for companies. Reputation 500 helps businesses control their search presence, manage reviews, and build lasting brand trust online.',
+  },
 }
 
 const faqs = [

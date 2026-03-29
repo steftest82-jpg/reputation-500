@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'Link Building Services for Businesses | Reputation 500',
   description:
     'Build high-quality backlinks that boost your domain authority and search rankings. Reputation 500 provides strategic link building through editorial placements, digital PR, and content partnerships.',
+  alternates: { canonical: 'https://reputation500.com/services/for-businesses/link-building' },
+  openGraph: {
+    title: 'Link Building Services for Businesses | Reputation 500',
+    description: 'Build high-quality backlinks that boost your domain authority and search rankings. Reputation 500 provides strategic link building through editorial placements, digital PR, and content partnerships.',
+  },
 }
 
 const faqs = [

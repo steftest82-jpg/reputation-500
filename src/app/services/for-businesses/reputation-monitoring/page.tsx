@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'Reputation Monitoring for Businesses | Reputation 500',
   description:
     'Continuous monitoring and real-time alerts for your business reputation. Reputation 500 tracks search results, reviews, media coverage, and social sentiment so you can respond fast and stay protected.',
+  alternates: { canonical: 'https://reputation500.com/services/for-businesses/reputation-monitoring' },
+  openGraph: {
+    title: 'Reputation Monitoring for Businesses | Reputation 500',
+    description: 'Continuous monitoring and real-time alerts for your business reputation. Reputation 500 tracks search results, reviews, media coverage, and social sentiment so you can respond fast and stay protected.',
+  },
 }
 
 const faqs = [

@@ -62,6 +62,12 @@ const organizationSchema = {
     contactType: 'customer service',
     email: 'info@reputation500.com',
   },
+  sameAs: [
+    'https://www.linkedin.com/company/reputation500',
+    'https://www.facebook.com/reputation500',
+    'https://twitter.com/reputation500',
+    'https://g.co/kgs/reputation500',
+  ],
 }
 
 const websiteSchema = {

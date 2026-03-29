@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'Brand Mentions for Individuals | Reputation 500',
   description:
     'Monitor and manage every mention of your name across the web. Reputation 500 helps individuals track, amplify, and respond to personal brand mentions in real time.',
+  alternates: { canonical: 'https://reputation500.com/services/for-individuals/brand-mentions' },
+  openGraph: {
+    title: 'Brand Mentions for Individuals | Reputation 500',
+    description: 'Monitor and manage every mention of your name across the web. Reputation 500 helps individuals track, amplify, and respond to personal brand mentions in real time.',
+  },
 }
 
 const faqs = [

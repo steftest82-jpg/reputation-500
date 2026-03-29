@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { PRICING_PLANS } from '@/lib/constants'
 import PricingCTA from '@/components/homepage/PricingCTA'
+import JsonLd from '@/components/seo/JsonLd'
 
 function CheckIcon() {
   return (
@@ -17,8 +18,58 @@ function CheckIcon() {
   )
 }
 
+const pricingSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Reputation 500 Packages',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      item: {
+        '@type': 'Product',
+        name: 'Essential Package',
+        description: 'Building brand foundation, personal reputation push & SMEs with publicity, trust & sales KPIs.',
+        offers: { '@type': 'Offer', price: '1250', priceCurrency: 'EUR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      item: {
+        '@type': 'Product',
+        name: 'Enhanced Package',
+        description: 'Minor Reputation concerns, politicians, growing SMEs, Fintech, negative results push.',
+        offers: { '@type': 'Offer', price: '2500', priceCurrency: 'EUR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      item: {
+        '@type': 'Product',
+        name: 'Elite Package',
+        description: 'Major monobrands, Upper scale national companies B2B, B2B2C, B2C, & FinTech.',
+        offers: { '@type': 'Offer', price: '3600', priceCurrency: 'EUR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 4,
+      item: {
+        '@type': 'Product',
+        name: 'Ultimate Package',
+        description: 'Multinational companies and high risk industry businesses with 100+ employees.',
+        offers: { '@type': 'Offer', price: '5800', priceCurrency: 'EUR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+      },
+    },
+  ],
+}
+
 export default function PricingSection() {
   return (
+    <>
+    <JsonLd data={pricingSchema} />
     <section className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
@@ -135,5 +186,6 @@ export default function PricingSection() {
         </div>
       </div>
     </section>
+    </>
   )
 }

@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'Digital PR Services for Businesses | Reputation 500',
   description:
     'Earn media coverage and build authority through strategic digital public relations. Reputation 500 secures high-authority placements that boost brand visibility, SEO, and trust.',
+  alternates: { canonical: 'https://reputation500.com/services/for-businesses/digital-pr' },
+  openGraph: {
+    title: 'Digital PR Services for Businesses | Reputation 500',
+    description: 'Earn media coverage and build authority through strategic digital public relations. Reputation 500 secures high-authority placements that boost brand visibility, SEO, and trust.',
+  },
 }
 
 const faqs = [

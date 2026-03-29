@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'Personal Reputation Management | Reputation 500',
   description:
     'Take control of what people see when they search your name online. Reputation 500 offers personal reputation management services that suppress negative content and build a positive digital presence.',
+  alternates: { canonical: 'https://reputation500.com/services/for-individuals/personal-reputation-management' },
+  openGraph: {
+    title: 'Personal Reputation Management | Reputation 500',
+    description: 'Take control of what people see when they search your name online. Reputation 500 offers personal reputation management services that suppress negative content and build a positive digital presence.',
+  },
 }
 
 const faqs = [

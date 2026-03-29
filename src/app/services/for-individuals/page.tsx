@@ -10,6 +10,11 @@ import { SITE_URL, SERVICES_DATA } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'Personal Reputation Management | Reputation 500',
   description: 'Take control of what people see when they Google your name. Personal reputation management for executives, professionals, and public figures across 21 countries.',
+  alternates: { canonical: 'https://reputation500.com/services/for-individuals' },
+  openGraph: {
+    title: 'Personal Reputation Management | Reputation 500',
+    description: 'Take control of what people see when they Google your name. Personal reputation management for executives, professionals, and public figures across 21 countries.',
+  },
 }
 
 const subServices = SERVICES_DATA['for-individuals'].subServices
@@ -18,19 +23,19 @@ const subServiceBasePath = '/services/for-individuals'
 const FAQ_ITEMS = [
   {
     question: 'What is personal reputation management and who needs it?',
-    answer: 'Personal reputation management is the practice of controlling and improving what appears when someone searches your name online. It is essential for executives, entrepreneurs, public figures, job seekers, and anyone whose career or opportunities depend on a strong digital first impression. Over 85% of people Google someone before a meeting, interview, or business deal.',
+    answer: 'Personal reputation management is the practice of controlling and improving what appears when someone searches your name online, across Google, social media, review platforms, and AI assistants like ChatGPT and Perplexity. It is essential for executives, entrepreneurs, public figures, job seekers, and anyone whose career or opportunities depend on a strong digital first impression. Over 85 percent of people Google someone before a meeting, interview, or business deal, and a single negative result or lack of online presence can cost you significant opportunities. Our service combines strategic content creation, media placements in respected publications, profile optimization, and ongoing monitoring to ensure your search results accurately reflect your professional accomplishments and personal brand.',
   },
   {
     question: 'Can you remove negative search results about me from Google?',
-    answer: 'We use proven suppression strategies to push unwanted content off the first page of Google by building and promoting high-authority positive assets. While direct removal depends on the platform, our approach has successfully moved negative results out of the top 10 for the majority of our individual clients within 90 to 120 days.',
+    answer: 'We use proven suppression strategies to push unwanted content off the first page of Google by building and promoting high-authority positive assets including media features, professional profiles, and authored content. While direct removal depends on the platform and legal circumstances, our approach has successfully moved negative results out of the top 10 for the majority of our individual clients within 90 to 120 days. The strategy typically involves creating 10 to 15 new high-ranking web properties that compete for and eventually dominate the first page of search results for your name. We also pursue removal where legally viable, including right-to-be-forgotten requests in applicable jurisdictions and direct takedown requests to hosting platforms.',
   },
   {
     question: 'How do you protect my personal brand on AI platforms like ChatGPT?',
-    answer: 'AI platforms pull information from publicly available sources to form their answers. We ensure those sources contain accurate, positive information about you by publishing authoritative content, securing high-quality media placements, and optimizing your digital footprint so AI assistants reference you favorably.',
+    answer: 'AI platforms like ChatGPT, Claude, Gemini, and Perplexity pull information from publicly available sources to form their answers about individuals. We ensure those sources contain accurate, positive information about you by publishing authoritative content on high-trust websites, securing media placements in respected publications, and optimizing your digital footprint with structured data that AI systems prioritize. Our AI optimization process includes auditing what each major AI platform currently says about you, identifying inaccuracies or gaps, and systematically improving the source material that these models reference. Most clients see measurable improvements in AI-generated responses within 8 to 12 weeks, ensuring that AI assistants reference you favorably and accurately across all platforms.',
   },
   {
     question: 'How long does personal reputation management take to show results?',
-    answer: 'Initial improvements typically appear within 30 to 60 days as new content gets indexed by Google. Significant changes to your first-page search results usually occur within 90 to 120 days. We provide monthly progress reports with clear metrics so you always know where things stand.',
+    answer: 'Initial improvements typically appear within 30 to 60 days as new content gets indexed by Google and begins ranking for your name. Significant changes to your first-page search results usually occur within 90 to 120 days, depending on the competitiveness of your name and the nature of existing content that needs to be displaced. Our strategy focuses on building 10 to 15 high-authority web properties around your name that collectively dominate the first page of search results. We provide monthly progress reports with clear metrics including search position tracking, content indexation status, and sentiment analysis so you always know exactly where things stand and what is coming next.',
   },
   {
     question: 'Is personal reputation management confidential?',
@@ -38,7 +43,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'What does a personal reputation management plan cost?',
-    answer: 'Plans for individuals start at EUR 1,250 per month. The exact investment depends on the complexity of your situation, the competitiveness of your search landscape, and how quickly you need results. We offer a free reputation analysis so you can see exactly what needs to be addressed before committing.',
+    answer: 'Plans for individuals start at EUR 1,250 per month, with tiered options available depending on the level of content production, media placement volume, and monitoring scope required. The exact investment depends on the complexity of your situation, the competitiveness of your search landscape, and how quickly you need results. We offer a free reputation analysis that provides a detailed snapshot of your current online presence, including a risk assessment and recommended action plan, so you can see exactly what needs to be addressed before committing. There are no long-term contracts required, and our team works with you to adjust the strategy as your personal brand evolves and your goals change.',
   },
 ]
 
@@ -230,6 +235,25 @@ export default function ForIndividualsPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-[28px] font-semibold text-center mb-8" style={{ fontFamily: 'var(--font-heading)' }}>
+            Explore Related Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <Link href="/services/for-businesses" className="block p-6 bg-[#F5F7FA] rounded-2xl border border-[#004AAD]/15 hover:border-[#004AAD]/30 transition-all card-lift">
+              <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>Business Reputation Management</h3>
+              <p className="text-gray-600" style={{ fontSize: '15px' }}>Protect your company brand, improve star ratings, and turn online trust into measurable revenue.</p>
+            </Link>
+            <Link href="/services/seo" className="block p-6 bg-[#F5F7FA] rounded-2xl border border-[#004AAD]/15 hover:border-[#004AAD]/30 transition-all card-lift">
+              <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>SEO Services</h3>
+              <p className="text-gray-600" style={{ fontSize: '15px' }}>Data-driven SEO strategies that increase organic traffic and dominate search rankings.</p>
+            </Link>
           </div>
         </div>
       </section>

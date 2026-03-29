@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'Ratings Optimization for Businesses | Reputation 500',
   description:
     'Improve your star ratings with ethical review generation and professional response strategies. Reputation 500 helps businesses earn more positive reviews and manage feedback across all platforms.',
+  alternates: { canonical: 'https://reputation500.com/services/for-businesses/ratings-optimization' },
+  openGraph: {
+    title: 'Ratings Optimization for Businesses | Reputation 500',
+    description: 'Improve your star ratings with ethical review generation and professional response strategies. Reputation 500 helps businesses earn more positive reviews and manage feedback across all platforms.',
+  },
 }
 
 const faqs = [

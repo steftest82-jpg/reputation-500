@@ -10,6 +10,11 @@ import { SITE_URL, SERVICES_DATA } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'Business Reputation Management | Reputation 500',
   description: 'Protect your company brand, improve star ratings, and turn online trust into revenue. Business reputation management for SMEs, FinTech, and enterprise brands across 21 countries.',
+  alternates: { canonical: 'https://reputation500.com/services/for-businesses' },
+  openGraph: {
+    title: 'Business Reputation Management | Reputation 500',
+    description: 'Protect your company brand, improve star ratings, and turn online trust into revenue. Business reputation management for SMEs, FinTech, and enterprise brands across 21 countries.',
+  },
 }
 
 const subServices = SERVICES_DATA['for-businesses'].subServices
@@ -18,7 +23,7 @@ const subServiceBasePath = '/services/for-businesses'
 const FAQ_ITEMS = [
   {
     question: 'Why is business reputation management important for revenue?',
-    answer: 'Studies show that a one-star increase in online ratings can lead to a 5 to 9 percent increase in revenue. Your online reputation directly impacts whether prospects trust you enough to become customers. We help businesses improve their ratings, dominate branded search results, and build the kind of digital trust that shortens sales cycles.',
+    answer: 'Studies show that a one-star increase in online ratings can lead to a 5 to 9 percent increase in revenue, and over 90 percent of B2B buyers research a company online before making a purchasing decision. Your online reputation directly impacts whether prospects trust you enough to become customers, partners, or investors. We help businesses improve their ratings across platforms like Google, Trustpilot, and G2, dominate branded search results with positive content, and build the kind of digital trust that shortens sales cycles and increases close rates. A strong business reputation also reduces customer acquisition costs by making your marketing spend more efficient, because prospects who trust your brand convert at significantly higher rates.',
   },
   {
     question: 'How do you handle negative reviews for businesses?',
@@ -26,19 +31,19 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Can you manage reputation across multiple business locations?',
-    answer: 'Yes. We manage multi-location reputation campaigns including local SEO, location-specific review management, and Google Business Profile optimization for each branch or office. Our reporting dashboard gives you a unified view of reputation metrics across all locations.',
+    answer: 'Yes. We manage multi-location reputation campaigns including local SEO, location-specific review management, and Google Business Profile optimization for each individual branch, office, or franchise location. Our team creates localized content strategies and review generation programs tailored to the specific needs and competitive landscape of each geography. Our centralized reporting dashboard gives you a unified view of reputation metrics across all locations, including star ratings, review volume, response times, and local search rankings, so you can compare performance and identify underperforming sites at a glance. We currently manage multi-location campaigns for clients with anywhere from 3 to over 50 locations across multiple countries.',
   },
   {
     question: 'How does digital PR help business reputation?',
-    answer: 'Digital PR earns your brand coverage in respected industry publications, news outlets, and authoritative websites. Each placement serves dual purposes: it builds trust with your audience and creates high-authority backlinks that improve your search rankings. This combination makes your brand more visible and more credible simultaneously.',
+    answer: 'Digital PR earns your brand coverage in respected industry publications, news outlets, and authoritative websites that your target audience already reads and trusts. Each placement serves dual purposes: it builds trust with your audience through third-party validation and creates high-authority backlinks that improve your search engine rankings across your entire domain. Our editorial team works with a network of journalists and editors across more than 3,500 media outlets to secure coverage that aligns with your brand narrative and business goals. This combination of earned media and SEO benefit makes your brand more visible and more credible simultaneously, while also influencing what AI platforms say about your company.',
   },
   {
     question: 'What industries do you specialize in for business reputation management?',
-    answer: 'We have deep experience across financial services, FinTech, real estate, SaaS, professional services, healthcare, and luxury brands. Each industry has unique reputation dynamics, and our strategies are tailored to the specific platforms, review sites, and media outlets that matter most in your sector.',
+    answer: 'We have deep experience across financial services, FinTech, real estate, SaaS, professional services, healthcare, and luxury brands, with clients ranging from fast-growing startups to publicly listed enterprises. Each industry has unique reputation dynamics, from the regulatory sensitivity of financial services to the review-driven nature of hospitality and healthcare. Our strategies are tailored to the specific platforms, review sites, and media outlets that matter most in your sector, including industry-specific publications and niche directories that carry significant weight with both search engines and AI systems. We also stay current with evolving compliance requirements in regulated industries to ensure all reputation management activities meet applicable standards.',
   },
   {
     question: 'How quickly can you improve our business ratings?',
-    answer: 'Most businesses see a measurable improvement in their aggregate star ratings within 60 to 90 days through our ethical review generation and response programs. Full reputation transformation, including search result optimization and media placements, typically reaches peak impact within 120 to 180 days.',
+    answer: 'Most businesses see a measurable improvement in their aggregate star ratings within 60 to 90 days through our ethical review generation and professional response programs. Full reputation transformation, including search result optimization, digital PR placements, and AI visibility improvements, typically reaches peak impact within 120 to 180 days. The speed of improvement depends on factors such as your current rating baseline, the volume of existing reviews, and the competitiveness of your industry. We set clear benchmarks during onboarding and provide monthly progress reports that track rating trends, review sentiment, and search position changes so you can measure the return on your investment at every stage.',
   },
 ]
 
@@ -236,6 +241,25 @@ export default function ForBusinessesPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-[28px] font-semibold text-center mb-8" style={{ fontFamily: 'var(--font-heading)' }}>
+            Explore Related Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <Link href="/services/for-individuals" className="block p-6 bg-[#F5F7FA] rounded-2xl border border-[#004AAD]/15 hover:border-[#004AAD]/30 transition-all card-lift">
+              <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>Personal Reputation Management</h3>
+              <p className="text-gray-600" style={{ fontSize: '15px' }}>Take control of your personal search results and build a powerful digital identity.</p>
+            </Link>
+            <Link href="/services/seo" className="block p-6 bg-[#F5F7FA] rounded-2xl border border-[#004AAD]/15 hover:border-[#004AAD]/30 transition-all card-lift">
+              <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>SEO Services</h3>
+              <p className="text-gray-600" style={{ fontSize: '15px' }}>Data-driven SEO strategies that increase organic traffic and dominate search rankings.</p>
+            </Link>
           </div>
         </div>
       </section>
