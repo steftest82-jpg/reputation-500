@@ -60,6 +60,9 @@ export default function Footer() {
               <img
                 src="/images/logo.png"
                 alt="Reputation 500"
+                width={160}
+                height={24}
+                loading="lazy"
                 className="h-6 w-auto brightness-0 invert"
               />
             </a>

@@ -109,6 +109,10 @@ export default function HeroSection() {
                     <img
                       src={logo.src}
                       alt={logo.alt}
+                      width={120}
+                      height={53}
+                      loading="lazy"
+                      decoding="async"
                       className="object-contain"
                       style={{ maxHeight: logo.alt === 'EY' ? '59px' : '53px', width: 'auto', height: 'auto' }}
                     />
@@ -146,12 +150,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes cursor-blink {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0; }
-        }
-      `}</style>
     </section>
   )
 }
