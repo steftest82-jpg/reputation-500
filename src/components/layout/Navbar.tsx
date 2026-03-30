@@ -118,51 +118,106 @@ export default function Navbar() {
                         </svg>
                       </button>
 
-                      {/* Dropdown */}
-                      <div
-                        className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-200 ${
-                          activeDropdown === link.label
-                            ? 'opacity-100 visible translate-y-0'
-                            : 'opacity-0 invisible -translate-y-1'
-                        }`}
-                      >
-                        <div className="bg-white rounded-xl shadow-xl shadow-black/[0.05] border border-gray-100 p-2 min-w-[260px]">
-                          {/* Parent page link */}
-                          <Link
-                            href={link.href}
-                            className="flex items-center px-4 py-2.5 rounded-lg text-sm text-[#004AAD] hover:bg-[#e8f0fe] transition-all duration-150 font-semibold border-b border-gray-100 mb-1"
-                            style={{ fontFamily: 'var(--font-body)' }}
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            {link.label} Overview
-                          </Link>
-                          {link.children.map((child: any) => (
-                            <div key={child.href}>
+                      {/* Dropdown — mega menu for Services, narrow for others */}
+                      {link.children.some((c: any) => c.children) ? (
+                        /* ===== MEGA MENU (Services) ===== */
+                        <div
+                          className={`fixed left-0 right-0 top-20 transition-all duration-200 ${
+                            activeDropdown === link.label
+                              ? 'opacity-100 visible translate-y-0'
+                              : 'opacity-0 invisible -translate-y-2'
+                          }`}
+                          onMouseEnter={() => handleDropdownEnter(link.label)}
+                          onMouseLeave={handleDropdownLeave}
+                        >
+                          <div className="bg-white border-t-2 border-[#004AAD] shadow-xl shadow-black/[0.08]">
+                            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
+                              {/* Top row: Overview + standalone items */}
+                              <div className="flex items-center gap-6 pb-5 mb-5 border-b border-gray-100">
+                                <Link
+                                  href={link.href}
+                                  className="text-sm font-semibold text-[#004AAD] hover:underline underline-offset-4"
+                                  style={{ fontFamily: 'var(--font-body)' }}
+                                  onClick={() => setActiveDropdown(null)}
+                                >
+                                  {link.label} Overview
+                                </Link>
+                                {link.children.filter((c: any) => !c.children).map((item: any) => (
+                                  <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    className="text-sm font-medium text-gray-700 hover:text-[#004AAD] transition-colors"
+                                    style={{ fontFamily: 'var(--font-body)' }}
+                                    onClick={() => setActiveDropdown(null)}
+                                  >
+                                    {item.label}
+                                  </Link>
+                                ))}
+                              </div>
+
+                              {/* Category columns */}
+                              <div className="grid grid-cols-4 gap-8">
+                                {link.children.filter((c: any) => c.children).map((category: any) => (
+                                  <div key={category.href}>
+                                    <Link
+                                      href={category.href}
+                                      className="block text-sm font-bold text-[#004AAD] mb-3 pb-2 border-b-2 border-[#004AAD]/20 hover:border-[#004AAD] transition-colors"
+                                      style={{ fontFamily: 'var(--font-heading)' }}
+                                      onClick={() => setActiveDropdown(null)}
+                                    >
+                                      {category.label}
+                                    </Link>
+                                    <div className="space-y-0.5">
+                                      {category.children.map((sub: any) => (
+                                        <Link
+                                          key={sub.href}
+                                          href={sub.href}
+                                          className="block px-2 py-1.5 text-sm text-gray-600 hover:text-[#004AAD] hover:bg-[#e8f0fe] rounded-md transition-all duration-150"
+                                          style={{ fontFamily: 'var(--font-body)' }}
+                                          onClick={() => setActiveDropdown(null)}
+                                        >
+                                          {sub.label}
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ) : (
+                        /* ===== NARROW DROPDOWN (About Us) ===== */
+                        <div
+                          className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-200 ${
+                            activeDropdown === link.label
+                              ? 'opacity-100 visible translate-y-0'
+                              : 'opacity-0 invisible -translate-y-1'
+                          }`}
+                        >
+                          <div className="bg-white rounded-xl shadow-xl shadow-black/[0.05] border border-gray-100 p-2 min-w-[220px]">
+                            <Link
+                              href={link.href}
+                              className="flex items-center px-4 py-2.5 rounded-lg text-sm text-[#004AAD] hover:bg-[#e8f0fe] transition-all duration-150 font-semibold border-b border-gray-100 mb-1"
+                              style={{ fontFamily: 'var(--font-body)' }}
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {link.label} Overview
+                            </Link>
+                            {link.children.map((child: any) => (
                               <Link
+                                key={child.href}
                                 href={child.href}
-                                className={`flex items-center px-4 py-2.5 rounded-lg text-sm hover:bg-[#e8f0fe] hover:text-[#004AAD] transition-all duration-150 ${
-                                  child.children ? 'text-[#004AAD] font-semibold mt-1' : 'text-gray-900 font-medium'
-                                }`}
+                                className="flex items-center px-4 py-2.5 rounded-lg text-sm text-gray-900 hover:bg-[#e8f0fe] hover:text-[#004AAD] transition-all duration-150 font-medium"
                                 style={{ fontFamily: 'var(--font-body)' }}
                                 onClick={() => setActiveDropdown(null)}
                               >
                                 {child.label}
                               </Link>
-                              {child.children && child.children.map((sub: any) => (
-                                <Link
-                                  key={sub.href}
-                                  href={sub.href}
-                                  className="flex items-center pl-8 pr-4 py-2 rounded-lg text-sm text-gray-700 hover:bg-[#e8f0fe] hover:text-[#004AAD] transition-all duration-150"
-                                  style={{ fontFamily: 'var(--font-body)' }}
-                                  onClick={() => setActiveDropdown(null)}
-                                >
-                                  {sub.label}
-                                </Link>
-                              ))}
-                            </div>
-                          ))}
+                            ))}
+                          </div>
                         </div>
-                      </div>
+                      )}
                     </>
                   ) : (
                     <Link
