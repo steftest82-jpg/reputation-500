@@ -126,7 +126,7 @@ export default function Navbar() {
                             : 'opacity-0 invisible -translate-y-1'
                         }`}
                       >
-                        <div className="bg-white rounded-xl shadow-xl shadow-black/[0.05] border border-gray-100 p-2 min-w-[220px]">
+                        <div className="bg-white rounded-xl shadow-xl shadow-black/[0.05] border border-gray-100 p-2 min-w-[260px]">
                           {/* Parent page link */}
                           <Link
                             href={link.href}
@@ -136,16 +136,30 @@ export default function Navbar() {
                           >
                             {link.label} Overview
                           </Link>
-                          {link.children.map((child) => (
-                            <Link
-                              key={child.href}
-                              href={child.href}
-                              className="flex items-center px-4 py-2.5 rounded-lg text-sm text-gray-900 hover:bg-[#e8f0fe] hover:text-[#004AAD] transition-all duration-150 font-medium"
-                              style={{ fontFamily: 'var(--font-body)' }}
-                              onClick={() => setActiveDropdown(null)}
-                            >
-                              {child.label}
-                            </Link>
+                          {link.children.map((child: any) => (
+                            <div key={child.href}>
+                              <Link
+                                href={child.href}
+                                className={`flex items-center px-4 py-2.5 rounded-lg text-sm hover:bg-[#e8f0fe] hover:text-[#004AAD] transition-all duration-150 ${
+                                  child.children ? 'text-[#004AAD] font-semibold mt-1' : 'text-gray-900 font-medium'
+                                }`}
+                                style={{ fontFamily: 'var(--font-body)' }}
+                                onClick={() => setActiveDropdown(null)}
+                              >
+                                {child.label}
+                              </Link>
+                              {child.children && child.children.map((sub: any) => (
+                                <Link
+                                  key={sub.href}
+                                  href={sub.href}
+                                  className="flex items-center pl-8 pr-4 py-2 rounded-lg text-sm text-gray-700 hover:bg-[#e8f0fe] hover:text-[#004AAD] transition-all duration-150"
+                                  style={{ fontFamily: 'var(--font-body)' }}
+                                  onClick={() => setActiveDropdown(null)}
+                                >
+                                  {sub.label}
+                                </Link>
+                              ))}
+                            </div>
                           ))}
                         </div>
                       </div>
@@ -282,7 +296,7 @@ export default function Navbar() {
 
                     <div
                       className={`overflow-hidden transition-all duration-300 ease-out ${
-                        mobileDropdown === link.label ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                        mobileDropdown === link.label ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
                       }`}
                     >
                       <div className="ml-4 pl-4 border-l-2 border-gray-100 space-y-0.5 py-1">
@@ -295,16 +309,30 @@ export default function Navbar() {
                         >
                           {link.label} Overview
                         </Link>
-                        {link.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className="block px-4 py-2.5 text-base text-gray-800 hover:text-[#004AAD] font-medium transition-colors rounded-lg"
-                            style={{ fontFamily: 'var(--font-body)' }}
-                            onClick={() => setMobileOpen(false)}
-                          >
-                            {child.label}
-                          </Link>
+                        {link.children.map((child: any) => (
+                          <div key={child.href}>
+                            <Link
+                              href={child.href}
+                              className={`block px-4 py-2.5 text-base transition-colors rounded-lg ${
+                                child.children ? 'text-[#004AAD] font-semibold mt-1' : 'text-gray-800 hover:text-[#004AAD] font-medium'
+                              }`}
+                              style={{ fontFamily: 'var(--font-body)' }}
+                              onClick={() => setMobileOpen(false)}
+                            >
+                              {child.label}
+                            </Link>
+                            {child.children && child.children.map((sub: any) => (
+                              <Link
+                                key={sub.href}
+                                href={sub.href}
+                                className="block pl-8 pr-4 py-2 text-sm text-gray-600 hover:text-[#004AAD] transition-colors rounded-lg"
+                                style={{ fontFamily: 'var(--font-body)' }}
+                                onClick={() => setMobileOpen(false)}
+                              >
+                                {sub.label}
+                              </Link>
+                            ))}
+                          </div>
                         ))}
                       </div>
                     </div>
