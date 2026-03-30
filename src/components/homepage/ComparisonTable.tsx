@@ -78,7 +78,7 @@ const rows: Row[] = [
     ultimate: 33,
   },
   {
-    feature: "Wikitia Page & Wikidata",
+    feature: "Wikitia Page or Wikidata",
     sub: "Extra charge=Optional",
     essential: "€550 One time fee",
     enhanced: "€450 One time fee",
