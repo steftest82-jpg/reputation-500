@@ -82,7 +82,7 @@ export default function RatingsOptimizationPage() {
       {/* Hero Section */}
       <section className="pt-24 lg:pt-32 pb-16 bg-bg-dark">
         <div className="max-w-7xl mx-auto px-4">
-          <Breadcrumbs
+          <Breadcrumbs light
             items={[
               { label: 'Services', href: '/services' },
               { label: 'For Businesses', href: '/services/for-businesses' },
@@ -96,7 +96,7 @@ export default function RatingsOptimizationPage() {
             >
               Ratings Optimization for Businesses
             </h1>
-            <p className="text-lg text-gray-800 leading-relaxed">
+            <p className="text-lg text-gray-300 leading-relaxed">
               Star ratings are the first thing potential customers see when evaluating your business. Our ratings optimization service helps you systematically earn more positive reviews, manage negative feedback professionally, and build the social proof that drives purchasing decisions.
             </p>
           </div>

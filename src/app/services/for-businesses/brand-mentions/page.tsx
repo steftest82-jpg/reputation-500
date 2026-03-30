@@ -82,7 +82,7 @@ export default function BrandMentionsBusinessesPage() {
       {/* Hero Section */}
       <section className="pt-24 lg:pt-32 pb-16 bg-bg-dark">
         <div className="max-w-7xl mx-auto px-4">
-          <Breadcrumbs
+          <Breadcrumbs light
             items={[
               { label: 'Services', href: '/services' },
               { label: 'For Businesses', href: '/services/for-businesses' },
@@ -96,7 +96,7 @@ export default function BrandMentionsBusinessesPage() {
             >
               Brand Mentions for Businesses
             </h1>
-            <p className="text-lg text-gray-800 leading-relaxed">
+            <p className="text-lg text-gray-300 leading-relaxed">
               Every reference to your company across the internet is an opportunity or a risk. Our brand mention services give you complete visibility into how and where your business is discussed online, with actionable strategies to amplify positive coverage and mitigate negative references.
             </p>
           </div>

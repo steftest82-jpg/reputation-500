@@ -82,7 +82,7 @@ export default function ReputationMonitoringBusinessesPage() {
       {/* Hero Section */}
       <section className="pt-24 lg:pt-32 pb-16 bg-bg-dark">
         <div className="max-w-7xl mx-auto px-4">
-          <Breadcrumbs
+          <Breadcrumbs light
             items={[
               { label: 'Services', href: '/services' },
               { label: 'For Businesses', href: '/services/for-businesses' },
@@ -96,7 +96,7 @@ export default function ReputationMonitoringBusinessesPage() {
             >
               Reputation Monitoring for Businesses
             </h1>
-            <p className="text-lg text-gray-800 leading-relaxed">
+            <p className="text-lg text-gray-300 leading-relaxed">
               In the digital age, a reputation crisis can develop in hours. Our continuous monitoring service watches your brand across search engines, review platforms, news outlets, and social media around the clock, delivering real-time alerts and actionable intelligence so you can respond to threats before they escalate.
             </p>
           </div>

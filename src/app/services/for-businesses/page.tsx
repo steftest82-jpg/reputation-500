@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import Accordion from '@/components/ui/Accordion'
 import ServiceCTA from '@/components/ui/ServiceCTA'
+import MediaGallery from '@/components/homepage/MediaGallery'
 import ServiceCard from '@/components/ui/ServiceCard'
 import JsonLd from '@/components/seo/JsonLd'
 import { SITE_URL, SERVICES_DATA } from '@/lib/constants'
@@ -244,6 +245,8 @@ export default function ForBusinessesPage() {
           </div>
         </div>
       </section>
+
+      <MediaGallery />
 
       {/* Related Services */}
       <section className="py-16 bg-white">

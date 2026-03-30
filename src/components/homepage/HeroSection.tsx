@@ -65,7 +65,7 @@ export default function HeroSection() {
               >
                 Reputation 500 is an online reputation management agency helping
                 individuals and businesses control what shows up in Google Search,
-                reviews, and brand mentions. We combine reputation monitoring,
+                AI engines, reviews, and brand mentions. We combine reputation monitoring,
                 ratings optimization, digital PR, link building, and SEO content to
                 protect your name, and turn your reputation into a growth asset.
               </p>

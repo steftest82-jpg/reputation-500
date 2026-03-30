@@ -15,10 +15,10 @@ export default function PricingCTA({ planName, isPopular }: PricingCTAProps) {
     <>
       <button
         onClick={() => setModalOpen(true)}
-        className={`block w-full text-center py-3.5 rounded-xl font-semibold text-sm transition-all duration-300 cursor-pointer ${
+        className={`block w-full text-center py-3.5 rounded-xl font-semibold text-[16px] transition-all duration-300 cursor-pointer ${
           isPopular
-            ? 'bg-[#004AAD] text-white hover:bg-[#003580] shadow-lg shadow-[#004AAD]/15'
-            : 'bg-gray-50 text-gray-900 border border-gray-200 hover:bg-[#004AAD] hover:text-white hover:border-[#004AAD]'
+            ? 'bg-[#004AAD] text-white border border-[#204A8D] hover:bg-[#003580] shadow-lg shadow-[#004AAD]/15'
+            : 'bg-white text-gray-900 border border-[#204A8D] hover:bg-[#004AAD] hover:text-white hover:border-[#004AAD]'
         }`}
       >
         Get Started

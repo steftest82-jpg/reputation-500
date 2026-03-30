@@ -115,11 +115,11 @@ export default function LinkedInAdsPage() {
       {/* Hero */}
       <section className="pt-24 lg:pt-32 pb-16 bg-bg-dark">
         <div className="container mx-auto px-4">
-          <Breadcrumbs items={breadcrumbItems} />
+          <Breadcrumbs light items={breadcrumbItems} />
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-6 mb-6">
             LinkedIn Ads Management
           </h1>
-          <p className="text-xl text-gray-800 max-w-3xl">
+          <p className="text-xl text-gray-300 max-w-3xl">
             Reach the decision-makers who matter most. Our LinkedIn Ads campaigns target prospects by
             job title, company, and seniority to fill your B2B pipeline with qualified leads.
           </p>

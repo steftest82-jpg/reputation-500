@@ -82,7 +82,7 @@ export default function ReputationMonitoringIndividualsPage() {
       {/* Hero Section */}
       <section className="pt-24 lg:pt-32 pb-16 bg-bg-dark">
         <div className="max-w-7xl mx-auto px-4">
-          <Breadcrumbs
+          <Breadcrumbs light
             items={[
               { label: 'Services', href: '/services' },
               { label: 'For Individuals', href: '/services/for-individuals' },
@@ -96,7 +96,7 @@ export default function ReputationMonitoringIndividualsPage() {
             >
               Reputation Monitoring for Individuals
             </h1>
-            <p className="text-lg text-gray-800 leading-relaxed">
+            <p className="text-lg text-gray-300 leading-relaxed">
               Your online reputation can change overnight. A new article, review, or social media post can shift search results without warning. Our continuous monitoring service ensures you are always informed and prepared to act before minor issues become major problems.
             </p>
           </div>

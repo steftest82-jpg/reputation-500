@@ -115,11 +115,11 @@ export default function ContentWritingPage() {
       {/* Hero */}
       <section className="pt-24 lg:pt-32 pb-16 bg-bg-dark">
         <div className="container mx-auto px-4">
-          <Breadcrumbs items={breadcrumbItems} />
+          <Breadcrumbs light items={breadcrumbItems} />
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-6 mb-6">
             SEO Content Writing
           </h1>
-          <p className="text-xl text-gray-800 max-w-3xl">
+          <p className="text-xl text-gray-300 max-w-3xl">
             Content that earns rankings and earns trust. We write research-backed, search-optimized
             articles, landing pages, and blog posts that attract organic traffic and convert readers
             into customers.

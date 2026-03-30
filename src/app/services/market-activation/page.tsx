@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
 import Accordion from '@/components/ui/Accordion'
 import ServiceCTA from '@/components/ui/ServiceCTA'
+import MediaGallery from '@/components/homepage/MediaGallery'
 import JsonLd from '@/components/seo/JsonLd'
 import { SITE_URL } from '@/lib/constants'
 
@@ -295,6 +296,8 @@ export default function MarketActivationPage() {
           </div>
         </div>
       </section>
+
+      <MediaGallery />
 
       {/* ── Related Services ── */}
       <section className="py-16 bg-white">
