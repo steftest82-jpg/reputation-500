@@ -42,7 +42,7 @@ export const MEDIA_PUBLICATIONS: MediaPublication[] = [
   { name: 'Medium', categories: ['TECH', 'BUSINESS', 'WEB 3'], domain: 'medium.com' },
   { name: 'Metro.co.uk', categories: ['LIFESTYLE'], domain: 'metro.co.uk' },
   { name: 'Tech Bullion', categories: ['TECH', 'FINANCE', 'REAL ESTATE', 'WEB 3'], domain: 'techbullion.com' },
-  { name: 'Luxury Lifestyle Magazine UK', categories: ['LIFESTYLE', 'FASHION', 'REAL ESTATE', 'LIQUOR', 'CASINO / GAMBLING'], domain: 'luxurylifestylemag.co.uk' },
+  // Removed Luxury Lifestyle Magazine UK (broken favicon)
   { name: 'The Source', categories: ['ENTERTAINMENT'], domain: 'thesource.com' },
   { name: 'Billboard', categories: ['ENTERTAINMENT'], domain: 'billboard.com' },
   { name: 'Your EDM', categories: ['ENTERTAINMENT'], domain: 'youredm.com' },
@@ -66,7 +66,7 @@ export const MEDIA_PUBLICATIONS: MediaPublication[] = [
   { name: 'Gulf Times', categories: ['BUSINESS'], domain: 'gulf-times.com' },
   { name: 'NewsBTC', categories: ['WEB 3', 'FINANCE'], domain: 'newsbtc.com' },
   { name: 'Gulf News', categories: ['BUSINESS', 'REAL ESTATE'], domain: 'gulfnews.com' },
-  { name: 'AsiaOne', categories: ['BUSINESS', 'REAL ESTATE'], domain: 'asiaone.com' },
+  // Removed AsiaOne (broken favicon)
   { name: 'Herald Sun', categories: ['BUSINESS'], domain: 'heraldsun.com.au' },
   { name: 'Fox', categories: ['BUSINESS', 'ENTERTAINMENT', 'REAL ESTATE', 'WEB 3'], domain: 'foxnews.com' },
   { name: 'Grit Daily', categories: ['TECH', 'BUSINESS', 'REAL ESTATE', 'WEB 3', 'LIQUOR', 'CANNABIS / CBD'], domain: 'gritdaily.com' },
@@ -127,7 +127,7 @@ export const MEDIA_PUBLICATIONS: MediaPublication[] = [
   // Health — removed Smart Tech Daily, Atlanta Wire, New York Wire, New Castle Herald, Examiner, The Land (generic/broken favicons)
 
   // Liquor / Cannabis / Casino / Adult
-  { name: 'CEO Official Magazine', categories: ['BUSINESS', 'LIQUOR', 'CANNABIS / CBD'], domain: 'ceoofficialmagazine.com' },
+  // Removed CEO Official Magazine (broken favicon)
 ]
 
 export const MEDIA_CATEGORIES = [
