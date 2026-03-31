@@ -7,13 +7,13 @@ import JsonLd from '@/components/seo/JsonLd'
 import { SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Branding Services for Businesses | Reputation 500',
+  title: 'Branding & Positioning Services for Businesses | Reputation 500',
   description:
-    'Build a strong, consistent brand identity that resonates with your audience. Reputation 500 helps businesses develop brand strategies that drive recognition, trust, and growth.',
+    'Build a strong, consistent brand identity and market positioning that resonates with your audience. Reputation 500 helps businesses develop brand strategies that drive recognition, trust, and growth.',
   alternates: { canonical: 'https://reputation500.com/services/for-businesses/branding' },
   openGraph: {
-    title: 'Branding Services for Businesses | Reputation 500',
-    description: 'Build a strong, consistent brand identity that resonates with your audience. Reputation 500 helps businesses develop brand strategies that drive recognition, trust, and growth.',
+    title: 'Branding & Positioning Services for Businesses | Reputation 500',
+    description: 'Build a strong, consistent brand identity and market positioning that resonates with your audience. Reputation 500 helps businesses develop brand strategies that drive recognition, trust, and growth.',
   },
 }
 
@@ -49,7 +49,7 @@ export default function BrandingPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Branding Services',
+    name: 'Branding & Positioning Services',
     description: metadata.description,
     provider: {
       '@type': 'Organization',
@@ -86,7 +86,7 @@ export default function BrandingPage() {
             items={[
               { label: 'Services', href: '/services' },
               { label: 'For Businesses', href: '/services/for-businesses' },
-              { label: 'Branding' },
+              { label: 'Branding & Positioning' },
             ]}
           />
           <div className="max-w-3xl">
@@ -94,7 +94,7 @@ export default function BrandingPage() {
               className="text-4xl lg:text-5xl font-bold text-white mb-6"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
-              Branding for Businesses
+              Branding & Positioning for Businesses
             </h1>
             <p className="text-lg text-gray-300 leading-relaxed">
               A strong brand is the foundation of every successful business. We help companies define their market position, craft compelling messaging, and build a digital brand presence that earns trust, drives recognition, and outperforms the competition.

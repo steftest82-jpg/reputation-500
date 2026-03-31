@@ -9,7 +9,6 @@ export const NAV_LINKS = [
     label: 'Services',
     href: '/services',
     children: [
-      { label: 'Market Activation', href: '/services/market-activation' },
       {
         label: 'For Individuals',
         href: '/services/for-individuals',
@@ -23,8 +22,9 @@ export const NAV_LINKS = [
         label: 'For Businesses',
         href: '/services/for-businesses',
         children: [
+          { label: 'Market Activation', href: '/services/market-activation' },
           { label: 'Business Reputation Management', href: '/services/for-businesses/business-reputation-management' },
-          { label: 'Branding', href: '/services/for-businesses/branding' },
+          { label: 'Branding & Positioning', href: '/services/for-businesses/branding' },
           { label: 'Digital PR', href: '/services/for-businesses/digital-pr' },
           { label: 'Link Building', href: '/services/for-businesses/link-building' },
           { label: 'Brand Mentions', href: '/services/for-businesses/brand-mentions' },
@@ -33,13 +33,14 @@ export const NAV_LINKS = [
         ],
       },
       {
-        label: 'SEO',
+        label: 'SEO / AI',
         href: '/services/seo',
         children: [
           { label: 'Link Building', href: '/services/seo/link-building' },
           { label: 'Content Writing', href: '/services/seo/content-writing' },
           { label: 'Content Planning', href: '/services/seo/content-planning' },
           { label: 'SEO Audit', href: '/services/seo/seo-audit' },
+          { label: 'AI Optimization', href: '/services/ai-optimization' },
         ],
       },
       {
@@ -52,7 +53,6 @@ export const NAV_LINKS = [
           { label: 'Programmatic Ads', href: '/services/performance-marketing/programmatic-ads' },
         ],
       },
-      { label: 'AI Optimization', href: '/services/ai-optimization' },
     ],
   },
   {
