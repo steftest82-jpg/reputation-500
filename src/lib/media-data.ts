@@ -18,13 +18,13 @@ export const MEDIA_PUBLICATIONS: MediaPublication[] = [
   { name: 'Benzinga', categories: ['FINANCE', 'WEB 3'], domain: 'benzinga.com' },
   { name: 'Variety', categories: ['ENTERTAINMENT', 'WEB 3'], domain: 'variety.com' },
   { name: 'International Business Times', categories: ['BUSINESS', 'FINANCE'], domain: 'ibtimes.com' },
-  { name: 'GQ', categories: ['FASHION', 'LIFESTYLE'], domain: 'gq.com' },
+  { name: 'GQ', categories: ['FASHION', 'LIFESTYLE', 'LIQUOR', 'CANNABIS / CBD'], domain: 'gq.com' },
   { name: 'Daily Mail', categories: ['LIFESTYLE'], domain: 'dailymail.co.uk' },
   { name: 'Vogue', categories: ['FASHION'], domain: 'vogue.com' },
   { name: 'Mashable', categories: ['TECH', 'LIFESTYLE', 'WEB 3'], domain: 'mashable.com' },
-  { name: 'LA Weekly', categories: ['ENTERTAINMENT', 'LIFESTYLE'], domain: 'laweekly.com' },
+  { name: 'LA Weekly', categories: ['ENTERTAINMENT', 'LIFESTYLE', 'LIQUOR', 'ADULT CONTENT', 'CANNABIS / CBD', 'CASINO / GAMBLING'], domain: 'laweekly.com' },
   { name: "Harper's Bazaar", categories: ['FASHION'], domain: 'harpersbazaar.com' },
-  { name: 'Village Voice', categories: ['ENTERTAINMENT', 'LIFESTYLE'], domain: 'villagevoice.com' },
+  { name: 'Village Voice', categories: ['ENTERTAINMENT', 'LIFESTYLE', 'LIQUOR', 'ADULT CONTENT', 'CANNABIS / CBD', 'CASINO / GAMBLING'], domain: 'villagevoice.com' },
   { name: 'Financial Times', categories: ['FINANCE', 'BUSINESS'], domain: 'ft.com' },
   { name: 'Washington Times', categories: ['BUSINESS'], domain: 'washingtontimes.com' },
   { name: 'Esquire', categories: ['FASHION', 'LIFESTYLE'], domain: 'esquire.com' },
@@ -36,17 +36,17 @@ export const MEDIA_PUBLICATIONS: MediaPublication[] = [
   { name: 'Economic Insider', categories: ['FINANCE', 'BUSINESS', 'REAL ESTATE'], domain: 'economicinsider.com' },
   { name: 'HackerNoon', categories: ['TECH', 'WEB 3'], domain: 'hackernoon.com' },
   { name: 'Tech Times', categories: ['TECH', 'REAL ESTATE', 'WEB 3'], domain: 'techtimes.com' },
-  { name: 'Madison Graph', categories: ['BUSINESS', 'REAL ESTATE', 'WEB 3'], domain: 'madisongraph.com' },
+  { name: 'Madison Graph', categories: ['BUSINESS', 'REAL ESTATE', 'WEB 3', 'LIQUOR', 'ADULT CONTENT', 'CANNABIS / CBD', 'CASINO / GAMBLING'], domain: 'madisongraph.com' },
   { name: 'US Reporter', categories: ['BUSINESS', 'REAL ESTATE'], domain: 'usreporter.com' },
-  { name: 'The Ritz Herald', categories: ['BUSINESS', 'LIFESTYLE', 'REAL ESTATE', 'WEB 3'], domain: 'ritzherald.com' },
+  { name: 'The Ritz Herald', categories: ['BUSINESS', 'LIFESTYLE', 'REAL ESTATE', 'WEB 3', 'LIQUOR', 'ADULT CONTENT', 'CANNABIS / CBD', 'CASINO / GAMBLING'], domain: 'ritzherald.com' },
   { name: 'Medium', categories: ['TECH', 'BUSINESS', 'WEB 3'], domain: 'medium.com' },
   { name: 'Metro.co.uk', categories: ['LIFESTYLE'], domain: 'metro.co.uk' },
   { name: 'Tech Bullion', categories: ['TECH', 'FINANCE', 'REAL ESTATE', 'WEB 3'], domain: 'techbullion.com' },
-  { name: 'Luxury Lifestyle Magazine UK', categories: ['LIFESTYLE', 'FASHION', 'REAL ESTATE'], domain: 'luxurylifestylemag.co.uk' },
+  { name: 'Luxury Lifestyle Magazine UK', categories: ['LIFESTYLE', 'FASHION', 'REAL ESTATE', 'LIQUOR', 'CASINO / GAMBLING'], domain: 'luxurylifestylemag.co.uk' },
   { name: 'The Source', categories: ['ENTERTAINMENT'], domain: 'thesource.com' },
   { name: 'Billboard', categories: ['ENTERTAINMENT'], domain: 'billboard.com' },
   { name: 'Your EDM', categories: ['ENTERTAINMENT'], domain: 'youredm.com' },
-  { name: 'Analytics Insight', categories: ['TECH'], domain: 'analyticsinsight.net' },
+  { name: 'Analytics Insight', categories: ['TECH', 'CASINO / GAMBLING'], domain: 'analyticsinsight.net' },
   { name: 'GeekExtreme', categories: ['TECH'], domain: 'geekextreme.com' },
   { name: 'The Wall Street Times', categories: ['FINANCE', 'BUSINESS'], domain: 'thewallstreettimes.com' },
   { name: 'NewsMax', categories: ['BUSINESS', 'REAL ESTATE'], domain: 'newsmax.com' },
@@ -57,7 +57,7 @@ export const MEDIA_PUBLICATIONS: MediaPublication[] = [
   { name: 'The Guardian', categories: ['BUSINESS', 'LIFESTYLE', 'REAL ESTATE'], domain: 'theguardian.com' },
   { name: 'Globe and Mail', categories: ['BUSINESS', 'FINANCE'], domain: 'theglobeandmail.com' },
   { name: 'Daily Caller', categories: ['BUSINESS'], domain: 'dailycaller.com' },
-  { name: 'Chicago Tribune', categories: ['BUSINESS'], domain: 'chicagotribune.com' },
+  { name: 'Chicago Tribune', categories: ['BUSINESS', 'CASINO / GAMBLING'], domain: 'chicagotribune.com' },
   { name: 'Daily Record', categories: ['LIFESTYLE'], domain: 'dailyrecord.co.uk' },
   { name: 'Toronto Star', categories: ['BUSINESS', 'REAL ESTATE'], domain: 'thestar.com' },
   { name: 'Manchester Evening News', categories: ['LIFESTYLE'], domain: 'manchestereveningnews.co.uk' },
@@ -69,10 +69,10 @@ export const MEDIA_PUBLICATIONS: MediaPublication[] = [
   { name: 'AsiaOne', categories: ['BUSINESS', 'REAL ESTATE'], domain: 'asiaone.com' },
   { name: 'Herald Sun', categories: ['BUSINESS'], domain: 'heraldsun.com.au' },
   { name: 'Fox', categories: ['BUSINESS', 'ENTERTAINMENT', 'REAL ESTATE', 'WEB 3'], domain: 'foxnews.com' },
-  { name: 'Grit Daily', categories: ['TECH', 'BUSINESS', 'REAL ESTATE', 'WEB 3'], domain: 'gritdaily.com' },
+  { name: 'Grit Daily', categories: ['TECH', 'BUSINESS', 'REAL ESTATE', 'WEB 3', 'LIQUOR', 'CANNABIS / CBD'], domain: 'gritdaily.com' },
   { name: 'Tech Cabal', categories: ['TECH'], domain: 'techcabal.com' },
   { name: 'Financial Tech Times', categories: ['FINANCE', 'TECH', 'WEB 3'], domain: 'financialtechtimes.com' },
-  { name: 'Markets Herald', categories: ['FINANCE', 'REAL ESTATE'], domain: 'marketsherald.com' },
+  { name: 'Markets Herald', categories: ['FINANCE', 'REAL ESTATE', 'LIQUOR', 'ADULT CONTENT', 'CANNABIS / CBD', 'CASINO / GAMBLING'], domain: 'marketsherald.com' },
   { name: 'Fox Interviewer', categories: ['BUSINESS', 'ENTERTAINMENT', 'WEB 3'], domain: 'foxinterviewer.com' },
   { name: 'Artist Weekly', categories: ['ENTERTAINMENT'], domain: 'artistweekly.com' },
   { name: 'US Business News', categories: ['BUSINESS'], domain: 'usbusinessnews.com' },
@@ -80,7 +80,7 @@ export const MEDIA_PUBLICATIONS: MediaPublication[] = [
   { name: 'Market Daily', categories: ['FINANCE', 'BUSINESS'], domain: 'marketdaily.com' },
   { name: 'Bigtime Daily', categories: ['BUSINESS', 'HEALTH'], domain: 'bigtimedaily.com' },
   { name: 'Global Banking & Finance', categories: ['FINANCE', 'HEALTH'], domain: 'globalbankingandfinance.com' },
-  { name: 'London Insider', categories: ['BUSINESS', 'LIFESTYLE', 'WEB 3'], domain: 'londoninsider.co.uk' },
+  { name: 'London Insider', categories: ['BUSINESS', 'LIFESTYLE', 'WEB 3', 'LIQUOR', 'ADULT CONTENT', 'CASINO / GAMBLING'], domain: 'londoninsider.co.uk' },
   { name: 'Saudi Gazette', categories: ['BUSINESS'], domain: 'saudigazette.com.sa' },
   { name: 'Finextra', categories: ['FINANCE', 'TECH', 'WEB 3'], domain: 'finextra.com' },
   { name: 'Tech Round', categories: ['TECH'], domain: 'techround.co.uk' },
@@ -105,13 +105,12 @@ export const MEDIA_PUBLICATIONS: MediaPublication[] = [
   { name: 'The Advocate', categories: ['LIFESTYLE'], domain: 'theadvocate.com' },
   { name: 'Denver Gazette', categories: ['BUSINESS'], domain: 'denvergazette.com' },
 
-  // New — Real Estate
+  // Real Estate
   { name: 'Voyage Magazine New York', categories: ['LIFESTYLE', 'REAL ESTATE'], domain: 'voyagenewyork.com' },
   { name: 'Haute Living', categories: ['LIFESTYLE', 'FASHION', 'REAL ESTATE'], domain: 'hauteliving.com' },
-  { name: 'House & Garden', categories: ['LIFESTYLE', 'REAL ESTATE'], domain: 'houseandgarden.co.uk' },
-  { name: 'Luxury Lifestyle Magazine US', categories: ['LIFESTYLE', 'FASHION', 'REAL ESTATE'], domain: 'luxurylifestylemag.com' },
+  // Removed House & Garden, Luxury Lifestyle Magazine US (generic/broken favicons)
 
-  // New — Web 3 / Crypto
+  // Web 3 / Crypto
   { name: 'Crypto Intelligence UK', categories: ['WEB 3', 'FINANCE'], domain: 'cryptointelligence.co.uk' },
   { name: 'Crypto Daily UK', categories: ['WEB 3'], domain: 'cryptodaily.co.uk' },
   { name: 'CryptoNewsZ', categories: ['WEB 3'], domain: 'cryptonewsz.com' },
@@ -121,17 +120,14 @@ export const MEDIA_PUBLICATIONS: MediaPublication[] = [
   { name: 'Cryptonews.net', categories: ['WEB 3'], domain: 'cryptonews.net' },
   { name: 'Crypto Mode', categories: ['WEB 3'], domain: 'cryptomode.com' },
   { name: 'The Good Men Project', categories: ['LIFESTYLE', 'WEB 3'], domain: 'goodmenproject.com' },
-  { name: 'Pharma Tech News', categories: ['HEALTH', 'TECH', 'WEB 3'], domain: 'pharmatechnews.com' },
-  { name: 'Luxury Miami Magazine', categories: ['LIFESTYLE', 'REAL ESTATE', 'WEB 3'], domain: 'luxurymiamimag.com' },
-  { name: 'Luxury LA Magazine', categories: ['LIFESTYLE', 'REAL ESTATE', 'WEB 3'], domain: 'luxurylamag.com' },
+  { name: 'Pharma Tech News', categories: ['HEALTH', 'TECH', 'WEB 3', 'LIQUOR', 'CANNABIS / CBD'], domain: 'pharmatechnews.com' },
+  { name: 'Luxury Miami Magazine', categories: ['LIFESTYLE', 'REAL ESTATE', 'WEB 3', 'LIQUOR', 'ADULT CONTENT', 'CANNABIS / CBD', 'CASINO / GAMBLING'], domain: 'luxurymiamimag.com' },
+  { name: 'Luxury LA Magazine', categories: ['LIFESTYLE', 'REAL ESTATE', 'WEB 3', 'LIQUOR', 'ADULT CONTENT', 'CANNABIS / CBD', 'CASINO / GAMBLING'], domain: 'luxurylamag.com' },
 
-  // New — Health
-  { name: 'Smart Tech Daily', categories: ['TECH', 'HEALTH'], domain: 'smarttechdaily.com' },
-  { name: 'Atlanta Wire', categories: ['BUSINESS', 'HEALTH'], domain: 'atlantawire.com' },
-  { name: 'New York Wire', categories: ['BUSINESS', 'HEALTH'], domain: 'newyorkwire.us' },
-  { name: 'New Castle Herald', categories: ['BUSINESS', 'HEALTH'], domain: 'newcastleherald.com.au' },
-  { name: 'Examiner', categories: ['BUSINESS', 'HEALTH'], domain: 'examiner.com.au' },
-  { name: 'The Land', categories: ['BUSINESS', 'HEALTH'], domain: 'theland.com.au' },
+  // Health — removed Smart Tech Daily, Atlanta Wire, New York Wire, New Castle Herald, Examiner, The Land (generic/broken favicons)
+
+  // Liquor / Cannabis / Casino / Adult
+  { name: 'CEO Official Magazine', categories: ['BUSINESS', 'LIQUOR', 'CANNABIS / CBD'], domain: 'ceoofficialmagazine.com' },
 ]
 
 export const MEDIA_CATEGORIES = [
