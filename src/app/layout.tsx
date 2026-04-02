@@ -42,11 +42,20 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME} | Leading Online Reputation Management Agency`,
     description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Reputation 500 - Reputation & Digital PR Agency',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${SITE_NAME} | Leading Online Reputation Management Agency`,
     description: SITE_DESCRIPTION,
+    images: ['/images/og-image.png'],
   },
   robots: { index: true, follow: true },
   icons: {
