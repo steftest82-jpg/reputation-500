@@ -31,7 +31,7 @@ const articles: Article[] = [
     excerpt: 'Employers, clients, and partners search your name before they meet you. Learn what they typically find — and why that first impression can make or break opportunities.',
     funnel: 'TOFU',
     tags: ['Google Search', 'First Impressions'],
-    published: false,
+    published: true,
   },
   {
     title: 'Personal Reputation Management: What It Is and Why Every Professional Needs It',
@@ -39,7 +39,7 @@ const articles: Article[] = [
     excerpt: 'Your online reputation isn\'t just for celebrities anymore. From executives to freelancers, learn why managing your digital presence is now essential for career success.',
     funnel: 'TOFU',
     tags: ['ORM Basics', 'Personal Branding'],
-    published: false,
+    published: true,
   },
   {
     title: 'How Negative Search Results Can Destroy Your Career (And How to Prevent It)',
@@ -47,7 +47,7 @@ const articles: Article[] = [
     excerpt: '70% of employers reject candidates based on what they find online. One negative article or old social media post can cost you the job, the deal, or the relationship.',
     funnel: 'TOFU',
     tags: ['Career Impact', 'Google Search'],
-    published: false,
+    published: true,
   },
   {
     title: 'How AI Assistants Are Defining Your Personal Reputation Without Your Input',
@@ -55,7 +55,7 @@ const articles: Article[] = [
     excerpt: 'Ask ChatGPT or Gemini about someone and you\'ll get an instant answer. If that answer is wrong or negative, it shapes perception for everyone who asks. Here is what to do.',
     funnel: 'TOFU',
     tags: ['AI Visibility', 'Trends'],
-    published: false,
+    published: true,
   },
   {
     title: 'The Hidden Cost of Ignoring Your Online Reputation as an Individual',
@@ -63,7 +63,7 @@ const articles: Article[] = [
     excerpt: 'Lost job offers, failed business deals, relationship damage, and missed opportunities — the real price of letting your online presence manage itself.',
     funnel: 'TOFU',
     tags: ['Career Impact', 'Revenue'],
-    published: false,
+    published: true,
   },
   {
     title: 'Personal Branding vs. Reputation Management: What Is the Difference?',
@@ -71,7 +71,7 @@ const articles: Article[] = [
     excerpt: 'Branding is what you build. Reputation management is what you protect. Learn how these two disciplines work together — and when you need each one.',
     funnel: 'TOFU',
     tags: ['Personal Branding', 'ORM Basics'],
-    published: false,
+    published: true,
   },
   {
     title: 'Why Executives and C-Suite Leaders Need Reputation Management in 2026',
@@ -79,7 +79,7 @@ const articles: Article[] = [
     excerpt: 'A CEO\'s personal reputation directly impacts company valuation, investor confidence, and media coverage. Here is why executive ORM is now a business necessity.',
     funnel: 'TOFU',
     tags: ['Executive Reputation', 'Brand Trust'],
-    published: false,
+    published: true,
   },
   {
     title: 'How Your Online Reputation Affects Your Earning Potential: The Data',
@@ -87,7 +87,7 @@ const articles: Article[] = [
     excerpt: 'Professionals with strong online reputations earn 10-20% more in negotiations. Data shows the direct link between digital presence and personal income.',
     funnel: 'TOFU',
     tags: ['Revenue', 'Career Impact'],
-    published: false,
+    published: true,
   },
   {
     title: 'The Psychology of Online Reputation: Why People Trust Search Results Over Personal Experience',
@@ -95,7 +95,7 @@ const articles: Article[] = [
     excerpt: 'Cognitive biases make us trust Google results more than our own interactions. Understanding this psychology is the first step to managing how you\'re perceived.',
     funnel: 'TOFU',
     tags: ['Brand Trust', 'Google Search'],
-    published: false,
+    published: true,
   },
   {
     title: 'Social Media and Personal Reputation: What Your Posts Really Say About You',
@@ -103,7 +103,7 @@ const articles: Article[] = [
     excerpt: 'Every post, comment, and photo contributes to your digital reputation. Learn what employers, clients, and partners are actually looking for — and what raises red flags.',
     funnel: 'TOFU',
     tags: ['Social Media', 'Personal Branding'],
-    published: false,
+    published: true,
   },
 
   // ===== MOFU — Consideration (12 articles) =====
@@ -113,7 +113,7 @@ const articles: Article[] = [
     excerpt: 'From DMCA takedowns to right-to-be-forgotten requests to content suppression — every method available to remove or push down negative content about you.',
     funnel: 'MOFU',
     tags: ['Google Search', 'Content Removal'],
-    published: false,
+    published: true,
   },
   {
     title: 'How to Build a Personal Brand That Dominates Google\'s First Page',
@@ -121,7 +121,7 @@ const articles: Article[] = [
     excerpt: 'The step-by-step process for creating and optimizing online properties that rank on the first page for your name — pushing everything else down.',
     funnel: 'MOFU',
     tags: ['Personal Branding', 'SEO'],
-    published: false,
+    published: true,
   },
   {
     title: 'Personal Reputation Monitoring: How to Track What Is Being Said About You Online',
@@ -129,7 +129,7 @@ const articles: Article[] = [
     excerpt: 'Set up alerts, monitor mentions, and track search results so you\'re never blindsided by negative content. A practical setup guide for ongoing reputation awareness.',
     funnel: 'MOFU',
     tags: ['Reputation Monitoring', 'Tools'],
-    published: false,
+    published: true,
   },
   {
     title: 'How to Suppress Negative Articles Without Getting Them Removed',
@@ -137,7 +137,7 @@ const articles: Article[] = [
     excerpt: 'When removal isn\'t possible, suppression is the strategy. Learn how to create authoritative content that pushes negative results to page two and beyond.',
     funnel: 'MOFU',
     tags: ['Content Suppression', 'SEO'],
-    published: false,
+    published: true,
   },
   {
     title: 'The Executive\'s Guide to LinkedIn and Online Authority Building',
@@ -145,7 +145,7 @@ const articles: Article[] = [
     excerpt: 'LinkedIn is the most powerful tool for executive reputation. Learn how to optimize your profile, publish thought leadership, and build authority that translates offline.',
     funnel: 'MOFU',
     tags: ['Executive Reputation', 'LinkedIn'],
-    published: false,
+    published: true,
   },
   {
     title: 'How to Handle a Personal Reputation Crisis: The First Steps That Matter Most',
@@ -153,7 +153,7 @@ const articles: Article[] = [
     excerpt: 'When something damaging goes viral or appears in search results — whether true or false — these are the immediate actions that limit the damage.',
     funnel: 'MOFU',
     tags: ['Crisis Management', 'Strategy'],
-    published: false,
+    published: true,
   },
   {
     title: 'Getting Featured in Media: How Press Coverage Builds Personal Authority',
@@ -161,7 +161,7 @@ const articles: Article[] = [
     excerpt: 'A Forbes feature or Entrepreneur interview doesn\'t just boost ego — it dominates search results, builds trust, and opens doors that cold outreach never could.',
     funnel: 'MOFU',
     tags: ['Digital PR', 'Media Coverage'],
-    published: false,
+    published: true,
   },
   {
     title: 'How to Clean Up Your Social Media History Before It Hurts You',
@@ -169,7 +169,7 @@ const articles: Article[] = [
     excerpt: 'Old tweets, inappropriate photos, and forgotten posts from years ago can resurface at the worst time. A practical guide to auditing and cleaning your social footprint.',
     funnel: 'MOFU',
     tags: ['Social Media', 'Privacy'],
-    published: false,
+    published: true,
   },
   {
     title: 'Reputation Management for Doctors, Lawyers, and Professionals: Industry-Specific Strategies',
@@ -177,7 +177,7 @@ const articles: Article[] = [
     excerpt: 'Healthcare, legal, and financial professionals face unique reputation challenges — from patient reviews to regulatory constraints. Tailored strategies for regulated industries.',
     funnel: 'MOFU',
     tags: ['Industry-Specific', 'Reviews'],
-    published: false,
+    published: true,
   },
   {
     title: 'How to Optimize Your Personal Website for Reputation Control',
@@ -185,7 +185,7 @@ const articles: Article[] = [
     excerpt: 'Your personal website is the one search result you fully control. Learn how to build and optimize it so it ranks #1 for your name — every time.',
     funnel: 'MOFU',
     tags: ['SEO', 'Personal Branding'],
-    published: false,
+    published: true,
   },
   {
     title: 'Online Privacy and Reputation: How to Protect Your Personal Information',
@@ -193,7 +193,7 @@ const articles: Article[] = [
     excerpt: 'Data brokers, public records, and social media leaks expose more than you think. Learn how to reduce your digital footprint while strengthening your reputation.',
     funnel: 'MOFU',
     tags: ['Privacy', 'Data Protection'],
-    published: false,
+    published: true,
   },
   {
     title: 'How to Get a Wikipedia or Wikitia Page and Why It Matters for Your Reputation',
@@ -201,7 +201,7 @@ const articles: Article[] = [
     excerpt: 'A Wikipedia or Wikitia page is one of the strongest reputation assets an individual can have. Learn the requirements, process, and how it impacts search results.',
     funnel: 'MOFU',
     tags: ['Authority Building', 'SEO'],
-    published: false,
+    published: true,
   },
 
   // ===== BOFU — Decision (8 articles) =====
@@ -211,7 +211,7 @@ const articles: Article[] = [
     excerpt: 'From guarantees to transparency to track record — the critical factors that separate effective personal ORM services from those that waste your money.',
     funnel: 'BOFU',
     tags: ['Hiring ORM', 'Service'],
-    published: false,
+    published: true,
   },
   {
     title: 'What Does Personal Reputation Management Cost? Honest Pricing Guide',
@@ -219,7 +219,7 @@ const articles: Article[] = [
     excerpt: 'From basic monitoring to full-service management — an honest breakdown of what personal ORM costs and what results you should expect at each investment level.',
     funnel: 'BOFU',
     tags: ['Pricing', 'Hiring ORM'],
-    published: false,
+    published: true,
   },
   {
     title: 'DIY vs. Professional Reputation Management: When to Hire an Expert',
@@ -227,7 +227,7 @@ const articles: Article[] = [
     excerpt: 'Some reputation issues you can handle yourself. Others require professional help. Here is how to tell the difference — and what professionals can do that you can\'t.',
     funnel: 'BOFU',
     tags: ['Hiring ORM', 'Strategy'],
-    published: false,
+    published: true,
   },
   {
     title: 'Case Study: How an Executive Went from Negative Press to Industry Authority in 6 Months',
@@ -235,7 +235,7 @@ const articles: Article[] = [
     excerpt: 'A real story of how strategic content creation, media placements, and search optimization transformed an executive\'s online presence and career trajectory.',
     funnel: 'BOFU',
     tags: ['Case Study', 'Executive Reputation'],
-    published: false,
+    published: true,
   },
   {
     title: 'Case Study: Removing Defamatory Content and Rebuilding a Doctor\'s Online Reputation',
@@ -243,7 +243,7 @@ const articles: Article[] = [
     excerpt: 'How a physician went from 2.8 stars and defamatory blog posts to a clean first page and 4.6-star rating through systematic reputation management.',
     funnel: 'BOFU',
     tags: ['Case Study', 'Content Removal'],
-    published: false,
+    published: true,
   },
   {
     title: 'What Results to Expect from Personal Reputation Management: Realistic Timelines',
@@ -251,7 +251,7 @@ const articles: Article[] = [
     excerpt: 'Month 1 vs. month 3 vs. month 6 — a transparent look at what changes and when, so you know exactly what you\'re investing in.',
     funnel: 'BOFU',
     tags: ['Expectations', 'Strategy'],
-    published: false,
+    published: true,
   },
   {
     title: 'How Reputation 500 Protects Personal Reputations: Our Approach Explained',
@@ -259,7 +259,7 @@ const articles: Article[] = [
     excerpt: 'From initial audit through ongoing monitoring — an inside look at our methodology for managing and protecting individual reputations across search, AI, and media.',
     funnel: 'BOFU',
     tags: ['Methodology', 'Service'],
-    published: false,
+    published: true,
   },
   {
     title: 'The ROI of Personal Reputation Management: Career Growth, Deals, and Opportunities',
@@ -267,7 +267,7 @@ const articles: Article[] = [
     excerpt: 'A framework for understanding how your reputation investment translates to career advancement, business opportunities, and measurable financial outcomes.',
     funnel: 'BOFU',
     tags: ['ROI', 'Revenue'],
-    published: false,
+    published: true,
   },
 ]
 
@@ -328,9 +328,10 @@ export default function IndividualsBlogPage() {
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {stageArticles.map((article) => (
-                  <div
+                  <Link
                     key={article.slug}
-                    className="bg-white border border-gray-200 rounded-xl p-6 hover:border-[#004AAD]/20 hover:shadow-lg transition-all duration-300 flex flex-col"
+                    href={`/blog/for-individuals/${article.slug}`}
+                    className="bg-white border border-gray-200 rounded-xl p-6 hover:border-[#004AAD]/20 hover:shadow-lg transition-all duration-300 flex flex-col group"
                   >
                     <div className="flex flex-wrap gap-2 mb-3">
                       {article.tags.map((tag) => (
@@ -343,7 +344,7 @@ export default function IndividualsBlogPage() {
                       ))}
                     </div>
                     <h3
-                      className="text-lg font-bold mb-3 leading-snug"
+                      className="text-lg font-bold mb-3 leading-snug group-hover:text-[#004AAD] transition-colors"
                       style={{ fontFamily: 'var(--font-heading)' }}
                     >
                       {article.title}
@@ -352,9 +353,9 @@ export default function IndividualsBlogPage() {
                       {article.excerpt}
                     </p>
                     <div className="mt-4 pt-4 border-t border-gray-100">
-                      <span className="text-xs font-medium text-gray-400">Coming Soon</span>
+                      <span className="text-sm font-medium text-[#004AAD]">Read article →</span>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
