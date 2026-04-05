@@ -43,7 +43,7 @@ export default function ContactForm({ variant = 'default', prefilledPackage }: C
         // Google Ads conversion tracking
         if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
           (window as any).gtag('event', 'conversion', {
-            send_to: 'AW-18063988632/lead_form_submit',
+            send_to: 'AW-18063988632/cLXqCMyoqPcBEJivyqVD',
             event_category: 'Lead',
             event_label: prefilledPackage || 'Contact Form',
           })
