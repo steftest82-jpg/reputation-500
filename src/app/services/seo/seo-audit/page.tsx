@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: 'SEO Audit Services | Technical & On-Page Analysis | Reputation 500',
   description:
     'Uncover the technical, on-page, and off-page issues holding your site back. Reputation 500 delivers comprehensive SEO audits with prioritized, actionable recommendations.',
+  alternates: { canonical: `${SITE_URL}/services/seo/seo-audit` },
+  openGraph: {
+    title: 'SEO Audit Services | Technical & On-Page Analysis | Reputation 500',
+    description:
+      'Uncover the technical, on-page, and off-page issues holding your site back. Reputation 500 delivers comprehensive SEO audits with prioritized, actionable recommendations.',
+  },
 };
 
 const breadcrumbItems = [

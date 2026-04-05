@@ -10,6 +10,11 @@ import { SITE_URL, SERVICES_DATA } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'SEO Services That Drive Rankings & Revenue | Reputation 500',
   description: 'Data-driven SEO services including link building, content writing, content planning, and technical audits. Increase organic traffic and dominate your niche in search.',
+  alternates: { canonical: `${SITE_URL}/services/seo` },
+  openGraph: {
+    title: 'SEO Services That Drive Rankings & Revenue | Reputation 500',
+    description: 'Data-driven SEO services including link building, content writing, content planning, and technical audits. Increase organic traffic and dominate your niche in search.',
+  },
 }
 
 const subServices = SERVICES_DATA.seo.subServices

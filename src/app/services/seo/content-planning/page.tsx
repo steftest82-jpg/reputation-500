@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: 'Content Planning & Strategy Services | SEO Roadmaps | Reputation 500',
   description:
     'Data-driven content planning that maps every article to a business goal. Reputation 500 builds editorial calendars, topic clusters, and keyword roadmaps that accelerate organic growth.',
+  alternates: { canonical: `${SITE_URL}/services/seo/content-planning` },
+  openGraph: {
+    title: 'Content Planning & Strategy Services | SEO Roadmaps | Reputation 500',
+    description:
+      'Data-driven content planning that maps every article to a business goal. Reputation 500 builds editorial calendars, topic clusters, and keyword roadmaps that accelerate organic growth.',
+  },
 };
 
 const breadcrumbItems = [

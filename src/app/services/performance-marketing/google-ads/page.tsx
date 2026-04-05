@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: 'Google Ads Management Services | PPC That Converts | Reputation 500',
   description:
     'Maximize ROI with expert Google Ads management. Reputation 500 builds, optimizes, and scales Search, Shopping, Display, and YouTube campaigns that deliver measurable results.',
+  alternates: { canonical: `${SITE_URL}/services/performance-marketing/google-ads` },
+  openGraph: {
+    title: 'Google Ads Management Services | PPC That Converts | Reputation 500',
+    description:
+      'Maximize ROI with expert Google Ads management. Reputation 500 builds, optimizes, and scales Search, Shopping, Display, and YouTube campaigns that deliver measurable results.',
+  },
 };
 
 const breadcrumbItems = [

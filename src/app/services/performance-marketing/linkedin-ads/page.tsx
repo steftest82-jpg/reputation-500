@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: 'LinkedIn Ads Management | B2B Advertising Experts | Reputation 500',
   description:
     'Generate qualified B2B leads with precision-targeted LinkedIn Ads. Reputation 500 builds campaigns that reach decision-makers by title, company, industry, and seniority.',
+  alternates: { canonical: `${SITE_URL}/services/performance-marketing/linkedin-ads` },
+  openGraph: {
+    title: 'LinkedIn Ads Management | B2B Advertising Experts | Reputation 500',
+    description:
+      'Generate qualified B2B leads with precision-targeted LinkedIn Ads. Reputation 500 builds campaigns that reach decision-makers by title, company, industry, and seniority.',
+  },
 };
 
 const breadcrumbItems = [

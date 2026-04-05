@@ -101,7 +101,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${montserrat.variable} ${inter.variable} ${syne.variable}`}>
       <head>
-        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+        <link rel="alternate" type="application/rss+xml" title="Reputation 500 Blog" href="/blog/feed.xml" />
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google.com" />
         <link rel="dns-prefetch" href="https://t3.gstatic.com" />
         <link

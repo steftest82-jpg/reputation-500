@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
+import JsonLd from '@/components/seo/JsonLd'
 import { SITE_NAME, SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -278,8 +279,19 @@ const funnelLabels: Record<string, { label: string; color: string; bg: string }>
 }
 
 export default function IndividualsBlogPage() {
+  const collectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Reputation Management for Individuals — Blog',
+    description: 'Protect your personal brand, suppress negative search results, and build a digital presence that opens doors.',
+    url: `${SITE_URL}/blog/for-individuals`,
+    isPartOf: { '@type': 'Blog', url: `${SITE_URL}/blog` },
+    publisher: { '@type': 'Organization', name: 'Reputation 500', url: SITE_URL },
+  }
+
   return (
     <>
+      <JsonLd data={collectionSchema} />
       {/* Hero */}
       <section className="bg-bg-dark pt-24 lg:pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-4">

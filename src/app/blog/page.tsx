@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/ui/Breadcrumbs'
+import JsonLd from '@/components/seo/JsonLd'
 import { SITE_NAME, SITE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -44,8 +45,18 @@ const categories = [
 ]
 
 export default function BlogPage() {
+  const blogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'Reputation Management Blog',
+    description: 'Expert insights on online reputation management for businesses and individuals.',
+    url: `${SITE_URL}/blog`,
+    publisher: { '@type': 'Organization', name: 'Reputation 500', url: SITE_URL },
+  }
+
   return (
     <>
+      <JsonLd data={blogSchema} />
       {/* Hero */}
       <section className="bg-bg-dark pt-24 lg:pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-4">

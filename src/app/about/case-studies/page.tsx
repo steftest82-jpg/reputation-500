@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import SectionHeading from '@/components/ui/SectionHeading';
 import CTABanner from '@/components/ui/CTABanner';
+import JsonLd from '@/components/seo/JsonLd';
 import { SITE_NAME, SITE_URL } from '@/lib/constants';
 
 export const metadata: Metadata = {
@@ -9,6 +10,11 @@ export const metadata: Metadata = {
   description:
     'Explore how Reputation 500 has helped businesses across Real Estate, FinTech, and Corporate sectors reclaim and protect their online reputation.',
   alternates: { canonical: `${SITE_URL}/about/case-studies` },
+  openGraph: {
+    title: `Case Studies | ${SITE_NAME}`,
+    description:
+      'Explore how Reputation 500 has helped businesses across Real Estate, FinTech, and Corporate sectors reclaim and protect their online reputation.',
+  },
 };
 
 const caseStudies = [
@@ -33,8 +39,18 @@ const caseStudies = [
 ];
 
 export default function CaseStudiesPage() {
+  const pageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Case Studies',
+    description: 'Explore how Reputation 500 has helped businesses across Real Estate, FinTech, and Corporate sectors reclaim and protect their online reputation.',
+    url: `${SITE_URL}/about/case-studies`,
+    publisher: { '@type': 'Organization', name: 'Reputation 500', url: SITE_URL },
+  }
+
   return (
     <>
+      <JsonLd data={pageSchema} />
       {/* Hero */}
       <section className="bg-bg-dark pt-24 pb-16 text-white">
         <div className="container mx-auto px-4 text-center">

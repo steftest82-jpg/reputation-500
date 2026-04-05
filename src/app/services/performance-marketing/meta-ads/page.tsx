@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: 'Meta Ads Management | Facebook & Instagram Advertising | Reputation 500',
   description:
     'Drive leads and sales with expertly managed Meta Ads campaigns. Reputation 500 builds high-converting Facebook and Instagram ad funnels backed by creative testing and audience science.',
+  alternates: { canonical: `${SITE_URL}/services/performance-marketing/meta-ads` },
+  openGraph: {
+    title: 'Meta Ads Management | Facebook & Instagram Advertising | Reputation 500',
+    description:
+      'Drive leads and sales with expertly managed Meta Ads campaigns. Reputation 500 builds high-converting Facebook and Instagram ad funnels backed by creative testing and audience science.',
+  },
 };
 
 const breadcrumbItems = [

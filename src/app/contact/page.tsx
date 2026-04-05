@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   description:
     'Get in touch with Reputation 500. Speak to our team about online reputation management, crisis response, or a free consultation.',
   alternates: { canonical: `${SITE_URL}/contact` },
+  openGraph: {
+    title: `Contact Us | ${SITE_NAME}`,
+    description:
+      'Get in touch with Reputation 500. Speak to our team about online reputation management, crisis response, or a free consultation.',
+  },
 };
 
 const localBusinessSchema = {

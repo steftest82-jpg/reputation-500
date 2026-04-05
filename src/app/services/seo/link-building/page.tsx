@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: 'Link Building Services | Authority-Driven SEO | Reputation 500',
   description:
     'Build domain authority with ethical, high-impact link building. Reputation 500 secures relevant backlinks from trusted publications to elevate your search rankings.',
+  alternates: { canonical: `${SITE_URL}/services/seo/link-building` },
+  openGraph: {
+    title: 'Link Building Services | Authority-Driven SEO | Reputation 500',
+    description:
+      'Build domain authority with ethical, high-impact link building. Reputation 500 secures relevant backlinks from trusted publications to elevate your search rankings.',
+  },
 };
 
 const breadcrumbItems = [

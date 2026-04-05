@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description:
     'Reputation-first market entry strategy. We build local credibility through localized PR, review foundations, local SEO, and market research before you launch in a new geography.',
   alternates: { canonical: `${SITE_URL}/services/market-activation` },
+  openGraph: {
+    title: 'Market Activation: Enter New Markets with Confidence | Reputation 500',
+    description:
+      'Reputation-first market entry strategy. We build local credibility through localized PR, review foundations, local SEO, and market research before you launch in a new geography.',
+  },
 }
 
 const valueProps = [

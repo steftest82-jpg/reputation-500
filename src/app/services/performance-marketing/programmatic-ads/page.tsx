@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: 'Programmatic Advertising Services | Display & Video Ads | Reputation 500',
   description:
     'Scale brand awareness and conversions with programmatic display, video, and native advertising. Reputation 500 uses DSP technology and data-driven targeting to reach your audience across the open web.',
+  alternates: { canonical: `${SITE_URL}/services/performance-marketing/programmatic-ads` },
+  openGraph: {
+    title: 'Programmatic Advertising Services | Display & Video Ads | Reputation 500',
+    description:
+      'Scale brand awareness and conversions with programmatic display, video, and native advertising. Reputation 500 uses DSP technology and data-driven targeting to reach your audience across the open web.',
+  },
 };
 
 const breadcrumbItems = [

@@ -8,6 +8,11 @@ export const metadata: Metadata = {
     'Read the Reputation 500 privacy policy to understand how we collect, use, and protect your personal information.',
   alternates: { canonical: `${SITE_URL}/privacy-policy` },
   robots: { index: false, follow: false },
+  openGraph: {
+    title: `Privacy Policy | ${SITE_NAME}`,
+    description:
+      'Read the Reputation 500 privacy policy to understand how we collect, use, and protect your personal information.',
+  },
 };
 
 export default function PrivacyPolicyPage() {

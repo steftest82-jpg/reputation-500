@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: 'SEO Content Writing Services | High-Ranking Copy | Reputation 500',
   description:
     'Expert SEO content writing that ranks and converts. Reputation 500 crafts research-backed articles, landing pages, and blog posts optimized for search and readers alike.',
+  alternates: { canonical: `${SITE_URL}/services/seo/content-writing` },
+  openGraph: {
+    title: 'SEO Content Writing Services | High-Ranking Copy | Reputation 500',
+    description:
+      'Expert SEO content writing that ranks and converts. Reputation 500 crafts research-backed articles, landing pages, and blog posts optimized for search and readers alike.',
+  },
 };
 
 const breadcrumbItems = [

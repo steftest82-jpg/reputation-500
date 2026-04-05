@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   description:
     'ROI-driven performance marketing across Google Ads, Meta Ads, LinkedIn Ads, and programmatic channels. Data-backed paid media campaigns that protect your brand and drive qualified leads.',
   alternates: { canonical: `${SITE_URL}/services/performance-marketing` },
+  openGraph: {
+    title: 'Performance Marketing That Delivers Measurable ROI | Reputation 500',
+    description:
+      'ROI-driven performance marketing across Google Ads, Meta Ads, LinkedIn Ads, and programmatic channels. Data-backed paid media campaigns that protect your brand and drive qualified leads.',
+  },
 }
 
 const valueProps = [

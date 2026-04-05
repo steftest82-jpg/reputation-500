@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   description:
     'Read what our clients say about working with Reputation 500. Real results from real businesses across the globe.',
   alternates: { canonical: `${SITE_URL}/about/testimonials` },
+  openGraph: {
+    title: `Client Testimonials | ${SITE_NAME}`,
+    description:
+      'Read what our clients say about working with Reputation 500. Real results from real businesses across the globe.',
+  },
 };
 
 const ratingSchema = {

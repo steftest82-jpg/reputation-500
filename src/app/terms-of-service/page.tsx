@@ -8,6 +8,11 @@ export const metadata: Metadata = {
     'Review the terms and conditions governing the use of Reputation 500 services and website.',
   alternates: { canonical: `${SITE_URL}/terms-of-service` },
   robots: { index: false, follow: false },
+  openGraph: {
+    title: `Terms of Service | ${SITE_NAME}`,
+    description:
+      'Review the terms and conditions governing the use of Reputation 500 services and website.',
+  },
 };
 
 export default function TermsOfServicePage() {
