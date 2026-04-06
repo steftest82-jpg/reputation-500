@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: '/images/og-image.png',
+        url: `${SITE_URL}/images/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'Reputation 500 - Reputation & Digital PR Agency',
@@ -55,13 +55,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${SITE_NAME} | Leading Online Reputation Management Agency`,
     description: SITE_DESCRIPTION,
-    images: ['/images/og-image.png'],
+    images: [`${SITE_URL}/images/og-image.png`],
   },
   robots: { index: true, follow: true },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: '32x32' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
     ],
     apple: [
