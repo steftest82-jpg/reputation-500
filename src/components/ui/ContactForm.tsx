@@ -41,9 +41,9 @@ export default function ContactForm({ variant = 'default', prefilledPackage }: C
       if (res.ok) {
         setStatus('sent')
         // Amplitude event tracking
-        import('@amplitude/unified').then((amp) => {
-          amp.track('Form Submitted', { form_type: 'contact', package: prefilledPackage || 'none' })
-        }).catch(() => {})
+        if (typeof window !== 'undefined' && (window as any).amplitude) {
+          (window as any).amplitude.track('Form Submitted', { form_type: 'contact', package: prefilledPackage || 'none' })
+        }
         // Google Ads conversion tracking
         if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
           (window as any).gtag('event', 'conversion', {

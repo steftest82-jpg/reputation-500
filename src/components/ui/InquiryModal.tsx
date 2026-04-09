@@ -59,9 +59,9 @@ function ModalContent({ onClose, title, subtitle, inquiryType, inquiryName }: Om
       if (res.ok) {
         setStatus('sent')
         // Amplitude event tracking
-        import('@amplitude/unified').then((amp) => {
-          amp.track('Form Submitted', { form_type: inquiryType, inquiry_name: inquiryName })
-        }).catch(() => {})
+        if (typeof window !== 'undefined' && (window as any).amplitude) {
+          (window as any).amplitude.track('Form Submitted', { form_type: inquiryType, inquiry_name: inquiryName })
+        }
         // Google Ads conversion tracking
         if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
           (window as any).gtag('event', 'conversion', {

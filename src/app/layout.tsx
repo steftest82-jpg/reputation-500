@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Montserrat, Inter, Syne } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
-import AmplitudeProvider from '@/components/analytics/AmplitudeProvider'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -114,6 +113,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         />
+        {/* Amplitude Analytics + Session Replay */}
+        <script
+          type="module"
+          dangerouslySetInnerHTML={{
+            __html: `
+              import * as amplitude from 'https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz';
+              import { sessionReplayPlugin } from 'https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.14.1-min.js.gz';
+
+              const sessionReplayTracking = sessionReplayPlugin({
+                sampleRate: 1,
+                maskLevel: 'medium',
+                enableRemoteConfig: true
+              });
+
+              amplitude.add(sessionReplayTracking);
+
+              amplitude.init('5fa4eab022df395336ca298f13dd139c', {
+                defaultTracking: true
+              });
+            `,
+          }}
+        />
         <link rel="alternate" type="application/rss+xml" title="Reputation 500 Blog" href="/blog/feed.xml" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -136,7 +157,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main-content" role="main">{children}</main>
         <Footer />
         <Analytics />
-        <AmplitudeProvider />
       </body>
     </html>
   )
