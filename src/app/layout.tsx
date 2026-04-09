@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Montserrat, Inter, Syne } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import AmplitudeProvider from '@/components/analytics/AmplitudeProvider'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -135,6 +136,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main-content" role="main">{children}</main>
         <Footer />
         <Analytics />
+        <AmplitudeProvider />
       </body>
     </html>
   )
