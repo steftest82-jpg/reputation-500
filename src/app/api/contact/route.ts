@@ -5,7 +5,7 @@ const TO_EMAIL = 'info@reputation500.com'
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { name, email, phone, message, package: pkg, service, company } = body
+    const { name, email, phone, message, package: pkg, service, company, country } = body
 
     // Honeypot check
     if (body._gotcha) {
@@ -17,12 +17,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Determine email subject
-    let subject = `New Contact: ${name}`
-    if (pkg) {
-      subject = `Package Inquiry: ${pkg} from ${name}`
-    } else if (service) {
-      subject = `Service Inquiry: ${service} from ${name}`
-    }
+    const subject = `[Next Steps] Reputation500: ${name}`
 
     // Build email HTML
     const htmlParts = [
@@ -31,6 +26,7 @@ export async function POST(request: NextRequest) {
       `<p><strong>Email:</strong> ${email}</p>`,
     ]
     if (company) htmlParts.push(`<p><strong>Company:</strong> ${company}</p>`)
+    if (country) htmlParts.push(`<p><strong>Country:</strong> ${country}</p>`)
     if (phone) htmlParts.push(`<p><strong>Phone:</strong> ${phone}</p>`)
     if (pkg) htmlParts.push(`<p><strong>Package:</strong> ${pkg}</p>`)
     if (service) htmlParts.push(`<p><strong>Service:</strong> ${service}</p>`)

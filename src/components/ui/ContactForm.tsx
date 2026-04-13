@@ -26,6 +26,7 @@ export default function ContactForm({ variant = 'default', prefilledPackage }: C
       name: formData.get('name') as string,
       email: formData.get('email') as string,
       phone: formData.get('phone') as string,
+      country: formData.get('country') as string,
       message: formData.get('message') as string,
       package: prefilledPackage || '',
       _gotcha: formData.get('_gotcha') as string,
@@ -83,6 +84,14 @@ export default function ContactForm({ variant = 'default', prefilledPackage }: C
         type="tel"
         name="phone"
         placeholder="+088-234-6849"
+        className={inputClass}
+        style={{ fontFamily: 'var(--font-body)' }}
+      />
+      <input
+        type="text"
+        name="country"
+        required
+        placeholder="Your country"
         className={inputClass}
         style={{ fontFamily: 'var(--font-body)' }}
       />

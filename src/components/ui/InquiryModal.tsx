@@ -43,6 +43,7 @@ function ModalContent({ onClose, title, subtitle, inquiryType, inquiryName }: Om
       name: formData.get('name') as string,
       email: formData.get('email') as string,
       company: formData.get('company') as string,
+      country: formData.get('country') as string,
       ...(inquiryType === 'package'
         ? { package: inquiryName }
         : { service: inquiryName }
@@ -176,6 +177,17 @@ function ModalContent({ onClose, title, subtitle, inquiryType, inquiryName }: Om
                 type="text"
                 name="company"
                 placeholder="Your Company"
+                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#004AAD] focus:ring-2 focus:ring-[#004AAD]/10 transition-all"
+                style={{ fontSize: '15px' }}
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Country *</label>
+              <input
+                type="text"
+                name="country"
+                required
+                placeholder="Your Country"
                 className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#004AAD] focus:ring-2 focus:ring-[#004AAD]/10 transition-all"
                 style={{ fontSize: '15px' }}
               />
