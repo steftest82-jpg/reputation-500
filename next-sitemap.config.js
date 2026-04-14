@@ -5,11 +5,12 @@ module.exports = {
   generateIndexSitemap: false,
   outDir: './public',
   exclude: [
-    '/privacy-policy',
-    '/terms-of-service',
     '/apple-icon.png',
     '/icon.png',
     '/favicon.ico',
+    '/favicon-*.png',
+    '/icon-*.png',
+    '/site.webmanifest',
   ],
   robotsTxtOptions: {
     policies: [

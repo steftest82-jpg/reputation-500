@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   description:
     'Review the terms and conditions governing the use of Reputation 500 services and website.',
   alternates: { canonical: `${SITE_URL}/terms-of-service` },
-  robots: { index: false, follow: false },
   openGraph: {
     title: `Terms of Service | ${SITE_NAME}`,
     description:
