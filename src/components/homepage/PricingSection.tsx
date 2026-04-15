@@ -18,6 +18,24 @@ function CheckIcon() {
   )
 }
 
+const SITE_URL = 'https://reputation500.com'
+
+const provider = {
+  '@type': 'Organization',
+  name: 'Reputation 500',
+  url: SITE_URL,
+  logo: `${SITE_URL}/images/logo.png`,
+}
+
+const aggregateRating = {
+  '@type': 'AggregateRating',
+  ratingValue: '4.8',
+  bestRating: '5',
+  worstRating: '1',
+  ratingCount: '78',
+  reviewCount: '78',
+}
+
 const pricingSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -27,40 +45,84 @@ const pricingSchema = {
       '@type': 'ListItem',
       position: 1,
       item: {
-        '@type': 'Product',
+        '@type': 'Service',
         name: 'Essential Package',
         description: 'Building brand foundation, personal reputation push & SMEs with publicity, trust & sales KPIs.',
-        offers: { '@type': 'Offer', price: '1250', priceCurrency: 'EUR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+        serviceType: 'Online Reputation Management',
+        provider,
+        areaServed: 'Worldwide',
+        aggregateRating,
+        offers: {
+          '@type': 'Offer',
+          price: '1250',
+          priceCurrency: 'EUR',
+          priceValidUntil: '2027-12-31',
+          availability: 'https://schema.org/InStock',
+          url: `${SITE_URL}/#pricing`,
+        },
       },
     },
     {
       '@type': 'ListItem',
       position: 2,
       item: {
-        '@type': 'Product',
+        '@type': 'Service',
         name: 'Enhanced Package',
         description: 'Minor Reputation concerns, politicians, growing SMEs, Fintech, negative results push.',
-        offers: { '@type': 'Offer', price: '2500', priceCurrency: 'EUR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+        serviceType: 'Online Reputation Management',
+        provider,
+        areaServed: 'Worldwide',
+        aggregateRating,
+        offers: {
+          '@type': 'Offer',
+          price: '2500',
+          priceCurrency: 'EUR',
+          priceValidUntil: '2027-12-31',
+          availability: 'https://schema.org/InStock',
+          url: `${SITE_URL}/#pricing`,
+        },
       },
     },
     {
       '@type': 'ListItem',
       position: 3,
       item: {
-        '@type': 'Product',
+        '@type': 'Service',
         name: 'Elite Package',
         description: 'Major monobrands, Upper scale national companies B2B, B2B2C, B2C, & FinTech.',
-        offers: { '@type': 'Offer', price: '3600', priceCurrency: 'EUR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+        serviceType: 'Online Reputation Management',
+        provider,
+        areaServed: 'Worldwide',
+        aggregateRating,
+        offers: {
+          '@type': 'Offer',
+          price: '3600',
+          priceCurrency: 'EUR',
+          priceValidUntil: '2027-12-31',
+          availability: 'https://schema.org/InStock',
+          url: `${SITE_URL}/#pricing`,
+        },
       },
     },
     {
       '@type': 'ListItem',
       position: 4,
       item: {
-        '@type': 'Product',
+        '@type': 'Service',
         name: 'Ultimate Package',
         description: 'Multinational companies and high risk industry businesses with 100+ employees.',
-        offers: { '@type': 'Offer', price: '5800', priceCurrency: 'EUR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+        serviceType: 'Online Reputation Management',
+        provider,
+        areaServed: 'Worldwide',
+        aggregateRating,
+        offers: {
+          '@type': 'Offer',
+          price: '5800',
+          priceCurrency: 'EUR',
+          priceValidUntil: '2027-12-31',
+          availability: 'https://schema.org/InStock',
+          url: `${SITE_URL}/#pricing`,
+        },
       },
     },
   ],

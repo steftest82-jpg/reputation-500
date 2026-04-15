@@ -93,13 +93,18 @@ export default function ServicesPage() {
       name: 'Reputation Management Services',
       itemListElement: SERVICE_CATEGORIES.map((service, index) => ({
         '@type': 'Offer',
-        itemOfferedAs: {
+        position: index + 1,
+        itemOffered: {
           '@type': 'Service',
           name: service.title,
           description: service.description,
           url: `${SITE_URL}${service.href}`,
+          provider: {
+            '@type': 'Organization',
+            name: 'Reputation 500',
+            url: SITE_URL,
+          },
         },
-        position: index + 1,
       })),
     },
   }

@@ -27,9 +27,24 @@ const ratingSchema = {
     '@type': 'AggregateRating',
     ratingValue: '4.8',
     bestRating: '5',
+    worstRating: '1',
     ratingCount: '78',
-    reviewCount: '6',
+    reviewCount: String(TESTIMONIALS.length),
   },
+  review: TESTIMONIALS.map((t) => ({
+    '@type': 'Review',
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: String(t.rating),
+      bestRating: '5',
+      worstRating: '1',
+    },
+    author: {
+      '@type': 'Person',
+      name: t.name,
+    },
+    reviewBody: t.text,
+  })),
 }
 
 export default function TestimonialsPage() {
