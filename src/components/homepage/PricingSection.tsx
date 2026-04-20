@@ -27,15 +27,6 @@ const provider = {
   logo: `${SITE_URL}/images/logo.png`,
 }
 
-const aggregateRating = {
-  '@type': 'AggregateRating',
-  ratingValue: '4.8',
-  bestRating: '5',
-  worstRating: '1',
-  ratingCount: '78',
-  reviewCount: '78',
-}
-
 const pricingSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -51,7 +42,6 @@ const pricingSchema = {
         serviceType: 'Online Reputation Management',
         provider,
         areaServed: 'Worldwide',
-        aggregateRating,
         offers: {
           '@type': 'Offer',
           price: '1250',
@@ -72,7 +62,6 @@ const pricingSchema = {
         serviceType: 'Online Reputation Management',
         provider,
         areaServed: 'Worldwide',
-        aggregateRating,
         offers: {
           '@type': 'Offer',
           price: '2500',
@@ -93,7 +82,6 @@ const pricingSchema = {
         serviceType: 'Online Reputation Management',
         provider,
         areaServed: 'Worldwide',
-        aggregateRating,
         offers: {
           '@type': 'Offer',
           price: '3600',
@@ -114,7 +102,6 @@ const pricingSchema = {
         serviceType: 'Online Reputation Management',
         provider,
         areaServed: 'Worldwide',
-        aggregateRating,
         offers: {
           '@type': 'Offer',
           price: '5800',
